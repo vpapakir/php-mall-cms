@@ -1,0 +1,24 @@
+<DataSources>
+	<Event>
+		<EventID><![CDATA[Event]]></EventID>
+		<UserID><![CDATA[Author]]></UserID>
+		<OwnerID><![CDATA[OwnerID]]></OwnerID>
+		<AdminID><![CDATA[AdminID]]></AdminID>
+		<PermUser><![CDATA[PermUser]]></PermUser>
+		<PermOwner><![CDATA[PermOwner]]></PermOwner>
+		<PermAll><![CDATA[PermAll]]></PermAll>
+		<TimeCreated><![CDATA[Created]]></TimeCreated>
+		<TimeSaved><![CDATA[Saved]]></TimeSaved>
+		<TimeStart><![CDATA[Start]]></TimeStart>
+		<TimeEnd><![CDATA[End]]></TimeEnd>
+		<EventSessionID><![CDATA[EventSessionID]]></EventSessionID>
+		<EventType><![CDATA[Type]]></EventType>
+		<EventServer><![CDATA[Server]]></EventServer>
+		<EventService><![CDATA[Service]]></EventService>
+		<EventMethod><![CDATA[Method]]></EventMethod>
+		<EvenetInput><![CDATA[Input]]></EvenetInput>
+		<EventStatus><![CDATA[Status]]></EventStatus>
+		<EventResult><![CDATA[Result]]></EventResult>
+		<EventEmailRemind><![CDATA[e-mail]]></EventEmailRemind>
+	</Event>
+</DataSources>

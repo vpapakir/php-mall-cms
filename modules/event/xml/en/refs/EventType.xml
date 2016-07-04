@@ -1,0 +1,14 @@
+<EventType>
+	<i>
+		<id>onetime</id>
+		<value><![CDATA[One time]]></value>
+	</i>
+	<i>
+		<id>periodical</id>
+		<value><![CDATA[Periodical]]></value>
+	</i>
+	<i>
+		<id>multithreaded</id>
+		<value><![CDATA[Periodical multithreaded]]></value>
+	</i>
+</EventType>

@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Templates imagesBasePath="fck_template/images/">
+	<Template title="Standart" image="template4.gif">
+		<Description>Standart page template.</Description>
+		<Html>
+			<![CDATA[
+				<table cellspacing="0" cellpadding="3" width="715" border="0">
+					<tbody>
+						<tr>
+							<td align="left" valign="top" width="100%" colspan="3"><span class="introductionfont">Intro</span></td>
+						</tr>
+						<tr>
+							<td align="center" valign="top" width="170"><img height="100" alt="" width="170" /></td>
+							<td align="center" valign="top" width="352"><img height="100" alt="" width="352" /></td>
+							<td align="center" valign="top" width="170"><img height="100" alt="" width="170" /></td>
+						</tr>
+						<tr>
+							<td align="left" valign="top"><span class="commentfont">Text 1</span></td>
+							<td align="left" valign="top"><span class="commentfont">Text 2</span></td>
+							<td align="left" valign="top"><span class="commentfont">Text 3</span></td>
+						</tr>
+						<tr>
+							<td align="left" valign="top" width="100%" colspan="3"><span class="text">Content</span></td>
+						</tr>
+					</tbody>
+				</table>
+			]]>
+		</Html>
+	</Template>	
+	<Template title="Region page" image="template4.gif">
+		<Description>Region page template.</Description>
+		<Html>
+			<![CDATA[
+				<table cellspacing="0" cellpadding="3" width="715" border="0">
+					<tbody>
+						<tr>
+							<td align="left" valign="top" width="100%" colspan="3"><span class="introductionfont">Intro</span></td>
+						</tr>
+						<tr>
+							<td align="center" valign="top" width="170"><img height="100" alt="" width="170" /></td>
+							<td align="center" valign="top" width="352"><img height="100" alt="" width="352" /></td>
+							<td align="center" valign="top" width="170"><img height="100" alt="" width="170" /></td>
+						</tr>
+						<tr>
+							<td align="left" valign="top"><span class="commentfont">Text 1</span></td>
+							<td align="left" valign="top"><span class="commentfont">Text 2</span></td>
+							<td align="left" valign="top"><span class="commentfont">Text 3</span></td>
+						</tr>
+					</tbody>
+				</table>
+				<table cellspacing="0" cellpadding="3" width="715" border="0">
+					<tbody>
+						<tr>
+							<td align="left" valign="top" width="100%"><span class="text">Content</span></td>
+						</tr>
+					</tbody>
+				</table>				
+				<table cellspacing="0" cellpadding="3" width="715" border="0">
+					<tbody>
+						<tr>
+							<td align="left" valign="top" width="20%"><span class="subtitle">Title 1</span></td>
+							<td align="left" valign="top" width="20%"><span class="subtitle">Title 2</span></td>
+							<td align="left" valign="top" width="20%"><span class="subtitle">Title 3</span></td>
+							<td align="left" valign="top" width="20%"><span class="subtitle">Title 4</span></td>
+							<td align="left" valign="top" width="20%"><span class="subtitle">Title 5</span></td>
+						</tr>
+						<tr>
+							<td align="left" valign="top" width="20%"><span class="text">Text 1</span></td>
+							<td align="left" valign="top" width="20%"><span class="text">Text 2</span></td>
+							<td align="left" valign="top" width="20%"><span class="text">Text 3</span></td>
+							<td align="left" valign="top" width="20%"><span class="text">Text 4</span></td>
+							<td align="left" valign="top" width="20%"><span class="text">Text 5</span></td>
+						</tr>
+					</tbody>
+				</table>		
+				<table cellspacing="0" cellpadding="3" width="715" border="0">
+					<tbody>
+						<tr>
+							<td align="left" valign="top" width="100%"><span class="text">Content</span></td>
+						</tr>
+					</tbody>
+				</table>						
+			]]>
+		</Html>
+	</Template>	
+	<Template title="Listing" image="template6.gif">
+		<Description>Listing page</Description>
+		<Html>
+			<![CDATA[
+				<table cellspacing="0" cellpadding="3" width="715" border="0">
+					<tbody>
+						<tr>
+							<td align="left" valign="top" width="100%" colspan="2"><span class="introductionfont">Intro</span></td>
+						</tr>
+						<tr>
+							<td align="center" valign="top" width="170"><img height="100" alt="" width="170" /></td>
+							<td align="left" valign="top" width="90%"><span class="commentfont">Text</span></td>
+						</tr>
+					</tbody>
+				</table>
+			]]>
+		</Html>
+	</Template>	
+	<Template title="Intro" image="template7.gif">
+		<Description>Intro page</Description>
+		<Html>
+			<![CDATA[
+				<table cellspacing="0" cellpadding="3" width="715" border="0">
+					<tbody>
+						<tr>
+							<td align="left" valign="top" width="100%"><span class="introductionfont">Intro</span></td>
+						</tr>
+					</tbody>
+				</table>
+			]]>
+		</Html>
+	</Template>	
+	<Template title="Content" image="template7.gif">
+		<Description>Simple text</Description>
+		<Html>
+			<![CDATA[
+				<table cellspacing="0" cellpadding="3" width="715" border="0">
+					<tbody>
+						<tr>
+							<td align="left" valign="top" width="100%">Content</td>
+						</tr>
+					</tbody>
+				</table>
+			]]>
+		</Html>
+	</Template>
+	<Template title="1 Image" image="template7.gif">
+		<Description>1 image with description under it</Description>
+		<Html>
+			<![CDATA[
+				<table cellspacing="0" cellpadding="3" width="715" border="0">
+					<tbody>
+						<tr>
+							<td align="center" valign="top" width="709"><img height="100" alt="" width="709" /></td>
+						</tr>
+						<tr>
+							<td width="100%" align="left" valign="top"><span class="commentfont">Text</span></td>
+						</tr>
+					</tbody>
+				</table>
+			]]>
+		</Html>
+	</Template>
+	<Template title="2 Images" image="template5.gif">
+		<Description>2 images in one row with description for each image.</Description>
+		<Html>
+			<![CDATA[
+				<table cellspacing="0" cellpadding="3" width="715" border="0">
+					<tbody>
+						<tr>
+							<td align="center" valign="top" width="353"><img height="100" alt="" width="353" /></td>
+							<td align="center" valign="top" width="353"><img height="100" alt="" width="353" /></td>
+						</tr>
+						<tr>
+							<td align="left" valign="top"><span class="commentfont">Text 1</span></td>
+							<td align="left" valign="top"><span class="commentfont">Text 2</span></td>
+						</tr>
+					</tbody>
+				</table>
+			]]>
+		</Html>
+	</Template>		
+	<Template title="3 Images" image="template4.gif">
+		<Description>3 images in one row with description for each image.</Description>
+		<Html>
+			<![CDATA[
+				<table cellspacing="0" cellpadding="3" width="715" border="0">
+					<tbody>
+						<tr>
+							<td align="center" valign="top" width="170"><img height="100" alt="" width="170" /></td>
+							<td align="center" valign="top" width="352"><img height="100" alt="" width="352" /></td>
+							<td align="center" valign="top" width="170"><img height="100" alt="" width="170" /></td>
+						</tr>
+						<tr>
+							<td align="left" valign="top"><span class="commentfont">Text 1</span></td>
+							<td align="left" valign="top"><span class="commentfont">Text 2</span></td>
+							<td align="left" valign="top"><span class="commentfont">Text 3</span></td>
+						</tr>
+					</tbody>
+				</table>
+			]]>
+		</Html>
+	</Template>
+	<Template title="Image and text" image="template6.gif">
+		<Description>Left column with image and right column with text</Description>
+		<Html>
+			<![CDATA[
+				<table cellspacing="0" cellpadding="3" width="715" border="0">
+					<tbody>
+						<tr>
+							<td align="center" valign="top" width="170"><img height="100" alt="" width="170" /></td>
+							<td align="left" valign="top" width="90%"><span class="commentfont">Text</span></td>
+						</tr>
+					</tbody>
+				</table>
+			]]>
+		</Html>
+	</Template>	
+	<Template title="Links" image="template7.gif">
+		<Description>Links list</Description>
+		<Html>
+			<![CDATA[
+				<table cellspacing="0" cellpadding="3" width="715" border="0">
+					<tbody>
+						<tr>
+							<td align="left" valign="top" width="100%">Link 1</td>
+						</tr>
+						<tr>
+							<td align="left" valign="top" width="100%">Link 2</td>
+						</tr>
+					</tbody>
+				</table>
+			]]>
+		</Html>
+	</Template>
+	<Template title="Region table" image="template7.gif">
+		<Description>Region table</Description>
+		<Html>
+			<![CDATA[
+				<table cellspacing="0" cellpadding="3" width="715" border="0">
+					<tbody>
+						<tr>
+							<td align="left" valign="top" width="50%">Text 1</td>
+							<td align="left" valign="top" width="50%">Text 2</td>
+						</tr>
+						<tr>
+							<td align="left" valign="top" width="50%">Text 3</td>
+							<td align="left" valign="top" width="50%">Text 4</td>
+						</tr>
+					</tbody>
+				</table>
+			]]>
+		</Html>
+	</Template>
+
+</Templates>

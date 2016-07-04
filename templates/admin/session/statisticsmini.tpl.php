@@ -1,0 +1,1 @@
+<?=$out['regCount'];?> <?=lang('usersonline.session.tip');?>

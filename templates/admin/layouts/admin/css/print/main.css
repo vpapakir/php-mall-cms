@@ -1,0 +1,262 @@
+/* ---- General styles ------ */
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:100%;
+	color:#000000;}
+td {
+	font-size:90%;
+}
+a {
+	color:#30569D;
+	text-decoration:underline;
+}
+a:hover {
+	color:#30569D;
+	text-decoration:none;
+}
+input, select 
+{
+	font-size:11px;
+}
+h1 {
+	font-size:80%;
+	margin-left:10px;
+	margin-top:5px;
+	margin-bottom:5px;
+	font-weight:normal;
+	color:#000000;
+}
+td h1 {
+	font-size:130%;
+	color:#C3302D;
+	margin-top:5px;
+	margin-bottom:5px;	
+}
+h2 {
+	font-size:120%;
+	color:#000000;
+	margin-top:5px;
+	margin-bottom:5px;	
+}
+h3 {
+	font-size:110%;
+	color:#000000;
+	margin-top:5px;
+	margin-bottom:5px;	
+}
+input, select {
+	font-size:90%;
+}
+form {
+	margin-top:1px;
+	margin-bottom:1px;
+}
+/* ---- Layout styles ------ */
+.line {
+	background-image: url(../../images/gr.gif);		
+}
+.redline {
+	background-image: url(../../images/r.gif);		
+}
+.header {
+	height:60px;
+	background-image: url(../../images/bg-header.gif);	
+	color:#C3302D;
+	font-size:75%;
+}
+.header a {
+	color:#C3302D;
+	font-weight:noraml;
+	text-decoration:none;
+	font-size:75%;
+}
+.header a:hover {
+	color:#30569D;
+	font-weight:noraml;
+	text-decoration:none;
+	font-size:75%;
+}
+.adsheader {
+	text-align:center;
+	padding-top:10px;
+	padding-bottom:10px;
+	padding-right:15px;
+	padding-left:15px;
+	background-image: url(../../images/bg-adsheader.gif);		
+}
+.searchline {
+	padding-top:3px;
+	padding-bottom:3px;
+	padding-left:20px;
+	padding-right:20px;
+	padding-bottom:5px;
+	font-size:80%;
+	text-align:center;
+}
+.topmenu {
+	padding-top:3px;
+	padding-bottom:3px;
+	padding-left:20px;
+	padding-right:10px;
+	padding-bottom:5px;
+	background-image: url(../../images/bg-topmenu.gif);	
+	color:#C3302D;
+	font-weight:bold;
+	font-size:70%;
+	text-align:right;
+}
+.topmenu a {
+	color:#C3302D;
+	font-weight:bold;
+	text-decoration:none;
+}
+.topmenu a:hover {
+	color:#30569D;
+	font-weight:bold;
+	text-decoration:none;
+}
+.path {
+	padding-top:3px;
+	padding-bottom:3px;
+	padding-left:5px;
+	padding-right:10px;
+	padding-bottom:5px;
+	color:#555555;
+	font-weight:normal;
+	font-size:75%;
+	text-align:left;
+}
+.path a {
+	color:#C3302D;
+	font-weight:normal;
+	text-decoration:none;
+}
+.path a:hover {
+	color:#30569D;
+	font-weight:normal;
+	text-decoration:none;
+}
+.bottom {
+	padding-top:5px;
+	padding-bottom:5px;
+	padding-left:50px;
+	padding-right:10px;
+	padding-bottom:5px;
+	color:#555555;
+	background-color:#FFFFFF;
+	font-size:75%;
+	text-align:left;
+}
+.bottom a {
+	color:#C3302D;
+	text-decoration:none;
+}
+.bottom a:hover {
+	color:#30569D;
+	text-decoration:none;
+}
+.center {
+	padding-top:10px;
+	padding-left:10px;
+	padding-right:10px;
+	padding-bottom:10px;
+}
+.menu {
+	padding-left:10px;
+	padding-right:10px;
+	color:#000000;
+	background-color:#EFEBDE;
+}
+.menu a {
+	color:#000000;
+	text-decoration:none;
+}
+.menu a:hover {
+	color:#000000;
+	text-decoration:underline;
+}
+.helptips {
+	padding-left:5px;
+	padding-right:10px;
+	padding-top:5px;
+	padding-bottom:5px;
+	color:#555555;
+	font-size:80%;
+	background-color: #CCFFFF;
+}
+.systemmessages {
+	padding-left:5px;
+	padding-right:10px;
+	padding-top:5px;
+	padding-bottom:5px;	
+	color:#FF0000;
+	font-size:90%;
+	background-color:#FFFF66;
+}
+.bottom {
+	padding-left:10px;
+	padding-right:10px;
+	color:#000000;
+	background-color:#D4D0C8;
+}
+.content{
+	background-color:#FFFFFF;
+}
+.left{
+	background-color:#EEEEEE;
+}
+.right{
+	background-color:#EEEEEE;
+}
+/* ---- Tabs styles ------ */
+.tab{
+	color:#C3302D;
+}
+.tab a {
+	color:#777777;
+	font-weight:normal;
+	text-decoration:none;
+}
+.tab a:hover {
+	color:#30569D;
+	font-weight:normal;
+	text-decoration:none;
+}
+a.currenttab{
+	color:#C3302D;
+}
+
+/* ---- Content styles ------ */
+.subtitle	{
+	color:#000000;
+	font-weight:bold;
+}
+.subtitleline	{
+	height: 25px; 
+	background-color: #EFEFEF; 
+}
+.listingfont	{
+	color:#000000;
+	font-weight:bold;
+}
+.toprow	{ 
+	background-color: #CDCDCD; 
+}
+td.row1	{ 
+	background-color: #EFEFEF; 
+}
+td.row2	{ 
+	background-color: #DEE3E7; 
+}
+td.row3	{
+	background-color: #D1D7DC; 
+}
+
+.locationField {
+	border: 1px solid #FFFFFF;
+	background-color: #FFFFFF;
+}

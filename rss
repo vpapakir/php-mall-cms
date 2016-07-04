@@ -1,0 +1,5 @@
+<?
+$loaderConfig['Settings']['Layout']='rss';
+$loaderName = 'rss';
+include_once "index.php";
+?>

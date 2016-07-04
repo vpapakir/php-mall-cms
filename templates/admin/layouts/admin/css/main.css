@@ -1,0 +1,183 @@
+/* ---- General styles ------ */
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:100%;
+}
+td {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:11px;
+}
+a {
+	color:#30569D;
+	text-decoration:underline;
+}
+a:hover {
+	color:#30569D;
+	text-decoration:none;
+}
+input, select 
+{
+	font-size:11px;
+}
+/* ---- Layout styles ------ */
+.header {
+	padding-left:10px;
+	padding-right:10px;
+	font-size:120%;
+	color:#FFFFFF;
+}
+.center {
+	padding-top:10px;
+	padding-left:10px;
+	padding-right:10px;
+	padding-bottom:10px;
+}
+.menu {
+	padding-left:10px;
+	padding-right:10px;
+	color:#000000;
+	background-color:#EFEBDE;
+}
+.menu a {
+	color:#000000;
+	text-decoration:none;
+}
+.menu a:hover {
+	color:#000000;
+	text-decoration:underline;
+}
+.icons {
+	padding-left:10px;
+	padding-right:10px;
+	color:#000000;
+	background-color:#D4D0C8;
+}
+.helptips {
+	padding-left:10px;
+	padding-right:10px;
+	color:#000000;
+	background-color:#F9CE91;
+}
+.systemmessages {
+	padding-left:10px;
+	padding-right:10px;
+	padding-top:5px;
+	padding-bottom:5px;	
+	color:#FF0000;
+	background-color:#FFFF66;
+}
+.bottom {
+	padding-left:10px;
+	padding-right:10px;
+	color:#000000;
+	background-color:#D4D0C8;
+}
+.content{
+	background-color:#FFFFFF;
+}
+/* ---- Tabs styles ------ */
+#globalnav {
+	position:relative;
+	float:left;
+	padding:0 0 0 0;
+	margin:0;
+	list-style:none;
+	line-height:1.3em;
+	border-top:1px solid #aaa;
+	border-left:1px solid #aaa;
+}
+#globalnav LI {
+	float:left;
+	margin:0;
+	padding:0;
+}
+#globalnav A {
+	display:block;
+	color:#000000;
+	text-decoration:none;
+	font-weight:none;
+	background:#ddd;
+	margin:0;
+	padding:0.25em 1em;
+	border-left:1px solid #fff;
+	border-top:1px solid #fff;
+	border-right:1px solid #aaa;
+}
+#globalnav A:hover,
+#globalnav A:active,
+#globalnav A.selectedtab:link,
+#globalnav A.selectedtab:visited {
+	background:#bbb;
+}
+#globalnav A.selectedtab:link,
+#globalnav A.selectedtab:visited {
+	position:relative;
+	z-index:102;
+}
+
+.tab{
+	padding-left:5px;
+	padding-right:5px;
+	color:#000000;
+}
+.tab a {
+	color:#000000;
+	text-decoration:none;
+}
+.tab a:hover {
+	color:#000000;
+	text-decoration:underline;
+}
+
+/* ---- Content styles ------ */
+.subtitle	{
+	color:#000000;
+	font-weight:bold;
+}
+.subtitleline	{
+	height: 25px; 
+	background-color: #EFEFEF; 
+}
+.listingfont	{
+	color:#000000;
+	font-weight:bold;
+}
+.toprow	{ 
+	background-color: #CDCDCD; 
+}
+td.row1	{ 
+	background-color: #EFEFEF; 
+}
+td.row2	{ 
+	background-color: #DEE3E7; 
+}
+td.row3	{
+	background-color: #D1D7DC; 
+}
+
+.locationField {
+	border: 1px solid #FFFFFF;
+	background-color: #FFFFFF;
+}
+
+
+/*---- help tips ---*/
+div.popup {
+    position: absolute;
+    display: none;
+    padding: 3px; 
+    border: 1px solid #999999; 
+    background-color: #FDFDFD;
+    z-index: 99;
+}
+div.popup p {
+    margin: 0;
+}
+div.popup ul {
+    margin: 0 0 .3em;
+    padding: 0 0 0 1.8em;
+}

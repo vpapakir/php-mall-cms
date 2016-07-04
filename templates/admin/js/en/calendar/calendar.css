@@ -1,0 +1,85 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    color: #000000;
+    background-color:#FFFFFF;
+	margin-top:0px;
+	margin-left:0px;
+	margin-right:0px;
+	margin-bottom:0px;
+}
+
+pre, tt         {font-size: 10px;}
+th              {font-family: Arial, Helvetica, sans-serif; font-size: 10px; font-weight: bold; color: #000000; background-color: #DDDDDD;}
+td              {font-family: Arial, Helvetica, sans-serif; font-size: 10px;}
+form            {font-family: Arial, Helvetica, sans-serif; font-size: 10px; padding: 0px; margin: 0px;}
+input           {font-family: Arial, Helvetica, sans-serif; font-size: 10px;}
+input.textfield {font-family: Arial, Helvetica, sans-serif; font-size: 10px; color: #000000; background-color: #FFFFFF}
+select          {font-family: Arial, Helvetica, sans-serif; font-size: 10px; color: #000000; background-color: #FFFFFF}
+textarea        {font-family: Arial, Helvetica, sans-serif; font-size: 10px; color: #000000; background-color: #FFFFFF}
+h1              {font-family: Arial, Helvetica, sans-serif; font-size: 14px; font-weight: bold}
+h2              {font-family: Arial, Helvetica, sans-serif; font-size: 16px; font-weight: bold}
+h3              {font-family: Arial, Helvetica, sans-serif; font-size: 18px; font-weight: bold}
+a:link          {font-family: Arial, Helvetica, sans-serif; font-size: 10px; text-decoration: none; color: #0000FF}
+a:visited       {font-family: Arial, Helvetica, sans-serif; font-size: 10px; text-decoration: none; color: #0000FF}
+a:hover         {font-family: Arial, Helvetica, sans-serif; font-size: 10px; text-decoration: none; color: #FF0000}
+
+/* Calendar */
+table.calendar {
+    width: 100%;
+}
+
+table.calendar td {
+    text-align: center;
+}
+
+table.calendar td a {
+    display: block;
+	text-decoration:none;
+	color:#0000FF;
+}
+
+table.calendar td a:hover {
+    background-color: #DDDDDD;
+	text-decoration:none;
+	color: #FF0000;
+}
+
+table.calendar th {
+    background-color: #DDDDDD;
+}
+
+table.calendar td.selected {
+    background-color: #DDDDDD;
+}
+
+img.calendar {
+    border: none;
+}
+
+form.clock {
+    text-align: center;
+}
+
+.nowrap {
+    white-space: nowrap;
+}
+
+div.nowrap {
+    margin: 0px;
+    padding: 0px;
+}
+
+li {
+    padding-bottom: 1em;
+}
+
+li form {
+    display: inline;
+}
+
+ul.main {
+    margin: 0px;
+    padding-left:2em;
+    padding-right:2em;
+}

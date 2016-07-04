@@ -1,0 +1,48 @@
+td.header{
+padding-bottom:30px;
+text-align:center;
+vertical-align:bottom;
+}
+td.header2{
+padding-bottom:29px;
+text-align:center;
+vertical-align:bottom;
+}
+td.logo{
+padding-bottom:8px;
+text-align:center;
+vertical-align:bottom;
+}
+
+
+.fieldNames
+{
+	font-family: Verdana,Arial,Helvetica,sans-serif; 
+	text-decoration: none; 
+	font-size:12px;	
+}
+a.boldLink
+{
+	font-weight:bold;
+}
+a.boldLink:hover
+{
+	font-weight:bold;
+}
+
+.toprow	{ 
+	background-color: #CDCDCD; 
+}
+td.row1	{ 
+	background-color: #EFEFEF; 
+}
+td.row2	{ 
+	background-color: #DEE3E7; 
+}
+td.row3	{
+	background-color: #D1D7DC; 
+}
+.subtitleline	{
+	height: 25px; 
+	background-color: #EFEFEF; 
+}

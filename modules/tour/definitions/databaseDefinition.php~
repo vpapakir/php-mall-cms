@@ -1,0 +1,61 @@
+<?
+	$databaseDefinition['t']['Tour']='TourID,TourAlias,UserID,OwnerID,PermAll,TimeCreated,TimeSaved,TimeStart,TimeEnd,IPCreated,IPSaved,TourStatus,TourType,TourCategories,TourContactFirstName,TourContactLastName,TourContactAddress,TourContactCity,TourContactPostalCode,TourContactRegionID,TourContactCountryID,TourContactPhone,TourContactFax,TourContactEmail,TourContactWebsite,TourContactICQ,TourContactSkype,TourContactComments,TourLocation,TourCountryID,TourTitle,TourLink,TourReciprocalLink,TourEmail,TourIntro,TourIntroText,TourContent,TourContentText,TourKeywords,TourMinPrice,TourPrice,TourMaxPrice,TourCurrency,TourWeight,TourIcon,TourImage,TourImagePreview,TourIcon1,TourImage1,TourIcon2,TourImage2,TourIcon3,TourImage3,TourIcon4,TourImage4,TourIcon5,TourImage5,TourPosition,TourFeaturedOptions,TourAccessType,TourPaymentType,TourPaymentStatus,TourPaymentTime,TourRating,TourRates,TourActivityRate,TourPaidRate,TourClicks,TourPrints,TourReviews,TourReviewsRate,TourDownloads,TourComments,TourLanguages,TourAuthorID,TourAuthor,TourSites,TourFields';
+	$databaseDefinition['k']['Tour']='TourID';
+	$databaseDefinition['langs']['Tour']['TourTitle']='infield';
+	$databaseDefinition['langs']['Tour']['TourIntro']='infield';
+	$databaseDefinition['langs']['Tour']['TourIntroText']='infield';
+	$databaseDefinition['langs']['Tour']['TourContent']='infield';
+	$databaseDefinition['langs']['Tour']['TourContentText']='infield';
+	$databaseDefinition['langs']['Tour']['TourKeywords']='infield';
+	$databaseDefinition['types']['Tour']['TourAlias']='Alias';
+		
+	$databaseDefinition['t']['TourField']='TourFieldID,TourFieldStatus,TourFieldName,TourID,TourTypeFieldID,TourFieldType,TourFieldPosition,TourFieldValue,TourFieldValueNumber,TourFieldValueTime';
+	$databaseDefinition['k']['TourField']='TourFieldID';
+
+	$databaseDefinition['t']['TourOption']='TourOptionID,TourOptionStatus,TourFieldID,TourTypeOptionID,TourOptionPosition,TourOptionPrice,TourOptionPriceAction,TourOptionWeight,TourOptionWeightAction';
+	$databaseDefinition['k']['TourOption']='TourOptionID';	
+
+	$databaseDefinition['t']['TourCategory']='TourCategoryID,TourCategoryAlias,UserID,OwnerID,PermAll,TourCategoryParentID,TourCategoryStatus,TourCategoryTypes,TourCategoryPosition,TourCategoryTitle,TourCategoryDescription,TourCategoryKeywords,TourCategoryIcon,TourCategoryImage,TourCategoryImagePreview,TourCategoryAccessType,TourCategoryComments,TourCategoryItems,TourCategoryChildren';
+	$databaseDefinition['k']['TourCategory']='TourCategoryID';
+	$databaseDefinition['langs']['TourCategory']['TourCategoryTitle']='infield';
+	$databaseDefinition['langs']['TourCategory']['TourCategoryKeywords']='infield';
+	$databaseDefinition['langs']['TourCategory']['TourCategoryDescription']='infield';
+	
+	$databaseDefinition['t']['TourCategoryStat']='TourCategoryStatID,UserID,OwnerID,TourCategoryID,TourType,TourCategoryStatItems,TourCategoryStatChildren';
+	$databaseDefinition['k']['TourCategoryStat']='TourCategoryStatID';
+
+	$databaseDefinition['t']['TourType']='TourTypeID,TourTypeAlias,UserID,OwnerID,PermAll,TourTemplate,TourTypeName,TourTypePosition,TourTypeDescription,TourTypeHiddenPlaces';
+	$databaseDefinition['k']['TourType']='TourTypeID';	
+	$databaseDefinition['langs']['TourType']['TourTypeName']='infield';
+	$databaseDefinition['langs']['TourType']['TourTypeDescription']='infield';	
+
+	$databaseDefinition['t']['TourTypeField']='TourTypeFieldID,TourTypeFieldAlias,UserID,OwnerID,PermAll,TourTypeID,TourType,TourTypeFieldName,TourTypeFieldPosition,TourTypeFieldType,TourTypeFieldMode,TourTypeFieldHidenPlaces';
+	$databaseDefinition['k']['TourTypeField']='TourTypeFieldID';	
+	$databaseDefinition['langs']['TourTypeField']['TourTypeFieldName']='infield';
+	$databaseDefinition['langs']['TourTypeField']['TourTypeFieldDescription']='infield';	
+
+	$databaseDefinition['t']['TourTypeOption']='TourTypeOptionID,TourTypeOptionAlias,UserID,OwnerID,PermAll,TourTypeFieldID,TourTypeOptionName,TourTypeOptionPosition,TourTypeOptionPrice,TourTypeOptionPriceAction,TourTypeOptionWeight,TourTypeOptionWeightAction';
+	$databaseDefinition['k']['TourTypeOption']='TourTypeOptionID';	
+	$databaseDefinition['langs']['TourTypeOption']['TourTypeOptionName']='infield';
+	$databaseDefinition['langs']['TourTypeOption']['TourTypeOptionDescription']='infield';	
+
+	$databaseDefinition['t']['TourComment']='TourCommentID,UserID,OwnerID,PermAll,TimeCreated,IPCreated,TourID,SectionID,TourCategoryID,TourCommentLocationID,TourCommentTitle,TourCommentAuthor,TourCommentLink,TourCommentEmail,TourCommentContent,TourCommentKeywords,TourCommentContactType,TourCommentImage';
+	$databaseDefinition['k']['TourComment']='TourCommentID';	
+
+/*
+	$databaseDefinition['t']['CartItem']='CartItemID,UserID,OwnerID,SessionID,TimeCreated,TimeSaved,IPCreated,IPSaved,CartItemType,TourID,TourAlias,TourType,TourCategories,TourTitle,TourIntro,TourIcon,TourLocation,TourLocationID,TourAuthor,TourAuthorID,TourFields,CartItemPrice,TourCurrency,CartItemWeight,CartItemQuantity';
+	$databaseDefinition['k']['CartItem']='CartItemID';	
+	
+	$databaseDefinition['t']['CartItemField']='CartItemFieldID,CartItemID,TourFieldAlias,TourTypeFieldID,TourFieldType,TourFieldMode,TourFieldName,TourFieldPosition,TourFieldValue,TourFieldValueNumber,TourFieldValueTime,TourFieldValueOptions';
+	$databaseDefinition['k']['CartItemField']='CartItemFieldID';	
+	
+	$databaseDefinition['t']['TourOrder']='TourOrderID,UserID,OwnerID,PermAll,TimeCreated,TimeSaved,TimeStart,TimeEnd,IPCreated,IPSaved,TourOrderType,TourOrderStatus,TourOrderPaymentStatus,TourOrderPaymentTime,TourOrderPaymentMethod,TourOrderDeliveryDate,TourOrderDeliveryMethod,TourOrderLocation,TourOrderFirstName,TourOrderLastName,TourOrderEmail,TourOrderPhone,TourOrderCompanyName,TourOrderAddress1,TourOrderAddress2,TourOrderCity,TourOrderRegionID,TourOrderRegion,TourOrderCountryID,TourOrderCountry,TourOrderPostCode,TourOrderBillingFirstName,TourOrderBillingLastName,TourOrderBillingAddress1,TourOrderBillingAddress2,TourOrderBillingCity,TourOrderBillingRegionID,TourOrderBillingRegion,TourOrderBillingCountryID,TourOrderBillingCountry,TourOrderBillingPostCode,TourOrderMessage,TourOrderWeight,TourOrderVolume,TourOrderAmount,TourOrderShippingAmount,TourOrderDiscountAmount,TourOrderTaxesAmount,TourOrderTotalAmount';
+	$databaseDefinition['k']['TourOrder']='TourOrderID';	
+
+	$databaseDefinition['t']['TourOrderItem']='TourOrderItemID,UserID,OwnerID,TimeCreated,TimeSaved,TourOrderID,TourID,TourAlias,TourType,TourCategories,TourTitle,TourIntro,TourIcon,TourLocation,TourLocationID,TourAuthor,TourAuthorID,TourFields,TourOrderItemPrice,TourOrderItemDiscountAmount,TourOrderItemWeight,TourOrderItemVolume,TourOrderItemQuantity';
+	$databaseDefinition['k']['TourOrderItem']='TourOrderItemID';	
+	
+	$databaseDefinition['t']['TourOrderItemField']='TourOrderItemFieldID,TourOrderItemID,TourFieldAlias,TourTypeFieldID,TourFieldType,TourFieldMode,TourFieldName,TourFieldPosition,TourFieldValue,TourFieldValueNumber,TourFieldValueTime,TourFieldValueOptions';
+	$databaseDefinition['k']['TourOrderItemField']='TourOrderItemFieldID';	
+	*/	
+?>

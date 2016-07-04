@@ -1,0 +1,27 @@
+<?
+	$databaseDefinition['t']['ComboardMessage']='
+							ComboardMessageID,
+							OwnerID,
+							UserID,
+							PermAll,
+							ComboardMessageCreatorID,
+							ComboardMessageCreatorCode, 
+							ComboardMessageParentID,
+							ComboardMessageType,
+							ComboardMessageTitle,
+							ComboardMessageContent,
+							ComboardMessageUsers,
+							ComboardMessageGroups,
+							ComboardMessageStartTime,
+							ComboardMessageEndTime,
+							ComboardMessageDuration,
+							ComboardMessageAlarm,
+							ComboardMessageAlarmTime,
+							ComboardMessageAlarmEmail,
+							ComboardMessageTimeCreated,
+							ComboardMessageTimeSaved,
+							ComboardMessageStatus,
+							ComboardMessageReadBy';
+							
+	$databaseDefinition['k']['ComboardMessage']='ComboardMessageID';	
+?>

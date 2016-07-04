@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+ * FCKeditor - The text editor for internet
+ * Copyright (C) 2003-2005 Frederico Caldeira Knabben
+ * 
+ * Licensed under the terms of the GNU Lesser General Public License:
+ * 		http://www.opensource.org/licenses/lgpl-license.php
+ * 
+ * For further information visit:
+ * 		http://www.fckeditor.net/
+ * 
+ * "Support Open Source software. What about a donation today?"
+ * 
+ * File Name: fckstyles.xml
+ * 	This is the sample style definitions file. It makes the styles combo
+ * 	completely customizable.
+ * 	See FCKConfig.StylesXmlPath in the configuration file.
+ * 
+ * File Authors:
+ * 		Frederico Caldeira Knabben (fredck@fckeditor.net)
+-->
+<Styles>
+	<!--Style name="Title" element="span">
+		<Attribute name="style" value="font-family:Arial; font-weight: bold; font-size:16px; color:#000000;" />
+	</Style>
+	<Style name="Subtitle" element="span">
+		<Attribute name="style" value="font-family:Arial; font-weight: bold; font-size:12px; color:#006699;" />
+	</Style>
+	<Style name="Intro" element="span">
+		<Attribute name="style" value="font-family:Arial;font-weight: normal; font-size:14px; color:#FD341F;" />
+	</Style>
+	<Style name="Text" element="span">
+		<Attribute name="style" value="font-family:Arial;font-weight: normal; color:#000000;font-size:12px;" />
+	</Style-->	
+	<Style name="Title" element="span">
+		<Attribute name="class" value="boxtitle" />
+	</Style>
+	<Style name="Subtitle" element="span">
+		<Attribute name="class" value="subtitle" />
+	</Style>	
+	<Style name="Intro" element="span">
+		<Attribute name="class" value="introductionfont" />
+	</Style>	
+	<Style name="Listing" element="span">
+		<Attribute name="class" value="listingfont" />
+	</Style>	
+	<Style name="Comments" element="span">
+		<Attribute name="class" value="commentfont" />
+	</Style>	
+	<Style name="Text" element="span">
+		<Attribute name="class" value="text" />
+	</Style>	
+</Styles>

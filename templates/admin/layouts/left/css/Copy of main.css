@@ -1,0 +1,77 @@
+td.header{
+padding-bottom:30px;
+text-align:center;
+vertical-align:bottom;
+}
+td.header2{
+padding-bottom:29px;
+text-align:center;
+vertical-align:bottom;
+}
+td.logo{
+padding-bottom:8px;
+text-align:center;
+vertical-align:bottom;
+}
+
+p { 
+	margin-top:0px 
+}
+a { 
+	font-family: Verdana,Arial,Helvetica,sans-serif; 
+	text-decoration: none;
+	font-size:12px;
+}
+td
+{
+	font-family: Verdana,Arial,Helvetica,sans-serif; 
+	text-decoration: none; 
+	font-size:12px;	
+}
+select,input,textarea
+{
+	font-family: Verdana,Arial,Helvetica,sans-serif; 
+	text-decoration: none; 
+	font-size:11px;	
+}
+
+a:hover {
+	font-family: Verdana,Arial,Helvetica,sans-serif; 
+	text-decoration: none; 
+	color: #c03;
+	font-size:12px; 
+}
+.center { text-align: center; }
+.title { font-family: Verdana,Arial,Helvetica,sans-serif; font-weight: bold; color: #fff; font-size: 14px; }
+.text { font-family: Verdana,Arial,Helvetica,sans-serif; font-size: 10px; }
+.subtitle { font-family: Verdana,Arial,Helvetica,sans-serif; color: #069; font-size: 12px; }
+.notice { font-family: Verdana,Arial,Helvetica,sans-serif; font-style: italic; font-size: 10px; }
+
+
+.fieldNames
+{
+	font-family: Verdana,Arial,Helvetica,sans-serif; 
+	text-decoration: none; 
+	font-size:12px;	
+}
+a.boldLink
+{
+	font-weight:bold;
+}
+a.boldLink:hover
+{
+	font-weight:bold;
+}
+
+.toprow	{ 
+	background-color: #CDCDCD; 
+}
+td.row1	{ 
+	background-color: #EFEFEF; 
+}
+td.row2	{ 
+	background-color: #DEE3E7; 
+}
+td.row3	{
+	background-color: #D1D7DC; 
+}
