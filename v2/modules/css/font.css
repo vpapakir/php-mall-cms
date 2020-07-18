@@ -1,0 +1,175 @@
+.font_title, .link_title
+{
+font-size: 14px;
+font-weight: normal;
+color: #FFFFFF;
+text-decoration: none;
+text-align: center;
+font-family: 'Arial', 'Helvetica', 'Verdana', 'sans-serif';
+}
+
+.font_intro, .link_intro
+{
+font-size: 12px;
+font-weight: normal;
+color: #D40000;
+text-decoration: none;
+text-align: left;
+font-family: 'Tahoma', 'Geneva', 'Trebuchet MS', 'Verdana', 'sans-serif';
+}
+
+.font_desc, .link_desc
+{
+font-size: 11px;
+font-weight: normal;
+color: #0B3B02;
+text-decoration: none;
+text-align: left;
+font-family: 'Tahoma', 'Geneva', 'Trebuchet MS', 'Verdana', 'sans-serif';
+}
+
+.font_subtitle, .link_subtitle
+{
+font-size: 11px;
+font-weight: bold;
+color: #8C0D1E;
+text-decoration: none;
+text-align: left;
+font-family: 'Tahoma', 'Geneva', 'Trebuchet MS', 'Verdana', 'sans-serif';
+}
+
+.font_main, .link_main
+{
+font-size: 11px;
+font-weight: normal;
+color: #000000;
+text-decoration: none;
+text-align: left;
+font-family: 'Helvetica', 'Verdana', 'Geneva', 'sans-serif';
+}
+
+.font_comment, .link_comment
+{
+font-size: 11px;
+font-weight: normal;
+color: #B3A807;
+text-decoration: none;
+text-align: left;
+font-family: 'Tahoma', 'Geneva', 'Trebuchet MS', 'Verdana', 'sans-serif';
+}
+
+.font_block1, .link_block1
+{
+font-size: 24px;
+font-weight: normal;
+color: #FFF7D1;
+text-decoration: none;
+text-align: center;
+font-family: 'Arial', 'Helvetica', 'Verdana', 'sans-serif';
+}
+
+.font_block2, .link_block2
+{
+font-size: 36px;
+font-weight: normal;
+color: #5A6855;
+text-decoration: none;
+text-align: center;
+font-family: 'Arial', 'Helvetica', 'Verdana', 'sans-serif';
+}
+
+.font_block3, .link_block3
+{
+font-size: 48px;
+font-weight: normal;
+color: #AA9E7A;
+text-decoration: none;
+text-align: center;
+font-family: 'Arial', 'Helvetica', 'Verdana', 'sans-serif';
+}
+
+.font_error1, .link_error1
+{
+font-size: 11px;
+font-weight: normal;
+color: #D40000;
+text-decoration: none;
+text-align: left;
+font-family: 'Tahoma', 'Geneva', 'Trebuchet MS', 'Verdana', 'sans-serif';
+}
+
+.font_error2, .link_error2
+{
+font-size: 11px;
+font-weight: normal;
+color: #687C66;
+text-decoration: none;
+text-align: left;
+font-family: 'Tahoma', 'Geneva', 'Trebuchet MS', 'Verdana', 'sans-serif';
+}
+
+.font_error3, .link_error3
+{
+font-size: 11px;
+font-weight: normal;
+color: #FFEAB5;
+text-decoration: none;
+text-align: left;
+font-family: 'Tahoma', 'Geneva', 'Trebuchet MS', 'Verdana', 'sans-serif';
+}
+
+.font_info1, .link_info1
+{
+font-size: 14px;
+font-weight: normal;
+color: #000000;
+text-decoration: none;
+text-align: left;
+font-family: 'Tahoma', 'Geneva', 'Trebuchet MS', 'Verdana', 'sans-serif';
+}
+
+.font_info2, .link_info2
+{
+font-size: 14px;
+font-weight: bold;
+color: #3F774C;
+text-decoration: none;
+text-align: left;
+font-family: 'Tahoma', 'Geneva', 'Trebuchet MS', 'Verdana', 'sans-serif';
+}
+
+.font_info3, .link_info3
+{
+font-size: 14px;
+font-weight: normal;
+color: #566282;
+text-decoration: none;
+text-align: left;
+font-family: 'Tahoma', 'Geneva', 'Trebuchet MS', 'Verdana', 'sans-serif';
+}
+
+.font_info4, .link_info4
+{
+font-size: 14px;
+font-weight: normal;
+color: #8C0D1E;
+text-decoration: none;
+text-align: left;
+font-family: 'Tahoma', 'Geneva', 'Trebuchet MS', 'Verdana', 'sans-serif';
+}
+
+.font_info5, .link_info5
+{
+font-size: 14px;
+font-weight: normal;
+color: #EBDC09;
+text-decoration: none;
+text-align: left;
+font-family: 'Tahoma', 'Geneva', 'Trebuchet MS', 'Verdana', 'sans-serif';
+}
+
+.link_title, .link_intro, .link_desc, .link_subtitle, .link_main, .link_comment, .link_block1, .link_block2, .link_block3, .link_error1, .link_error2, .link_error3, .link_info1, .link_info2, .link_info3, .link_info4, .link_info5{
+border-bottom: 1px dotted black; }
+
+.link_title:hover, .link_intro:hover, .link_desc:hover, .link_subtitle:hover, .link_main:hover, .link_comment:hover, .link_block1:hover, .link_block2:hover, .link_block3:hover, .link_error1:hover, .link_error2:hover, .link_error3:hover, .link_info1:hover, .link_info2:hover, .link_info3:hover, .link_info4:hover, .link_info5:hover{
+border-bottom: 1px solid black; }

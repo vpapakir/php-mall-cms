@@ -1,0 +1,29 @@
+<?php
+#select
+include('modules/user/admin/msgedit/button/bt_cboSelectuserMsgEdit.php');
+#getinfo
+include('modules/user/admin/msgedit/msgedit_getinfo.php');
+#bt
+include('modules/user/admin/msgedit/button/bt_settodeleted_msgedit.php');
+include('modules/user/admin/msgedit/button/bt_settoread_msgedit.php');
+include('modules/user/admin/msgedit/button/bt_settounread_msgedit.php');
+include('modules/user/admin/msgedit/button/bt_deleted_msgedit.php');
+include('modules/user/admin/msgedit/button/bt_sendreply_msgedit.php');
+include('modules/user/admin/msgedit/button/bt_cancel_msgedit.php');
+?>
+<form method="post"><table width="100%">
+<?php
+if(isset($_GET['idmsg']))
+{
+    include('modules/user/admin/msgedit/message/msgedit_view.php');
+}
+else
+{
+    include('modules/user/admin/msgedit/select/msgedit_select.php');
+    include('modules/user/admin/msgedit/expand/msgedit_expand_unread.php');
+    include('modules/user/admin/msgedit/expand/msgedit_expand_read.php');
+    include('modules/user/admin/msgedit/expand/msgedit_expand_sent.php');
+    include('modules/user/admin/msgedit/expand/msgedit_expand_deleted.php');
+}   
+?>     
+</table></form>
