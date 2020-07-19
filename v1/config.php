@@ -1,35 +1,9 @@
 <?
-	//database connections
-	/*$mainConfig['db']['main']['type']='mysql';
-	$mainConfig['db']['main']['host']='localhost:8889';
-	$mainConfig['db']['main']['name']='cormorans';
-	$mainConfig['db']['main']['user']='root';
-	$mainConfig['db']['main']['password']='root';*/
-
-	
-    /*$mainConfig['db']['main']['type']='mysql';
-	$mainConfig['db']['main']['host']='sql6';
-	$mainConfig['db']['main']['name']='gitedescormoran';
-	$mainConfig['db']['main']['user']='gitedescormoran';
-	$mainConfig['db']['main']['password']='svm7gMZc';*/
-	
-	/*$mainConfig['db']['coorda']['type']='mysql';
-	$mainConfig['db']['coorda']['host']='localhost:8889';
-	$mainConfig['db']['coorda']['name']='cormorans';
-	$mainConfig['db']['coorda']['user']='root';
-	$mainConfig['db']['coorda']['password']='root';*/	
-    
-    /*$mainConfig['db']['main']['type']='mysql';
-    $mainConfig['db']['main']['host']='sql6';
-    $mainConfig['db']['main']['name']='gitedescormoran';
-    $mainConfig['db']['main']['user']='gitedescormoran';
-    $mainConfig['db']['main']['password']='svm7gMZc';*/
-    
-    $mainConfig['db']['main']['type']='mysql';
-    $mainConfig['db']['main']['host']='localhost';
-    $mainConfig['db']['main']['name']='lajeanne';
-    $mainConfig['db']['main']['user']='lajeannedb';
-    $mainConfig['db']['main']['password']='nalaje974';
+	$mainConfig['db']['main']['type']    ='mysql';
+	$mainConfig['db']['main']['host']    ='XXX';
+	$mainConfig['db']['main']['name']    ='YYY';
+	$mainConfig['db']['main']['user']    ='ZZZ';
+	$mainConfig['db']['main']['password']='TTTT';
 	
 	$mainConfig['Settings']['WebFolder'] = str_replace($_SERVER['DOCUMENT_ROOT'],"",realpath('./')).'/';
 
