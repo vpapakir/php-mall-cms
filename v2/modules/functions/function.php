@@ -92,9 +92,9 @@ function give_prioritylangcontent($content, $idpage, $family)
     }   
 }
 
-function checkrights($actualrights, $arrayauthrights, $redirection, $excludeSA)
+function checkrights($actualrights, $arrayauthrights, $redirection, $excludeSA = true)
 {
-    $header = "http://fp-distribution.com/";
+    $header =  "//";
     
     if(empty($actualrights))
     {
@@ -4111,7 +4111,7 @@ function generate_code($nb_char_max)
 //    }
 //}
 
-function cut_string($string, $start, $end, $punctuation, $forcecut)
+function cut_string($string, $start, $end, $punctuation, $forcecut = false)
 {
     if(strlen($string) > $end)
     {

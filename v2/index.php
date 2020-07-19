@@ -9,7 +9,6 @@ $COOBOX_BASE_URL = "//mymall/v2/";
 include('modules/dbconnect/dinxdev/dbconnect.php');
 include('modules/functions/function.php');
 include('config/config_admin.php');
-exit(0);
 include('config/config_main.php');
 include('config/config_image.php');
 include('modules/pdf/pdf.php');
