@@ -1,6 +1,1 @@
-<?php
-	$database_host    = 'TTT';
-	$database_connect = 'dbname=ZZZ'; //database name
-	$database_user    = 'YYY';
-	$database_pass    = 'XXX';
-?>
+/var/www/vhosts/vpapakir.eu/mymall.vpapakir.eu/configurations/mymall/v2/dbconnect_info.php
