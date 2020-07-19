@@ -2,7 +2,7 @@
 ob_start("ob_gzhandler");
 
 $include_dbconnect_info = 'modules/dbconnect/dinxdev/dbconnect_info.php';
-$COOBOX_BASE_URL = "http://fp-distribution.com/";
+$COOBOX_BASE_URL = "https://mymall.vpapakir.eu/mymall/v2/";
 include('modules/dbconnect/dinxdev/dbconnect.php');
 include('modules/functions/function.php');
 include('config/config_admin.php');
