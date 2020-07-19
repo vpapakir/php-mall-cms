@@ -218,7 +218,7 @@ function check_date($date)
             }
             break;
             
-        case 09:
+        case "09":
             if($date[2] > 30)
             {
                 $bok_date_work = false;
