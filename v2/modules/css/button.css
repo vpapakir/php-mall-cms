@@ -1,0 +1,56 @@
+input[type=submit], .link_input, .navtab
+{
+font-family: 'Tahoma', 'Geneva', 'Trebuchet MS', 'Verdana', 'sans-serif';
+font-size: 12px;
+font-weight: normal;
+color: #FFFFFF;
+text-align: center;
+border: 2px solid;
+border-color: #9C9384;
+border-radius: 5px 5px 5px 5px;
+-webkit-border-radius: 5px 5px 5px 5px;
+background-color: #9C9384;
+width: auto;
+height: auto;
+cursor: pointer;
+}
+
+input[type=submit]:hover, .link_input:hover, .navtab:hover
+{
+font-family: 'Tahoma', 'Geneva', 'Trebuchet MS', 'Verdana', 'sans-serif';
+font-size: 12px;
+font-weight: normal;
+color: #FFFFFF;
+text-align: center;
+border: 2px solid;
+border-color: #8C0D1E;
+border-radius: 5px 5px 5px 5px;
+-webkit-border-radius: 5px 5px 5px 5px;
+background-color: #8C0D1E;
+width: auto;
+height: auto;
+cursor: pointer;
+}
+
+input[type=submit]:active, .link_input:active, .navtab:active
+{
+font-family: 'Tahoma', 'Geneva', 'Trebuchet MS', 'Verdana', 'sans-serif';
+font-size: 12px;
+font-weight: normal;
+color: #FFFFFF;
+text-align: center;
+border: 2px solid;
+border-color: #676763;
+border-radius: 5px 5px 5px 5px;
+-webkit-border-radius: 5px 5px 5px 5px;
+background-color: #676763;
+width: auto;
+height: auto;
+cursor: pointer;
+}
+
+.navtab, .navtab:hover, .navtab:active, .navtab_selected
+{
+border-radius: 5px 5px 0px 0px;
+-webkit-border-radius: 5px 5px 0px 0px;
+}

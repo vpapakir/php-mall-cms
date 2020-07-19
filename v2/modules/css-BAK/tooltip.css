@@ -1,0 +1,27 @@
+a.tooltip 
+{
+   color: black;
+   text-decoration: none;
+}
+a.tooltip span 
+{
+   display: none;
+}
+a.tooltip:hover 
+{
+   background: none;
+   z-index: 500;
+}
+a.tooltip:hover span 
+{
+    display: inline;
+    position: absolute;
+    height: auto;
+    width: auto;
+    background-color: ivory;
+    padding: 4px;
+    border: 1px solid black;
+    border-radius: 6px 6px 6px 6px;
+    -moz-border-radius: 6px 6px 6px 6px;
+    -webkit-border-radius: 6px 6px 6px 6px;
+}
