@@ -3,8 +3,7 @@
 session_start();
 ob_start("ob_gzhandler");
 
-$include_dbconnect_info = 'modules/dbconnect/dinxdev/dbconnect_info.php';
-$COOBOX_BASE_URL = "//mymall/v2/";
+$COOBOX_BASE_URL = $_SERVER['REQUEST_URI'];
 
 include('modules/dbconnect/dinxdev/dbconnect.php');
 include('modules/functions/function.php');
@@ -13,9 +12,7 @@ include('config/config_main.php');
 include('config/config_image.php');
 include('modules/pdf/pdf.php');
 $_SESSION['index'] = 'index.php';
-$_SESSION['cooshopname'] = 'coobox.eu';
-
-$_SESSION['cooshopid'] = 1;
+$_SESSION['cooshopname'] = 'mymall';
 if (isset($_COOKIE["language"]))
 {
 	if($_SESSION['current_language'] != $_COOKIE["language"]) {
@@ -27,7 +24,6 @@ include('structure/config_structure.php');
 include('modules/language/language/language_switch.php');
 include('modules/finance/currency/currency_switch.php');
 include('modules/stats/visit/statsvisit_main.php');
-
 $_SESSION['current_page'] = trim(htmlspecialchars($_GET['page'], ENT_QUOTES));
 $main_id_language = $_SESSION['current_language'];
 $main_id_currency = $_SESSION['current_currency'];
@@ -42,8 +38,6 @@ $main_rights_log = $_SESSION['current_log_rightsuser'];
 $main_onlinestatus_log = $_SESSION['current_log_onlinestatususer'];
 $blocktitle_box_structure = 21;
 $blockcontent_box_structure = 22;
-
-
 include('config/config_valuerelated.php');
 
 ?>
@@ -116,6 +110,6 @@ include('config/config_valuerelated.php');
         
         <?php 
 			//get language cookie            
-			include('structure/body/body1.php');
+			//include('structure/body/body1.php');
         ?>
 </html>
