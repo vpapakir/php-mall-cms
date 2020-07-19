@@ -204,7 +204,7 @@ if(!empty($scriptcode_logo[$y]) && !empty($scriptpath_logo[$y]))
             <tr>
             <td align="left"> 
 <?php
-            include($include_script);
+            //include($include_script);
 ?>
             </td>
             </tr>

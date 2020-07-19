@@ -23,9 +23,9 @@ else
 {
     $kcfinder_disabled = true;
 }
-$kcfinder_sitename = 'http://immopan.fr';
+$kcfinder_sitename = 'https://mymall.vpapakir.eu/mymall/v2/';
 $kcfinder_uploadURL = $kcfinder_sitename.'/images/kcfinder/upload';
-$kcfinder_uploaddir = '/home/gandic3root/www-dev/immopan/htdocs/images/kcfinder/upload';
+$kcfinder_uploaddir = '//images/kcfinder/upload';
 $_CONFIG = array(
 
     'disabled' => $kcfinder_disabled,

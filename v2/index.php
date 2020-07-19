@@ -1,8 +1,11 @@
-<?php session_start();
+<?php 
+
+session_start();
 ob_start("ob_gzhandler");
 
 $include_dbconnect_info = 'modules/dbconnect/dinxdev/dbconnect_info.php';
-$COOBOX_BASE_URL = "https://mymall.vpapakir.eu/mymall/v2/";
+$COOBOX_BASE_URL = "//mymall/v2/";
+
 include('modules/dbconnect/dinxdev/dbconnect.php');
 include('modules/functions/function.php');
 include('config/config_admin.php');
@@ -11,22 +14,15 @@ include('config/config_image.php');
 include('modules/pdf/pdf.php');
 $_SESSION['index'] = 'index.php';
 $_SESSION['cooshopname'] = 'coobox.eu';
+
 $_SESSION['cooshopid'] = 1;
 if (isset($_COOKIE["language"]))
-			{
-				if($_SESSION['current_language'] != $_COOKIE["language"]) {
-					$_SESSION['current_language'] = $_COOKIE["language"];
-					//$main_id_language = $_SESSION['current_language'];
-					/*$pageeee = $_SESSION['current_page'];
-					$sec = "0";
-					header("Refresh: $sec; url=$pageeee");*/
-				}
-				//$_SESSION['current_language'] = $_COOKIE["language"];
-				//echo $_COOKIE["language"]."XXX".$_SESSION['current_language'];
-			} else {
-				//$main_id_language = $_SESSION['current_language'];
-				//echo "FUCK!!!";
+{
+	if($_SESSION['current_language'] != $_COOKIE["language"]) {
+		$_SESSION['current_language'] = $_COOKIE["language"];
+	}
 }
+
 include('structure/config_structure.php');
 include('modules/language/language/language_switch.php');
 include('modules/finance/currency/currency_switch.php');
@@ -47,19 +43,11 @@ $main_onlinestatus_log = $_SESSION['current_log_onlinestatususer'];
 $blocktitle_box_structure = 21;
 $blockcontent_box_structure = 22;
 
+
 include('config/config_valuerelated.php');
 
-if(isset($_GET['block']))
-{
-    if($_GET['block'] == 'true')
-    {
-        //include('modules/settings/css/block/block_main.php');
-    }
-}
-
-
-
 ?>
+
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"> 
 <html>
     <head>
