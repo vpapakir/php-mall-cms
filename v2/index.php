@@ -4,7 +4,6 @@ session_start();
 ob_start("ob_gzhandler");
 
 $COOBOX_BASE_URL = $_SERVER['REQUEST_URI'];
-
 include('modules/dbconnect/dinxdev/dbconnect.php');
 include('modules/functions/function.php');
 include('config/config_admin.php');
@@ -41,7 +40,6 @@ $blockcontent_box_structure = 22;
 include('config/config_valuerelated.php');
 
 ?>
-
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"> 
 <html>
     <head>
@@ -100,16 +98,14 @@ include('config/config_valuerelated.php');
         <script type="text/javascript" src="<?php echo($config_customheader); ?>external_modules/popup/highslide/highslide.config.js" charset="utf-8"></script>
         <script type="text/javascript" src="<?php echo($config_customheader); ?>external_modules/popup/highslide/highslide.js"></script>
         <link rel="stylesheet" type="text/css" href="<?php echo($config_customheader); ?>external_modules/popup/highslide/highslide.css"/>      
-        
         <?php
             //include('modules/css/font.php');
             //include('modules/css/button.php');
             //include('modules/css/block.php');
         ?>        
-    </head>       
-        
+    </head>             
         <?php 
-			//get language cookie            
-			//include('structure/body/body1.php');
+		//get language cookie            
+		//include('structure/body/body1.php');
         ?>
 </html>

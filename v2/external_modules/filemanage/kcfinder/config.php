@@ -24,8 +24,8 @@ else
     $kcfinder_disabled = true;
 }
 $kcfinder_sitename = 'https://mymall.vpapakir.eu/mymall/v2/';
-$kcfinder_uploadURL = $kcfinder_sitename.'/images/kcfinder/upload';
-$kcfinder_uploaddir = '//images/kcfinder/upload';
+$kcfinder_uploadURL = $kcfinder_sitename.'/images/';
+$kcfinder_uploaddir = '/var/www/vhosts/vpapakir.eu/mymall.vpapakir.eu/mymall/v2/images';
 $_CONFIG = array(
 
     'disabled' => $kcfinder_disabled,
