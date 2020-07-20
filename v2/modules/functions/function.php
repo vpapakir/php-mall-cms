@@ -1820,7 +1820,10 @@ function give_translation($code, $echo, $showtranslationcode)
                            WHERE code_translation = :code';
         //if((checkrights($main_rights_log, '9', $redirection)) === true){ $_SESSION['prepared_query'] = $prepared_query; }
         $query = $connectData->prepare($prepared_query);
-        $query->bindParam('code', trim(htmlspecialchars($code, ENT_QUOTES)));
+	$code_1 = $code;
+	$code_2 = htmlspecialchars($code_1, ENT_QUOTES);
+	$code_3 = trim($code_2);
+        $query->bindParam('code', $code_3);
         $query->execute();
         
         if(($data = $query->fetch()) != false)

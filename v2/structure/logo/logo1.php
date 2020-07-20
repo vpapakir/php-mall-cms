@@ -96,28 +96,32 @@ catch(Exception $e)
 {
     $_SESSION['error400_message'] = $e->getMessage();
     echo $_SESSION['error400_message'];
-    /*if($_SESSION['index'] == 'index.php')
+    if($_SESSION['index'] == 'index.php')
     {
         die(header('Location: '.$config_customheader.'Error/400'));
     }
     else
     {
         die(header('Location: '.$config_customheader.$_SESSION['index'].'Backoffice/Error/400'));
-    }*/
+    }
 }
 
 
-if(empty($scriptcode_logo[$y]))
+if(empty($scriptcode_logo[$y]) && isset($scriptpath_logo))
 {
     $include_script = $scriptpath_logo[$y];
     $Bok_include_path = true;
 }
 else
 {
-    $include_script = $scriptcode_logo[$y];
+    if(isset($scriptcode_logo)) {
+    	$include_script = $scriptcode_logo[$y];
+    } else {
+	$include_script = "";
+    }
 }
 
-if(!empty($scriptcode_logo[$y]) && !empty($scriptpath_logo[$y]))
+if(!empty($scriptcode_logo[$y]) && !empty($scriptpath_logo[$y]) && isset($scriptpath_logo))
 {
     $Bok_include_both = true;
 

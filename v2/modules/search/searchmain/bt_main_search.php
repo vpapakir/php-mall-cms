@@ -109,8 +109,8 @@ if(isset($_POST['bt_main_search']) || ($_SESSION['searchmain_search_result_count
     
     $_SESSION['searchmain_search_txtsearchmainSearch_2'] = $sentence;
     
-    $modified_sentence = str_replace_char($sentence, $main_id_language, true);
-    $modified_sentence = replace_dirtyword($modified_sentence, $main_id_language, true);
+    $modified_sentence = str_replace_char($sentence, $main_id_language, true, "", "", "");
+    $modified_sentence = replace_dirtyword($modified_sentence, $main_id_language, true, "", "", "");
     /*extract all separated words by whitespace and include them in an array*/
     $keywords = split_string($modified_sentence, ' ');
 

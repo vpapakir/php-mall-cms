@@ -155,7 +155,7 @@ catch(Exception $e)
 <?php   
                         if($status_frame[6] == 1)
                         {
-                            include('structure/frame/tabbar/tabbarL1.php');
+                            #include('structure/frame/tabbar/tabbarL1.php');
                         }   
 ?>
                     </td>
@@ -164,7 +164,7 @@ catch(Exception $e)
 <?php                
                         if($status_frame[7] == 1)
                         {
-                            include('structure/frame/tabbar/tabbarR1.php');
+                            #include('structure/frame/tabbar/tabbarR1.php');
                         }
 ?>
                     </td>
@@ -183,7 +183,7 @@ catch(Exception $e)
         </td>
     </tr>
 <?php    
-    if($status_frame_layout[5] == 1)
+    if(isset($status_frame_layout) && $status_frame_layout[5] == 1)
     {
 ?>    
         <tr>

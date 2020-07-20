@@ -4,7 +4,7 @@ try
     $prepared_query = 'SELECT * FROM structure_box
                        WHERE id_box = :id_box
                        AND id_frame LIKE \'%'.$id_frame.'%\'';
-    //if((checkrights($main_rights_log, '9', $redirection)) === true){ $_SESSION['prepared_query'] = $prepared_query; }
+    if((checkrights($main_rights_log, '9', $redirection)) === true){ $_SESSION['prepared_query'] = $prepared_query; }
     $query = $connectData->prepare($prepared_query);
     $query->bindParam('id_box', $idbox_hierarchybox[$i]);
     $query->execute();
