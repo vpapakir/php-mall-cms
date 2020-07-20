@@ -183,7 +183,7 @@ catch(Exception $e)
         </td>
     </tr>
 <?php    
-    if(isset($status_frame_layout) && $status_frame_layout[5] == 1)
+    if($status_frame_layout[5] == 1)
     {
 ?>    
         <tr>

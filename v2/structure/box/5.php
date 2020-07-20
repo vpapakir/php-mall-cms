@@ -1,5 +1,5 @@
 <?php
-if((checkrights($main_rights_log, $userrights_hierarchybox[$i])) === true)
+if((checkrights($main_rights_log, '9', $userrights_hierarchybox[$i])) === true)
 {
     $id_box_structure = 5;
 

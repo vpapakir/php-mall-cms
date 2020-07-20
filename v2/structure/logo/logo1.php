@@ -83,7 +83,7 @@ try
                        AND family_page_translation = "rewritingF"';
     if((checkrights($main_rights_log, '9', $redirection)) === true){ $_SESSION['prepared_query'] = $prepared_query; }
     $query = $connectData->prepare($prepared_query);
-    $query->bindParam('page', htmlspecialchars($id_page, ENT_QUOTES));
+    //$query->bindParam('page', htmlspecialchars($id_page, ENT_QUOTES));
     $query->execute();
 
     if(($data = $query->fetch()) != false)

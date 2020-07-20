@@ -60,7 +60,7 @@ try
     
     if($width_frame != '0px')
     {
-        $widthmax_frame_image = $width_frame - 32;
+        $widthmax_frame_image = floatval($width_frame) - 32;
     }
     
     $array_box = split_number($id_box);
