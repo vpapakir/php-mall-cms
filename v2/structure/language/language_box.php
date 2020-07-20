@@ -5,7 +5,7 @@ try
 {
     $prepared_query = 'SELECT COUNT(id_language) FROM language
                        WHERE status_language = 1';
-    //if((checkrights($main_rights_log, '9', $redirection)) === true){ $_SESSION['prepared_query'] = $prepared_query; }
+    if((checkrights($main_rights_log, '9', $redirection)) === true){ $_SESSION['prepared_query'] = $prepared_query; }
     $query = $connectData->prepare($prepared_query);
     $query->execute();
     
@@ -25,7 +25,7 @@ try
                            WHERE status_language = 1
                            AND status_image = 9
                            ORDER BY priority_language DESC, position_language';
-        //if((checkrights($main_rights_log, '9', $redirection)) === true){ $_SESSION['prepared_query'] = $prepared_query; }
+        if((checkrights($main_rights_log, '9', $redirection)) === true){ $_SESSION['prepared_query'] = $prepared_query; }
         $query = $connectData->prepare($prepared_query);
         $query->execute();
 
@@ -53,14 +53,15 @@ try
 catch(Exception $e)
 {
     $_SESSION['error400_message'] = $e->getMessage();
-    if($_SESSION['index'] == 'index.php')
+    echo $_SESSION['error400_message'];
+    /*if($_SESSION['index'] == 'index.php')
     {
         die(header('Location: '.$config_customheader.'Error/400'));
     }
     else
     {
         die(header('Location: '.$config_customheader.'Backoffice/Error/400'));
-    }
+    }*/
 }
 ?> 
     </tr>

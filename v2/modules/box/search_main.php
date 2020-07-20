@@ -20,7 +20,7 @@
     <td>
         <input style="border-radius: 0px 6px 6px 0px; 
 /*                      -moz-border-radius: 0px 6px 6px 0px;*/
-                      -webkit-border-radius: 0px 6px 6px 0px; padding: 4px;" type="submit" name="bt_main_search" value="<?php give_translation('main.bt_search', $echo, $config_showtranslationcode); ?>"></input>
+                      -webkit-border-radius: 0px 6px 6px 0px; padding: 4px;" type="submit" name="bt_main_search" value="<?php give_translation('main.bt_search', "true", $config_showtranslationcode); ?>"></input>
     </td>
     </tr>
     

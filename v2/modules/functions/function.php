@@ -41,7 +41,7 @@ function stats_page_checksession($session, $url_page, $allowstatsurl)
 
 function give_prioritylangcontent($content, $idpage, $family)
 {
-    $header = "http://fp-distribution.com/";
+    $header = $_SERVER['REQUEST_URI'];
     $include_dbconnect_info = 'modules/dbconnect/dinxdev/dbconnect_info.php';
     include('modules/dbconnect/dinxdev/dbconnect.php');
 
@@ -92,7 +92,7 @@ function give_prioritylangcontent($content, $idpage, $family)
     }   
 }
 
-function checkrights($actualrights, $arrayauthrights, $redirection, $excludeSA = true)
+function checkrights($actualrights = 0, $arrayauthrights, $redirection, $excludeSA = true)
 {
     $header =  "//";
     
@@ -381,7 +381,7 @@ function paging_number_page($result, $limit_by_page)
 
 function givePagePathImage($id_page, $pathcolumn, $noimagetype)
 {
-    $header = "http://fp-distribution.com/";
+    $header = ["REQUEST_URI"];
     $include_dbconnect_info = 'modules/dbconnect/dinxdev/dbconnect_info.php';
     include('modules/dbconnect/dinxdev/dbconnect.php');
     
@@ -431,7 +431,7 @@ function givePagePathImage($id_page, $pathcolumn, $noimagetype)
 
 function giveCDRvalue($id_cdr, $typecdr, $current_language)
 {
-    $header = "http://fp-distribution.com/";
+    $header = ["REQUEST_URI"];
     $include_dbconnect_info = 'modules/dbconnect/dinxdev/dbconnect_info.php';
     include('modules/dbconnect/dinxdev/dbconnect.php');
     
@@ -477,7 +477,7 @@ function giveCDRvalue($id_cdr, $typecdr, $current_language)
 
 function givePageTranslation($id_page, $family, $current_language)
 {
-    $header = "http://fp-distribution.com/";
+    $header = ["REQUEST_URI"];
     $include_dbconnect_info = 'modules/dbconnect/dinxdev/dbconnect_info.php';
     include('modules/dbconnect/dinxdev/dbconnect.php');
     
@@ -520,7 +520,7 @@ function cdrgeo($type, $valueP, $code, $status, $id, $selected, $isfirstoption, 
 {
     if(!empty($showresult) && $showresult == 'true' && !empty($datacolumn) && !empty($dataoperator))
     {
-        $header = "http://fp-distribution.com/";
+        $header = ["REQUEST_URI"];
         $include_dbconnect_info = 'modules/dbconnect/dinxdev/dbconnect_info.php';
         $main_customfolder = 'immo';
         include('modules/dbconnect/dinxdev/dbconnect.php');
@@ -1150,7 +1150,7 @@ function cdreditor($type, $valueP, $code, $status, $id, $selected, $isfirstoptio
 {
     if(!empty($showresult) && $showresult == 'true' && !empty($datacolumn) && !empty($dataoperator))
     {
-        $header = "http://fp-distribution.com/";
+        $header = ["REQUEST_URI"];
         $include_dbconnect_info = 'modules/dbconnect/dinxdev/dbconnect_info.php';
         $main_customfolder = 'immo';
         include('modules/dbconnect/dinxdev/dbconnect.php');
@@ -1806,7 +1806,7 @@ function create_pdf()
 
 function give_translation($code, $echo, $showtranslationcode)
 {
-    $header = "http://fp-distribution.com/";
+    $header = ["REQUEST_URI"];
     $include_dbconnect_info = 'modules/dbconnect/dinxdev/dbconnect_info.php';
     include('modules/dbconnect/dinxdev/dbconnect.php');
     
@@ -1935,7 +1935,7 @@ function destroy_image($pathoriginal, $paththumb, $pathsearch, $nameimg)
 
 function upload_advert($input, $nameimg, $maxsize, $originwidth, $originheight, $filedestination, $idadvert, $idlang)
 {
-    $header = "http://fp-distribution.com/";
+    $header = ["REQUEST_URI"];
     $include_dbconnect_info = 'modules/dbconnect/dinxdev/dbconnect_info.php';
     include('modules/dbconnect/dinxdev/dbconnect.php');
     $message = null;
@@ -2128,7 +2128,7 @@ return $imageOut;
 
 function upload_file_body($input, $nameimg, $maxsize, $originwidth, $originheight, $thumbwidth, $thumbheight, $searchwidth, $searchheight, $filedestination, $filedestination_thumb, $filedestination_search, $id_type, $id, $table, $ispage, $randomname, $update, $id_image)
 {
-    $header = "http://fp-distribution.com/";
+    $header = ["REQUEST_URI"];
     $include_dbconnect_info = 'modules/dbconnect/dinxdev/dbconnect_info.php';
     include('modules/dbconnect/dinxdev/dbconnect.php');
     $message = null;
@@ -2570,7 +2570,7 @@ function upload_file_body($input, $nameimg, $maxsize, $originwidth, $originheigh
 
 function upload_file_skin($input, $nameimg, $maxsize, $originwidth, $originheight, $thumbwidth, $thumbheight, $searchwidth, $searchheight, $filedestination, $filedestination_thumb, $filedestination_search, $id_type, $id, $table, $ispage, $randomname, $update, $id_image)
 {
-    $header = "http://fp-distribution.com/";
+    $header = ["REQUEST_URI"];
     $include_dbconnect_info = 'modules/dbconnect/dinxdev/dbconnect_info.php';
     include('modules/dbconnect/dinxdev/dbconnect.php');
     $message = null;
@@ -3012,7 +3012,7 @@ function upload_file_skin($input, $nameimg, $maxsize, $originwidth, $originheigh
 
 function upload_file($input, $nameimg, $maxsize, $originwidth, $originheight, $thumbwidth, $thumbheight, $searchwidth, $searchheight, $filedestination, $filedestination_thumb, $filedestination_search, $id_type, $id, $table, $ispage, $randomname, $update, $id_image)
 {
-    $header = "http://fp-distribution.com/";
+    $header = ["REQUEST_URI"];
     $include_dbconnect_info = 'modules/dbconnect/dinxdev/dbconnect_info.php';
     include('modules/dbconnect/dinxdev/dbconnect.php');
     $message = null;
@@ -3454,7 +3454,7 @@ function upload_file($input, $nameimg, $maxsize, $originwidth, $originheight, $t
 
 function upload_file_language($input, $input_index, $nameimg, $maxsize, $originwidth, $originheight, $iconwidth, $iconheight, $filedestination, $filedestination_icon, $id, $status, $insert_data, $tablename, $id_column_name)
 {
-    $header = "http://fp-distribution.com/";
+    $header = ["REQUEST_URI"];
     $include_dbconnect_info = 'modules/dbconnect/dinxdev/dbconnect_info.php';
     include('modules/dbconnect/dinxdev/dbconnect.php');
     $message = null;
@@ -4554,7 +4554,7 @@ function get_dropdown_elements($dropdown, $array_temp, $data)
 function replace_dirtyword($string, $current_language, $search, $keyword, $comment, $comreplacechar)
 {     
     unset($array_unmodified_char, $array_modified_char);
-    $header = "http://fp-distribution.com/";
+    $header = ["REQUEST_URI"];
     $include_dbconnect_info = 'modules/dbconnect/dinxdev/dbconnect_info.php';
     include('modules/dbconnect/dinxdev/dbconnect.php');
     
@@ -4742,7 +4742,7 @@ function replace_dirtyword($string, $current_language, $search, $keyword, $comme
 function str_replace_char($string, $current_language, $search, $keyword, $comment, $comreplacechar)
 {     
     unset($array_unmodified_char, $array_modified_char);
-    $header = "http://fp-distribution.com/";
+    $header = ["REQUEST_URI"];
     $include_dbconnect_info = 'modules/dbconnect/dinxdev/dbconnect_info.php';
     include('modules/dbconnect/dinxdev/dbconnect.php');
     

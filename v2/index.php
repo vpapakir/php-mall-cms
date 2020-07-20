@@ -49,17 +49,13 @@ include('modules/finance/currency/currency_switch.php');
 include('modules/stats/visit/statsvisit_main.php');
 include('config/config_valuerelated.php');
 
-#$_SESSION['current_page'] = trim(htmlspecialchars($_GET['page'], ENT_QUOTES));
-#$main_id_currency = $_SESSION['current_currency'];
-#$main_coef_currency = $_SESSION['current_coef_currency'];
-#$main_rate_currency = $_SESSION['current_rate_currency'];
-#$main_code_currency = $_SESSION['current_code_currency'];
-#$main_selectedcode_currency = $_SESSION['current_selectedcode_currency'];
-#$main_selectedsymbol_currency = $_SESSION['current_selectedsymbol_currency'];
-#$main_priority_currency = $_SESSION['current_priority_currency'];
-#$main_onlinestatus_log = $_SESSION['current_log_onlinestatususer'];
-#$blocktitle_box_structure = 21;
-#$blockcontent_box_structure = 22;
+if (isset($_GET['page'])) {
+	$_SESSION['current_page'] = trim(htmlspecialchars($_GET['page'], ENT_QUOTES));
+}
+
+if (isset($main_onlinestatus_log)) {
+	$main_onlinestatus_log = $_SESSION['current_log_onlinestatususer'];
+}
 
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"> 
@@ -120,14 +116,13 @@ include('config/config_valuerelated.php');
         <script type="text/javascript" src="<?php echo($config_customheader); ?>external_modules/popup/highslide/highslide.config.js" charset="utf-8"></script>
         <script type="text/javascript" src="<?php echo($config_customheader); ?>external_modules/popup/highslide/highslide.js"></script>
         <link rel="stylesheet" type="text/css" href="<?php echo($config_customheader); ?>external_modules/popup/highslide/highslide.css"/>      
-        <?php
-            //include('modules/css/font.php');
-            //include('modules/css/button.php');
-            //include('modules/css/block.php');
-        ?>        
+<?php
+        include('modules/css/font.php');
+        include('modules/css/button.php');
+        include('modules/css/block.php');
+?>        
     </head>             
-        <?php 
-		//get language cookie            
-		include('structure/body/body1.php');
-        ?>
+<?php 
+	include('structure/body/body1.php');
+?>
 </html>

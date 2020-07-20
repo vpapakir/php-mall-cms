@@ -4,7 +4,7 @@ try
     
     $prepared_query = 'SELECT * FROM structure_layout
                        WHERE id_layout = :id_layout';
-    //if((checkrights($main_rights_log, '9', $redirection)) === true){ $_SESSION['prepared_query'] = $prepared_query; }
+    if((checkrights($main_rights_log, '9', $redirection)) === true){ $_SESSION['prepared_query'] = $prepared_query; }
     $query = $connectData->prepare($prepared_query);
     $query->bindParam('id_layout', $id_layout);   
     $query->execute();
@@ -123,7 +123,7 @@ try
     
     $prepared_query = 'SELECT status_frame, type_frame FROM structure_frame
                        WHERE id_layout = :id_layout';
-    //if((checkrights($main_rights_log, '9', $redirection)) === true){ $_SESSION['prepared_query'] = $prepared_query; }
+    if((checkrights($main_rights_log, '9', $redirection)) === true){ $_SESSION['prepared_query'] = $prepared_query; }
     $query = $connectData->prepare($prepared_query);
     $query->bindParam('id_layout', $id_layout);   
     $query->execute();
@@ -139,14 +139,15 @@ try
 catch(Exception $e)
 {
     $_SESSION['error400_message'] = $e->getMessage();
-    if($_SESSION['index'] == 'index.php')
+    echo $_SESSION['error400_message'];
+    /*if($_SESSION['index'] == 'index.php')
     {
         die(header('Location: '.$config_customheader.'Error/400'));
     }
     else
     {
         die(header('Location: '.$config_customheader.$_SESSION['index'].'Backoffice/Error/400'));
-    }
+    }*/
 }
 ?>       
 <table style="width: <?php echo($width_layout); ?>; height: <?php echo($height_layout); ?>; 

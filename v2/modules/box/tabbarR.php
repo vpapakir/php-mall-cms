@@ -181,14 +181,14 @@
     catch(Exception $e)
     {
         $_SESSION['error400_message'] = $e->getMessage();
-        if($_SESSION['index'] == 'index.php')
+        /*if($_SESSION['index'] == 'index.php')
         {
             die(header('Location: '.$config_customheader.'Error/400'));
         }
         else
         {
             die(header('Location: '.$config_customheader.'Backoffice/Error/400'));
-        }
+        }*/
     }
     
     unset($id_box_content, $code_box_content, $type_box_content, $typelink_box_content,

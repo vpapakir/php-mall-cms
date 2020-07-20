@@ -3,7 +3,7 @@ try
 { 
     $prepared_query = 'SELECT * FROM structure_logo
                        WHERE id_logo = :id_logo';
-    //if((checkrights($main_rights_log, '9', $redirection)) === true){ $_SESSION['prepared_query'] = $prepared_query; }
+    if((checkrights($main_rights_log, '9', $redirection)) === true){ $_SESSION['prepared_query'] = $prepared_query; }
     $query = $connectData->prepare($prepared_query);
     $query->bindParam('id_logo', $id_logo);   
     $query->execute();
@@ -16,7 +16,7 @@ try
     
     $prepared_query = 'SELECT * FROM structure_section
                        WHERE id_section = :id_section';
-    //if((checkrights($main_rights_log, '9', $redirection)) === true){ $_SESSION['prepared_query'] = $prepared_query; }
+    if((checkrights($main_rights_log, '9', $redirection)) === true){ $_SESSION['prepared_query'] = $prepared_query; }
     $query = $connectData->prepare($prepared_query);
     $query->bindParam('id_section', $id_section);   
     $query->execute();
@@ -44,7 +44,7 @@ try
     
     $prepared_query = 'SELECT * FROM structure_frame
                        WHERE id_layout = :layout';
-    //if((checkrights($main_rights_log, '9', $redirection)) === true){ $_SESSION['prepared_query'] = $prepared_query; }
+    if((checkrights($main_rights_log, '9', $redirection)) === true){ $_SESSION['prepared_query'] = $prepared_query; }
     $query = $connectData->prepare($prepared_query);
     $query->bindParam('layout', $id_layout);   
     $query->execute();
@@ -88,6 +88,7 @@ try
 catch(Exception $e)
 {
     $_SESSION['error400_message'] = $e->getMessage();
+    echo $_SESSION['error400_message'];
     if($_SESSION['index'] == 'index.php')
     {
         die(header('Location: '.$config_customheader.'Error/400'));
@@ -182,7 +183,7 @@ catch(Exception $e)
         </td>
     </tr>
 <?php    
-    if($status_frame_layout[5] == 1)
+    if(isset($status_frame_layout) && $status_frame_layout[5] == 1)
     {
 ?>    
         <tr>
