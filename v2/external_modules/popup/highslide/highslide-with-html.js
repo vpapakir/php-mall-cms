@@ -1,10 +1,10 @@
 /** 
  * Name:    Highslide JS
- * Version: 4.1.13 (2011-10-06)
+ * Version: 5.0.0 (2016-05-24)
  * Config:  default +inline +ajax +iframe +flash
  * Author:  Torstein Hønsi
  * Support: www.highslide.com/support
- * License: www.highslide.com/#license
+ * License: MIT
  */
 if (!hs) { var hs = {
 // Language strings
@@ -162,8 +162,7 @@ cacheBindings : [],
 cachedGets : {},
 clones : {},
 onReady: [],
-uaVersion: /Trident\/4\.0/.test(navigator.userAgent) ? 8 :
-	parseFloat((navigator.userAgent.toLowerCase().match( /.+(?:rv|it|ra|ie)[\/: ]([\d.]+)/ ) || [0,'0'])[1]),
+uaVersion: document.documentMode ||	parseFloat((navigator.userAgent.toLowerCase().match( /.+(?:rv|it|ra|ie)[\/: ]([\d.]+)/ ) || [0,'0'])[1]),
 ie : (document.all && !window.opera),
 //ie : navigator && /MSIE [678]/.test(navigator.userAgent), // ie9 compliant?
 safari : /Safari/.test(navigator.userAgent),
@@ -1434,7 +1433,7 @@ writeExtendedContent : function () {
 				' onload="if (hs.expanders['+ this.key +']) hs.expanders['+ this.key +'].contentLoaded()" ' : '';
 		this.body.innerHTML += '<iframe name="hs'+ (new Date()).getTime() +'" frameborder="0" key="'+ this.key +'" '
 			+' style="width:'+ this.objectWidth +'px; height:'+ h +'px" '
-			+ onload +' src="'+ this.src +'" ></iframe>';
+			+ onload +' src="'+ this.src +'" allowfullscreen></iframe>';
 		this.ruler = this.body.getElementsByTagName('div')[0];
 		this.iframe = this.body.getElementsByTagName('iframe')[0];
 		
@@ -2027,7 +2026,11 @@ htmlPrepareClose : function() {
 
 destroyObject : function () {
 	if (hs.ie && this.iframe)
-		try { this.iframe.contentWindow.document.body.innerHTML = ''; } catch (e) {}
+		try { 
+			this.iframe.contentWindow.document.body.innerHTML = ''; 
+		} catch (e) {
+			this.iframe.src = '';
+		}
 	if (this.objectType == 'swf') swfobject.removeSWF(this.body.id);
 	this.body.innerHTML = '';
 },
@@ -2323,7 +2326,7 @@ afterClose : function () {
 		this.sleep();
 	} else {
 		if (this.outline && this.outlineWhileAnimating) this.outline.destroy();
-	
+		if (this.iframe && this.objectLoadTime != 'after') this.destroyObject();
 		hs.discardElement(this.wrapper);
 	}
 	if (hs.mask) hs.mask.style.display = 'none';

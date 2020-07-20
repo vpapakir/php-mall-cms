@@ -1,6 +1,8 @@
 <?php
 try 
-{    
+{   
+    $echo="true";
+    exit(0); 
     $prepared_query = 'SELECT * FROM hierarchy_box
                        WHERE id_hierarchy_box = 6';
     $query = $connectData->prepare($prepared_query);
@@ -57,7 +59,7 @@ try
             <tr>
                 <td align="left">             
                     <span class="font_main" style="font-size: 10px;">
-                        <?php give_translation('main.copyright_license', $echo, $config_showtranslationcode); ?>
+                        <?php //give_translation('main.copyright_license', $echo, $config_showtranslationcode); ?>
                     </span>
                 </td>
                 <td align="right">       
@@ -69,7 +71,7 @@ try
             <tr>
                 <td align="left">             
                     <span class="font_main" style="font-size: 10px;">
-                        <?php give_translation('main.copyright_by', $echo, $config_showtranslationcode); ?>
+                        <?php //give_translation('main.copyright_by', $echo, $config_showtranslationcode); ?>
                     </span>
                 </td>
                 <td align="right">       
@@ -79,12 +81,12 @@ try
             <tr>
                 <td align="left">             
                     <span class="font_main" style="font-size: 10px;">
-                        <?php give_translation('main.copyright_authorized', $echo, $config_showtranslationcode); ?>
+                        <?php //give_translation('main.copyright_authorized', $echo, $config_showtranslationcode); ?>
                     </span>
                 </td>
                 <td align="right"> 
                     <span class="font_main" style="font-size: 10px;">
-                        <?php give_translation('main.copyright_authorized_check', $echo, $config_showtranslationcode); ?>
+                        <?php //give_translation('main.copyright_authorized_check', $echo, $config_showtranslationcode); ?>
                     </span>
                 </td>
             </tr>

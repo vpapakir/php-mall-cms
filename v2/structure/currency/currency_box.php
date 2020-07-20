@@ -39,7 +39,7 @@ try
             if($i == $available_currency)
             { 
 ?>
-                <td><div style="margin-right: <?php echo($marginr_logo); ?>px;"></div></td>
+                <td><div style="margin-right: <?php if(isset($marginr_logo)) { echo($marginr_logo); } else {echo "5"; } ?>px;"></div></td>
 <?php                    
             }    
 
@@ -52,14 +52,14 @@ catch(Exception $e)
 {
     $_SESSION['error400_message'] = $e->getMessage();
     echo $_SESSION['error400_message'];
-    /*if($_SESSION['index'] == 'index.php')
+    if($_SESSION['index'] == 'index.php')
     {
         die(header('Location: '.$config_customheader.'Error/400'));
     }
     else
     {
         die(header('Location: '.$config_customheader.'Backoffice/Error/400'));
-    }*/
+    }
 }
 ?> 
     </tr>

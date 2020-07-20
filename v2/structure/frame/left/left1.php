@@ -67,14 +67,14 @@ catch(Exception $e)
 {
     $_SESSION['error400_message'] = $e->getMessage();
     echo $_SESSION['error400_message'];
-    /*if($_SESSION['index'] == 'index.php')
+    if($_SESSION['index'] == 'index.php')
     {
         die(header('Location: '.$config_customheader.'Error/400'));
     }
     else
     {
         die(header('Location: '.$config_customheader.'Backoffice/Error/400'));
-    }*/
+    }
 }
 ?>
 
@@ -94,9 +94,9 @@ if($idbox_hierarchybox[0] != null && $idbox_hierarchybox[0] != 0)
                   cellpadding="<?php echo($cp_frame); ?>" cellspacing="<?php echo($cs_frame); ?>" border="0">                 
 <?php 
         }
-        
-        include('structure/box/'.$idbox_hierarchybox[$i].'.php');
-
+        # OLETHROS!!!
+        #include('structure/box/'.$idbox_hierarchybox[$i].'.php');
+	echo($idbox_hierarchybox[$i]." - ");
         if($i >= (count($idbox_hierarchybox) - 1))
         {
 ?>     

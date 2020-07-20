@@ -8,7 +8,7 @@ if(empty($main_iduser_log))
 
     include('structure/box/block_getinfo.php');
     include('structure/box/box_getinfo.php');
-    if($url_page != 'login_subscribe')
+    if(isset($url_page) && $url_page != 'login_subscribe')
     {
 ?>
     <tr>

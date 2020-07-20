@@ -41,7 +41,7 @@ try
             if($i == $available_language)
             { 
 ?>
-                <td><div style="margin-right: <?php echo($marginr_logo); ?>px;"></div></td>
+                <td><div style="margin-right: <?php if(isset($marginr_logo)) { echo($marginr_logo); } else {echo "5"; } ?>px;"></div></td>
 <?php                    
             }    
 

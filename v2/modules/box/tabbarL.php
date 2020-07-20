@@ -2,9 +2,7 @@
     unset($id_box_content, $code_box_content, $type_box_content, $typelink_box_content,
           $title_box_content, $link_box_content, $level_box_content, $margin_box_content,
           $position_box_content);
-    
-//for($y = 0, $count = count($id_hierarchybox); $y < $count; $y++)
-//{
+
     try 
     {  
         $prepared_query = 'SELECT * FROM hierarchy_box_content
@@ -32,7 +30,6 @@
             $x++;
         }
         
-        //echo(var_dump($typelink_box_content));
 ?>
         <tr>
             <td <?php if(!empty($tablebg_box)){ ?>style="background-color: <?php echo($tablebg_box); ?>;"<?php } ?> align="left">
@@ -174,14 +171,14 @@
     catch(Exception $e)
     {
         $_SESSION['error400_message'] = $e->getMessage();
-        /*if($_SESSION['index'] == 'index.php')
+        if($_SESSION['index'] == 'index.php')
         {
             die(header('Location: '.$config_customheader.'Error/400'));
         }
         else
         {
             die(header('Location: '.$config_customheader.'Backoffice/Error/400'));
-        }*/
+        }
     }
     
     unset($id_box_content, $code_box_content, $type_box_content, $typelink_box_content,
