@@ -4,7 +4,7 @@ try
     $prepared_query = 'SELECT * FROM structure_frame
                                WHERE id_frame = :id_frame
                                AND id_layout = :id_layout';
-    //if((checkrights($main_rights_log, '9', $redirection)) === true){ $_SESSION['prepared_query'] = $prepared_query; }
+    if((checkrights($main_rights_log, '9', $redirection)) === true){ $_SESSION['prepared_query'] = $prepared_query; }
     $query = $connectData->prepare($prepared_query);
     $query->execute(array(
                           'id_frame' => $array_id_frame[1],
@@ -62,14 +62,15 @@ try
 catch(Exception $e)
 {
     $_SESSION['error400_message'] = $e->getMessage();
-    if($_SESSION['index'] == 'index.php')
+    echo $_SESSION['error400_message'];
+    /*if($_SESSION['index'] == 'index.php')
     {
         die(header('Location: '.$config_customheader.'Error/400'));
     }
     else
     {
         die(header('Location: '.$config_customheader.$_SESSION['index'].'Backoffice/Error/400'));
-    }
+    }*/
 }
 ?>
 

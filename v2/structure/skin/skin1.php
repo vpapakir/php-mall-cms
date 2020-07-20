@@ -3,7 +3,7 @@ try
 { 
     $prepared_query = 'SELECT * FROM structure_skin
                             WHERE id_body = :id_body';
-    //if((checkrights($main_rights_log, '9', $redirection)) === true){ $_SESSION['prepared_query'] = $prepared_query; }
+    if((checkrights($main_rights_log, '9', $redirection)) === true){ $_SESSION['prepared_query'] = $prepared_query; }
     $query = $connectData->prepare($prepared_query);
     $query->bindParam('id_body', $id_body);
     $query->execute();
@@ -63,6 +63,7 @@ try
 catch(Exception $e)
 {
     $_SESSION['error400_message'] = $e->getMessage();
+    echo $_SESSION['error400_message'];
     if($_SESSION['index'] == 'index.php')
     {
         die(header('Location: '.$config_customheader.'Error/400'));
@@ -78,7 +79,7 @@ catch(Exception $e)
 <table style="width: <?php echo($width_skin); ?>; height: <?php echo($height_skin); ?>; 
        border: <?php echo($border_skin.' solid '.$bordercolor_skin); ?>;
        position: <?php echo($position_skin); ?>; margin: <?php echo($margin_skin); ?>;
-       /*background-image: url('<?php echo($config_customheader/*.$path_skin*/) ?>');*/ 
+       background-image: url('<?php echo($config_customheader.$path_skin) ?>');*/ 
        <?php if(!empty($repeat_skin)){ ?>background-repeat: <?php echo($repeat_skin) ?>;<?php } ?>
        <?php if(!empty($attachment_skin)){ ?>background-attachment: <?php echo($attachment_skin) ?>;<?php } ?>" 
        cellpadding="<?php echo($cp_skin); ?>" cellspacing="<?php echo($cs_skin); ?>">

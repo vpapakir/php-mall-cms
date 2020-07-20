@@ -49,17 +49,13 @@ include('modules/finance/currency/currency_switch.php');
 include('modules/stats/visit/statsvisit_main.php');
 include('config/config_valuerelated.php');
 
-#$_SESSION['current_page'] = trim(htmlspecialchars($_GET['page'], ENT_QUOTES));
-#$main_id_currency = $_SESSION['current_currency'];
-#$main_coef_currency = $_SESSION['current_coef_currency'];
-#$main_rate_currency = $_SESSION['current_rate_currency'];
-#$main_code_currency = $_SESSION['current_code_currency'];
-#$main_selectedcode_currency = $_SESSION['current_selectedcode_currency'];
-#$main_selectedsymbol_currency = $_SESSION['current_selectedsymbol_currency'];
-#$main_priority_currency = $_SESSION['current_priority_currency'];
-#$main_onlinestatus_log = $_SESSION['current_log_onlinestatususer'];
-#$blocktitle_box_structure = 21;
-#$blockcontent_box_structure = 22;
+if (isset($_GET['page'])) {
+	$_SESSION['current_page'] = trim(htmlspecialchars($_GET['page'], ENT_QUOTES));
+}
+
+if (isset($main_onlinestatus_log)) {
+	$main_onlinestatus_log = $_SESSION['current_log_onlinestatususer'];
+}
 
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"> 

@@ -6,7 +6,7 @@ try
                        INNER JOIN structure_template AS temp
                        ON font.id_font = temp.id_font
                        WHERE status_template = 1';
-    //if((checkrights($main_rights_log, '9', $redirection)) === true){ $_SESSION['prepared_query'] = $prepared_query; }
+    if((checkrights($main_rights_log, '9', $redirection)) === true){ $_SESSION['prepared_query'] = $prepared_query; }
     $query = $connectData->prepare($prepared_query);
     $query->execute();
     

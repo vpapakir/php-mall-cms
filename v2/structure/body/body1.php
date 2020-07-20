@@ -35,7 +35,7 @@ try
     
     if(($data = $query->fetch()) != false)
     {
-        $id_image_body = 1 /*$data['id_image']*/;
+        $id_image_body = $data['id_image'];
     }
     $query->closeCursor();
     

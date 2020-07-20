@@ -5,7 +5,7 @@ try
     $prepared_query = 'SELECT * FROM structure_frame
                                WHERE id_frame = :id_frame
                                AND id_layout = :id_layout';
-    //if((checkrights($main_rights_log, '9', $redirection)) === true){ $_SESSION['prepared_query'] = $prepared_query; }
+    if((checkrights($main_rights_log, '9', $redirection)) === true){ $_SESSION['prepared_query'] = $prepared_query; }
     $query = $connectData->prepare($prepared_query);
     $query->execute(array(
                           'id_frame' => $array_id_frame[0],
@@ -68,14 +68,15 @@ try
 catch(Exception $e)
 {
     $_SESSION['error400_message'] = $e->getMessage();
-    if($_SESSION['index'] == 'index.php')
+    echo $_SESSION['error400_message'];
+    /*if($_SESSION['index'] == 'index.php')
     {
         die(header('Location: '.$config_customheader.'Error/400'));
     }
     else
     {
         die(header('Location: '.$config_customheader.$_SESSION['index'].'Backoffice/Error/400'));
-    }
+    }*/
 }
 ?>
 
@@ -111,7 +112,7 @@ if($array_box[0] != null && $array_box[0] != 0)
             $prepared_query = 'SELECT * FROM structure_box
                                    WHERE id_box = :id_box
                                    AND id_frame LIKE \'%'.$array_id_frame[0].'%\'';
-            //if((checkrights($main_rights_log, '9', $redirection)) === true){ $_SESSION['prepared_query'] = $prepared_query; }
+            if((checkrights($main_rights_log, '9', $redirection)) === true){ $_SESSION['prepared_query'] = $prepared_query; }
             $query = $connectData->prepare($prepared_query);
             $query->bindParam('id_box', $array_box[$i]);
             $query->execute();
@@ -168,14 +169,14 @@ if($array_box[0] != null && $array_box[0] != 0)
         catch(Exception $e)
         {
             $_SESSION['error400_message'] = $e->getMessage();
-            if($_SESSION['index'] == 'index.php')
+            /*if($_SESSION['index'] == 'index.php')
             {
                 die(header('Location: '.$config_customheader.'Error/400'));
             }
             else
             {
                 die(header('Location: '.$config_customheader.$_SESSION['index'].'Backoffice/Error/400'));
-            }
+            }*/
         }
 ?> 
             <td style="background-color: <?php echo($tablebg_frame); ?>; vertical-align: top;">           

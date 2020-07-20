@@ -88,14 +88,15 @@ try
 catch(Exception $e)
 {
     $_SESSION['error400_message'] = $e->getMessage();
-    /*if($_SESSION['index'] == 'index.php')
+    echo $_SESSION['error400_message'];
+    if($_SESSION['index'] == 'index.php')
     {
         die(header('Location: '.$config_customheader.'Error/400'));
     }
     else
     {
         die(header('Location: '.$config_customheader.'Backoffice/Error/400'));
-    }*/
+    }
 }
 ?>
 <table style="width: <?php echo($width_section); ?>; height: <?php echo($height_section); ?>; 
@@ -119,23 +120,23 @@ catch(Exception $e)
             <tr>
                 <td align="<?php echo($align_logo); ?>" width="100%">
                     <?php
-                        //include('structure/logo/logo1.php');
+                        include('structure/logo/logo1.php');
                     ?>
                 </td>
                 <td align="<?php echo($align_logo); ?>">
                     <?php
-                        //include('structure/currency/currency_box.php');
+                        include('structure/currency/currency_box.php');
                     ?>
                 </td>
                 <td>
                     <?php
-                        //include('structure/box/11.php');
+                        include('structure/box/11.php');
                     ?>
                 </td>
                 <td><div style="width: 10px;"></div></td>
                 <td align="right">
                     <?php
-                        //include('structure/language/language_box.php');
+                        include('structure/language/language_box.php');
                     ?>
                 </td>
             </tr>
@@ -154,7 +155,7 @@ catch(Exception $e)
 <?php   
                         if($status_frame[6] == 1)
                         {
-                            //include('structure/frame/tabbar/tabbarL1.php');
+                            include('structure/frame/tabbar/tabbarL1.php');
                         }   
 ?>
                     </td>
@@ -163,7 +164,7 @@ catch(Exception $e)
 <?php                
                         if($status_frame[7] == 1)
                         {
-                            //include('structure/frame/tabbar/tabbarR1.php');
+                            include('structure/frame/tabbar/tabbarR1.php');
                         }
 ?>
                     </td>
@@ -177,7 +178,7 @@ catch(Exception $e)
     <tr>
         <td align="center" style="background-color: <?php echo($tablebg_section); ?>;">
             <?php
-                //include('structure/layout/layout1.php');
+                include('structure/layout/layout1.php');
             ?>
         </td>
     </tr>
@@ -188,7 +189,7 @@ catch(Exception $e)
         <tr>
         <td colspan="3" style="vertical-align: top;">
 <?php
-            //include('structure/frame/footer/footer1.php');
+            include('structure/frame/footer/footer1.php');
 ?>
         </td>
         </tr>
