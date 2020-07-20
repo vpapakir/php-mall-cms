@@ -178,7 +178,7 @@ catch(Exception $e)
     <tr>
         <td align="center" style="background-color: <?php echo($tablebg_section); ?>;">
             <?php
-                #include('structure/layout/layout1.php');
+                include('structure/layout/layout1.php');
             ?>
         </td>
     </tr>
@@ -189,7 +189,7 @@ catch(Exception $e)
         <tr>
         <td colspan="3" style="vertical-align: top;">
 <?php
-            #include('structure/frame/footer/footer1.php');
+            include('structure/frame/footer/footer1.php');
 ?>
         </td>
         </tr>

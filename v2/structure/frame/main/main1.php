@@ -169,14 +169,14 @@ if($array_box[0] != null && $array_box[0] != 0)
         catch(Exception $e)
         {
             $_SESSION['error400_message'] = $e->getMessage();
-            /*if($_SESSION['index'] == 'index.php')
+            if($_SESSION['index'] == 'index.php')
             {
                 die(header('Location: '.$config_customheader.'Error/400'));
             }
             else
             {
                 die(header('Location: '.$config_customheader.$_SESSION['index'].'Backoffice/Error/400'));
-            }*/
+            }
         }
 ?> 
             <td style="background-color: <?php echo($tablebg_frame); ?>; vertical-align: top;">           
@@ -187,7 +187,7 @@ if($array_box[0] != null && $array_box[0] != 0)
                    cellpadding="<?php echo($cp_box); ?>" cellspacing="<?php echo($cs_box); ?>">
 
 <?php
-                   include('structure/box/'.$id_box.'.php');
+                   #include('structure/box/'.$id_box.'.php');
 ?>
             
             </table>
