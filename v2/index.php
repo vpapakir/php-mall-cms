@@ -120,14 +120,13 @@ include('config/config_valuerelated.php');
         <script type="text/javascript" src="<?php echo($config_customheader); ?>external_modules/popup/highslide/highslide.config.js" charset="utf-8"></script>
         <script type="text/javascript" src="<?php echo($config_customheader); ?>external_modules/popup/highslide/highslide.js"></script>
         <link rel="stylesheet" type="text/css" href="<?php echo($config_customheader); ?>external_modules/popup/highslide/highslide.css"/>      
-        <?php
-            //include('modules/css/font.php');
-            //include('modules/css/button.php');
-            //include('modules/css/block.php');
-        ?>        
+<?php
+        include('modules/css/font.php');
+        include('modules/css/button.php');
+        include('modules/css/block.php');
+?>        
     </head>             
-        <?php 
-		//get language cookie            
-		include('structure/body/body1.php');
-        ?>
+<?php 
+	include('structure/body/body1.php');
+?>
 </html>

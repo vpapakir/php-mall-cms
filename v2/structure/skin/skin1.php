@@ -78,7 +78,7 @@ catch(Exception $e)
 <table style="width: <?php echo($width_skin); ?>; height: <?php echo($height_skin); ?>; 
        border: <?php echo($border_skin.' solid '.$bordercolor_skin); ?>;
        position: <?php echo($position_skin); ?>; margin: <?php echo($margin_skin); ?>;
-       background-image: url('<?php echo($config_customheader.$path_skin) ?>'); 
+       /*background-image: url('<?php echo($config_customheader/*.$path_skin*/) ?>');*/ 
        <?php if(!empty($repeat_skin)){ ?>background-repeat: <?php echo($repeat_skin) ?>;<?php } ?>
        <?php if(!empty($attachment_skin)){ ?>background-attachment: <?php echo($attachment_skin) ?>;<?php } ?>" 
        cellpadding="<?php echo($cp_skin); ?>" cellspacing="<?php echo($cs_skin); ?>">
@@ -86,7 +86,7 @@ catch(Exception $e)
     <tr style="background-color: <?php echo($tablebg_skin); ?>;">
         <td align="center" style="vertical-align: top;">       
             <?php         
-            include('structure/section/section1.php');
+            	include('structure/section/section1.php');
             ?>
         </td>
     </tr>
