@@ -1,0 +1,2064 @@
+AddType text/x-component .htc
+
+# Follow symbolic links :
+Options +FollowSymlinks
+
+# URL Rewriting is activated :
+RewriteEngine On
+
+# FR
+
+RewriteRule ^fr/$   index.php?page=home_frontend&lang=1 [L]
+RewriteRule ^fr/$   index_backoffice.php?page=home_backoffice&lang=1 [L]
+RewriteRule ^fr$   index.php?page=home_frontend&lang=1 [L]
+RewriteRule ^fr$   index_backoffice.php?page=home_backoffice&lang=1 [L]
+
+# CDR éditeur
+RewriteRule ^gestion/cdreditor$   index.php?page=cdreditor [L]
+RewriteRule ^backoffice/gestion/cdreditor$   index_backoffice.php?page=cdreditor [L]
+
+# Gestion des pages
+RewriteRule ^gestion/page$   index.php?page=page_edit [L]
+RewriteRule ^backoffice/gestion/page$   index_backoffice.php?page=page_edit [L]
+
+# Hierarchie des menus
+RewriteRule ^Gestion/Sitemap$   index.php?page=sitemap [L]
+RewriteRule ^Backoffice/Gestion/Sitemap$   index_backoffice.php?page=sitemap [L]
+
+# Gestion structure et styles
+RewriteRule ^Gestion/Structure$   index.php?page=edit_structure [L]
+RewriteRule ^Backoffice/Gestion/Structure$   index_backoffice.php?page=edit_structure [L]
+
+# Gestion des langues
+RewriteRule ^Gestion/Langues$   index.php?page=edit_language [L]
+RewriteRule ^Backoffice/Gestion/Langues$   index_backoffice.php?page=edit_language [L]
+
+# Edition des couleurs
+RewriteRule ^Gestion/Couleur$   index.php?page=edit_color [L]
+RewriteRule ^Backoffice/Gestion/Couleur$   index_backoffice.php?page=edit_color [L]
+
+# Gestion des traductions
+RewriteRule ^Gestion/Traductions$   index.php?page=edit_translation [L]
+RewriteRule ^Backoffice/Gestion/Traductions$   index_backoffice.php?page=edit_translation [L]
+
+# Gestion des Items
+RewriteRule ^Gestion/Item$   index.php?page=edit_item [L]
+RewriteRule ^Backoffice/Gestion/Item$   index_backoffice.php?page=edit_item [L]
+
+# Memo
+RewriteRule ^edit_memo$   index.php?page=edit_memo [L]
+RewriteRule ^backoffice/edit_memo$   index_backoffice.php?page=edit_memo [L]
+
+# Gestion des produits
+RewriteRule ^gestion/produit$   index.php?page=edit_product [L]
+RewriteRule ^backoffice/gestion/produit$   index_backoffice.php?page=edit_product [L]
+
+# Gestion des devises
+RewriteRule ^gestion/devise$   index.php?page=currency_edit [L]
+RewriteRule ^backoffice/gestion/devise$   index_backoffice.php?page=currency_edit [L]
+
+# Gestion des emails
+RewriteRule ^mail_edit$   index.php?page=mail_edit [L]
+RewriteRule ^backoffice/mail_edit$   index_backoffice.php?page=mail_edit [L]
+
+# Gestion signature
+RewriteRule ^signature_edit$   index.php?page=signature_edit [L]
+RewriteRule ^backoffice/signature_edit$   index_backoffice.php?page=signature_edit [L]
+
+# Gestion des publicités
+RewriteRule ^advertising_edit$   index.php?page=advertising_edit [L]
+RewriteRule ^backoffice/advertising_edit$   index_backoffice.php?page=advertising_edit [L]
+
+# Statistiques des pages
+RewriteRule ^stats_page$   index.php?page=stats_page [L]
+RewriteRule ^backoffice/stats_page$   index_backoffice.php?page=stats_page [L]
+
+# Statistiques des visites
+RewriteRule ^stats_visit$   index.php?page=stats_visit [L]
+RewriteRule ^backoffice/stats_visit$   index_backoffice.php?page=stats_visit [L]
+
+# Liste des utilisateurs inscrits
+RewriteRule ^user_edit$   index.php?page=user_edit [L]
+RewriteRule ^backoffice/user_edit$   index_backoffice.php?page=user_edit [L]
+
+# Mailing
+RewriteRule ^user_mailing$   index.php?page=user_mailing [L]
+RewriteRule ^backoffice/user_mailing$   index_backoffice.php?page=user_mailing [L]
+
+# Gestion des messages
+RewriteRule ^message_edit$   index.php?page=message_edit [L]
+RewriteRule ^backoffice/message_edit$   index_backoffice.php?page=message_edit [L]
+
+# Liste des traductions manquantes
+RewriteRule ^property_translation$   index.php?page=property_translation [L]
+RewriteRule ^backoffice/property_translation$   index_backoffice.php?page=property_translation [L]
+
+# Gestion des principaux paramètres
+RewriteRule ^adminconfig_edit$   index.php?page=adminconfig_edit [L]
+RewriteRule ^backoffice/adminconfig_edit$   index_backoffice.php?page=adminconfig_edit [L]
+
+# Module Management
+RewriteRule ^new_module$   index.php?page=new_module [L]
+RewriteRule ^backoffice/new_module$   index_backoffice.php?page=new_module [L]
+
+# Types de produit
+RewriteRule ^product_type$   index.php?page=product_type [L]
+RewriteRule ^backoffice/product_type$   index_backoffice.php?page=product_type [L]
+
+# Editeur des matrix
+RewriteRule ^matrix_edit$   index.php?page=matrix_edit [L]
+RewriteRule ^backoffice/matrix_edit$   index_backoffice.php?page=matrix_edit [L]
+
+# Erreur 400
+RewriteRule ^Error/400$   index.php?page=error400 [L]
+RewriteRule ^Backoffice/Error/400$   index_backoffice.php?page=error400 [L]
+
+# Erreur 404
+RewriteRule ^Error/404$   index.php?page=error404 [L]
+RewriteRule ^Backoffice/Error/404$   index_backoffice.php?page=error404 [L]
+
+# Page d´accueil
+RewriteRule ^Accueil$   index.php?page=home_frontend [L]
+RewriteRule ^Accueil$   index_backoffice.php?page=home_frontend [L]
+
+# Accueil Backoffice
+RewriteRule ^Backoffice/Accueil$   index.php?page=home_backoffice [L]
+RewriteRule ^Backoffice/Accueil$   index_backoffice.php?page=home_backoffice [L]
+
+# Gestion des images
+RewriteRule ^edit_image$   index.php?page=edit_image [L]
+RewriteRule ^backoffice/edit_image$   index_backoffice.php?page=edit_image [L]
+
+# Geo éditeur
+RewriteRule ^gestion/geoedit$   index.php?page=cdrgeo [L]
+RewriteRule ^backoffice/gestion/geoedit$   index_backoffice.php?page=cdrgeo [L]
+
+# Erreur 401
+RewriteRule ^error401$   index.php?page=error401 [L]
+RewriteRule ^backoffice/error401$   index_backoffice.php?page=error401 [L]
+
+# Erreur 403
+RewriteRule ^error403$   index.php?page=error403 [L]
+RewriteRule ^backoffice/error403$   index_backoffice.php?page=error403 [L]
+
+# Erreur 500
+RewriteRule ^error500$   index.php?page=error500 [L]
+RewriteRule ^backoffice/error500$   index_backoffice.php?page=error500 [L]
+
+# Gestion messages (traductions)
+RewriteRule ^messages$   index.php?page=messages [L]
+RewriteRule ^backoffice/messages$   index_backoffice.php?page=messages [L]
+
+# footer
+RewriteRule ^footer$   index.php?page=footer [L]
+RewriteRule ^backoffice/footer$   index_backoffice.php?page=footer [L]
+
+# Inscription
+RewriteRule ^subscription$   index.php?page=subscription [L]
+RewriteRule ^backoffice/subscription$   index_backoffice.php?page=subscription [L]
+
+# lingerie
+RewriteRule ^information$   index.php?page=lingerie [L]
+RewriteRule ^backoffice/information$   index_backoffice.php?page=lingerie [L]
+
+# Mon compte
+RewriteRule ^myaccount$   index.php?page=myaccount [L]
+RewriteRule ^backoffice/myaccount$   index_backoffice.php?page=myaccount [L]
+
+# Formulaire de contact
+RewriteRule ^contact_main$   index.php?page=contact_main [L]
+RewriteRule ^backoffice/contact_main$   index_backoffice.php?page=contact_main [L]
+
+# Connexion à mon compte
+RewriteRule ^login_subscribe$   index.php?page=login_subscribe [L]
+RewriteRule ^backoffice/login_subscribe$   index_backoffice.php?page=login_subscribe [L]
+
+# Modification de mon adresse email
+RewriteRule ^myaccount_email_edit$   index.php?page=myaccount_email_edit [L]
+RewriteRule ^backoffice/myaccount_email_edit$   index_backoffice.php?page=myaccount_email_edit [L]
+
+# Modification de mon mot de passe
+RewriteRule ^myaccount_pwd_edit$   index.php?page=myaccount_pwd_edit [L]
+RewriteRule ^backoffice/myaccount_pwd_edit$   index_backoffice.php?page=myaccount_pwd_edit [L]
+
+# Formulaire de contact
+RewriteRule ^formulaire-contact$   index.php?page=form_contactmain [L]
+RewriteRule ^backoffice/formulaire-contact$   index_backoffice.php?page=form_contactmain [L]
+
+# Mentions légales
+RewriteRule ^disclaimer$   index.php?page=disclaimer [L]
+RewriteRule ^backoffice/disclaimer$   index_backoffice.php?page=disclaimer [L]
+
+# Modification de vos coordonnées
+RewriteRule ^myaccount_address_edit$   index.php?page=myaccount_address_edit [L]
+RewriteRule ^backoffice/myaccount_address_edit$   index_backoffice.php?page=myaccount_address_edit [L]
+
+# Récupération du mot de passe
+RewriteRule ^forgotten_pwd$   index.php?page=forgotten_pwd [L]
+RewriteRule ^backoffice/forgotten_pwd$   index_backoffice.php?page=forgotten_pwd [L]
+
+# Récupération du mot de passe (partie 2)
+RewriteRule ^forgotten_pwd_part2$   index.php?page=forgotten_pwd_part2 [L]
+RewriteRule ^backoffice/forgotten_pwd_part2$   index_backoffice.php?page=forgotten_pwd_part2 [L]
+
+# Résultat de votre recherche
+RewriteRule ^search_main$   index.php?page=search_main [L]
+RewriteRule ^backoffice/search_main$   index_backoffice.php?page=search_main [L]
+
+# Clipboard
+RewriteRule ^clipboard$   index.php?page=clipboard [L]
+RewriteRule ^backoffice/clipboard$   index_backoffice.php?page=clipboard [L]
+
+# print_footer
+RewriteRule ^footer_print$   index.php?page=print_footer [L]
+RewriteRule ^backoffice/footer_print$   index_backoffice.php?page=print_footer [L]
+
+# print_header
+RewriteRule ^print_header$   index.php?page=print_header [L]
+RewriteRule ^backoffice/print_header$   index_backoffice.php?page=print_header [L]
+
+# Gestion mots interdits
+RewriteRule ^dirtyword_edit$   index.php?page=dirtyword_edit [L]
+RewriteRule ^backoffice/dirtyword_edit$   index_backoffice.php?page=dirtyword_edit [L]
+
+# some_page
+RewriteRule ^some_page$   index.php?page=some_page [L]
+RewriteRule ^backoffice/some_page$   index_backoffice.php?page=some_page [L]
+
+# Editeur des niveaux
+RewriteRule ^produites_categories$   index.php?page=product_groups [L]
+RewriteRule ^backoffice/produites_categories$   index_backoffice.php?page=product_groups [L]
+
+# some_page_3
+RewriteRule ^some_page_3$   index.php?page=some_page_3 [L]
+RewriteRule ^backoffice/some_page_3$   index_backoffice.php?page=some_page_3 [L]
+
+# Ventes
+RewriteRule ^ventes$   index.php?page=quick_search [L]
+RewriteRule ^backoffice/ventes$   index_backoffice.php?page=quick_search [L]
+
+# test10
+RewriteRule ^test10$   index.php?page=test10 [L]
+RewriteRule ^backoffice/test10$   index_backoffice.php?page=test10 [L]
+
+# Liste Des Produits
+RewriteRule ^product_listing$   index.php?page=product_listing [L]
+RewriteRule ^backoffice/product_listing$   index_backoffice.php?page=product_listing [L]
+
+# Détails du produit
+RewriteRule ^product_details$   index.php?page=product_details [L]
+RewriteRule ^backoffice/product_details$   index_backoffice.php?page=product_details [L]
+
+# Coffret Coquin Orale Passion
+RewriteRule ^coffret-coquin-orale-passion$   index.php?page=830039 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=830039 [L]
+
+# 999999
+RewriteRule ^$   index.php?page=999999 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=999999 [L]
+
+# 999998
+RewriteRule ^$   index.php?page=999998 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=999998 [L]
+
+# 999997
+RewriteRule ^$   index.php?page=999997 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=999997 [L]
+
+# 999996
+RewriteRule ^$   index.php?page=999996 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=999996 [L]
+
+# 999995
+RewriteRule ^$   index.php?page=999995 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=999995 [L]
+
+# 999994
+RewriteRule ^$   index.php?page=999994 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=999994 [L]
+
+# 999993
+RewriteRule ^$   index.php?page=999993 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=999993 [L]
+
+# 999992
+RewriteRule ^$   index.php?page=999992 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=999992 [L]
+
+# 990099
+RewriteRule ^$   index.php?page=990099 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=990099 [L]
+
+# 990098
+RewriteRule ^$   index.php?page=990098 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=990098 [L]
+
+# 990097
+RewriteRule ^$   index.php?page=990097 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=990097 [L]
+
+# 990096
+RewriteRule ^$   index.php?page=990096 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=990096 [L]
+
+# 990095
+RewriteRule ^$   index.php?page=990095 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=990095 [L]
+
+# 990094
+RewriteRule ^$   index.php?page=990094 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=990094 [L]
+
+# 990093
+RewriteRule ^$   index.php?page=990093 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=990093 [L]
+
+# prod1
+RewriteRule ^$   index.php?page=prod1 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=prod1 [L]
+
+# prod2
+RewriteRule ^$   index.php?page=prod2 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=prod2 [L]
+
+# prod3
+RewriteRule ^$   index.php?page=prod3 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=prod3 [L]
+
+# prod4
+RewriteRule ^$   index.php?page=prod4 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=prod4 [L]
+
+# prod5
+RewriteRule ^$   index.php?page=prod5 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=prod5 [L]
+
+# product6
+RewriteRule ^$   index.php?page=product6 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=product6 [L]
+
+# prod7
+RewriteRule ^$   index.php?page=prod7 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=prod7 [L]
+
+# prod9
+RewriteRule ^$   index.php?page=prod9 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=prod9 [L]
+
+# prod10
+RewriteRule ^$   index.php?page=prod10 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=prod10 [L]
+
+# prod20
+RewriteRule ^$   index.php?page=prod20 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=prod20 [L]
+
+# prod21
+RewriteRule ^$   index.php?page=prod21 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=prod21 [L]
+
+# eeee
+RewriteRule ^$   index.php?page=eeee [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=eeee [L]
+
+# ererer
+RewriteRule ^$   index.php?page=ererer [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=ererer [L]
+
+# test5
+RewriteRule ^$   index.php?page=test5 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=test5 [L]
+
+# vvvvv
+RewriteRule ^$   index.php?page=vvvvv [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=vvvvv [L]
+
+# test56
+RewriteRule ^$   index.php?page=test56 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=test56 [L]
+
+# test57
+RewriteRule ^$   index.php?page=test57 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=test57 [L]
+
+# test58
+RewriteRule ^$   index.php?page=test58 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=test58 [L]
+
+# test78
+RewriteRule ^$   index.php?page=test78 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=test78 [L]
+
+# test567
+RewriteRule ^$   index.php?page=test567 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=test567 [L]
+
+# test566
+RewriteRule ^$   index.php?page=test566 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=test566 [L]
+
+# test555
+RewriteRule ^$   index.php?page=test555 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=test555 [L]
+
+# test444
+RewriteRule ^$   index.php?page=test444 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=test444 [L]
+
+# test4444
+RewriteRule ^$   index.php?page=test4444 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=test4444 [L]
+
+# 999993545
+RewriteRule ^$   index.php?page=999993545 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=999993545 [L]
+
+# EN
+
+RewriteRule ^en/$   index.php?page=home_frontend&lang=2 [L]
+RewriteRule ^en/$   index_backoffice.php?page=home_backoffice&lang=2 [L]
+RewriteRule ^en$   index.php?page=home_frontend&lang=2 [L]
+RewriteRule ^en$   index_backoffice.php?page=home_backoffice&lang=2 [L]
+
+# CDR editor
+RewriteRule ^edition/cdreditor$   index.php?page=cdreditor [L]
+RewriteRule ^backoffice/edition/cdreditor$   index_backoffice.php?page=cdreditor [L]
+
+# Page editor
+RewriteRule ^gestion/page$   index.php?page=page_edit [L]
+RewriteRule ^backoffice/gestion/page$   index_backoffice.php?page=page_edit [L]
+
+# Sitemap editor
+RewriteRule ^Gestion/Sitemap$   index.php?page=sitemap [L]
+RewriteRule ^Backoffice/Gestion/Sitemap$   index_backoffice.php?page=sitemap [L]
+
+# Structure - and style editor
+RewriteRule ^Gestion/Structure$   index.php?page=edit_structure [L]
+RewriteRule ^Backoffice/Gestion/Structure$   index_backoffice.php?page=edit_structure [L]
+
+# Language editor
+RewriteRule ^Gestion/Langues$   index.php?page=edit_language [L]
+RewriteRule ^Backoffice/Gestion/Langues$   index_backoffice.php?page=edit_language [L]
+
+# Color editor
+RewriteRule ^Gestion/Couleur$   index.php?page=edit_color [L]
+RewriteRule ^Backoffice/Gestion/Couleur$   index_backoffice.php?page=edit_color [L]
+
+# Translation editor
+RewriteRule ^Gestion/Traductions$   index.php?page=edit_translation [L]
+RewriteRule ^Backoffice/Gestion/Traductions$   index_backoffice.php?page=edit_translation [L]
+
+# Item editor
+RewriteRule ^Gestion/Item$   index.php?page=edit_item [L]
+RewriteRule ^Backoffice/Gestion/Item$   index_backoffice.php?page=edit_item [L]
+
+# Memo
+RewriteRule ^edit_memo$   index.php?page=edit_memo [L]
+RewriteRule ^backoffice/edit_memo$   index_backoffice.php?page=edit_memo [L]
+
+# Product editor
+RewriteRule ^edition/product$   index.php?page=edit_product [L]
+RewriteRule ^backoffice/edition/product$   index_backoffice.php?page=edit_product [L]
+
+# Currency editor
+RewriteRule ^edition/currency$   index.php?page=currency_edit [L]
+RewriteRule ^backoffice/edition/currency$   index_backoffice.php?page=currency_edit [L]
+
+# mail_edit
+RewriteRule ^mail_edit$   index.php?page=mail_edit [L]
+RewriteRule ^backoffice/mail_edit$   index_backoffice.php?page=mail_edit [L]
+
+# signature_edit
+RewriteRule ^signature_edit$   index.php?page=signature_edit [L]
+RewriteRule ^backoffice/signature_edit$   index_backoffice.php?page=signature_edit [L]
+
+# advertising_edit
+RewriteRule ^advertising_edit$   index.php?page=advertising_edit [L]
+RewriteRule ^backoffice/advertising_edit$   index_backoffice.php?page=advertising_edit [L]
+
+# Page Statistics
+RewriteRule ^stats_page$   index.php?page=stats_page [L]
+RewriteRule ^backoffice/stats_page$   index_backoffice.php?page=stats_page [L]
+
+# stats_visit
+RewriteRule ^stats_visit$   index.php?page=stats_visit [L]
+RewriteRule ^backoffice/stats_visit$   index_backoffice.php?page=stats_visit [L]
+
+# user_edit
+RewriteRule ^user_edit$   index.php?page=user_edit [L]
+RewriteRule ^backoffice/user_edit$   index_backoffice.php?page=user_edit [L]
+
+# user_mailing
+RewriteRule ^user_mailing$   index.php?page=user_mailing [L]
+RewriteRule ^backoffice/user_mailing$   index_backoffice.php?page=user_mailing [L]
+
+# message_edit
+RewriteRule ^message_edit$   index.php?page=message_edit [L]
+RewriteRule ^backoffice/message_edit$   index_backoffice.php?page=message_edit [L]
+
+# property_translation
+RewriteRule ^property_translation$   index.php?page=property_translation [L]
+RewriteRule ^backoffice/property_translation$   index_backoffice.php?page=property_translation [L]
+
+# Main Parameters
+RewriteRule ^adminconfig_edit$   index.php?page=adminconfig_edit [L]
+RewriteRule ^backoffice/adminconfig_edit$   index_backoffice.php?page=adminconfig_edit [L]
+
+# Module Management
+RewriteRule ^new_module$   index.php?page=new_module [L]
+RewriteRule ^backoffice/new_module$   index_backoffice.php?page=new_module [L]
+
+# Product types
+RewriteRule ^product_type$   index.php?page=product_type [L]
+RewriteRule ^backoffice/product_type$   index_backoffice.php?page=product_type [L]
+
+# Matrix editor
+RewriteRule ^matrix_edit$   index.php?page=matrix_edit [L]
+RewriteRule ^backoffice/matrix_edit$   index_backoffice.php?page=matrix_edit [L]
+
+# Error 400
+RewriteRule ^Error/400$   index.php?page=error400 [L]
+RewriteRule ^Backoffice/Error/400$   index_backoffice.php?page=error400 [L]
+
+# Error 404
+RewriteRule ^Error/404$   index.php?page=error404 [L]
+RewriteRule ^Backoffice/Error/404$   index_backoffice.php?page=error404 [L]
+
+# Frontend home
+RewriteRule ^Accueil$   index.php?page=home_frontend [L]
+RewriteRule ^Accueil$   index_backoffice.php?page=home_frontend [L]
+
+# Backoffice home
+RewriteRule ^Backoffice/Accueil$   index.php?page=home_backoffice [L]
+RewriteRule ^Backoffice/Accueil$   index_backoffice.php?page=home_backoffice [L]
+
+# Image editor
+RewriteRule ^edit_image$   index.php?page=edit_image [L]
+RewriteRule ^backoffice/edit_image$   index_backoffice.php?page=edit_image [L]
+
+# Geo editor
+RewriteRule ^edition/geoedit$   index.php?page=cdrgeo [L]
+RewriteRule ^backoffice/edition/geoedit$   index_backoffice.php?page=cdrgeo [L]
+
+# Error 401
+RewriteRule ^error401$   index.php?page=error401 [L]
+RewriteRule ^backoffice/error401$   index_backoffice.php?page=error401 [L]
+
+# Error 403
+RewriteRule ^error403$   index.php?page=error403 [L]
+RewriteRule ^backoffice/error403$   index_backoffice.php?page=error403 [L]
+
+# Error 500
+RewriteRule ^error500$   index.php?page=error500 [L]
+RewriteRule ^backoffice/error500$   index_backoffice.php?page=error500 [L]
+
+# Notification editor
+RewriteRule ^messages$   index.php?page=messages [L]
+RewriteRule ^backoffice/messages$   index_backoffice.php?page=messages [L]
+
+# footer
+RewriteRule ^footer$   index.php?page=footer [L]
+RewriteRule ^backoffice/footer$   index_backoffice.php?page=footer [L]
+
+# subscription
+RewriteRule ^subscription$   index.php?page=subscription [L]
+RewriteRule ^backoffice/subscription$   index_backoffice.php?page=subscription [L]
+
+# lingerie
+RewriteRule ^information$   index.php?page=lingerie [L]
+RewriteRule ^backoffice/information$   index_backoffice.php?page=lingerie [L]
+
+# MyAccount
+RewriteRule ^myaccount$   index.php?page=myaccount [L]
+RewriteRule ^backoffice/myaccount$   index_backoffice.php?page=myaccount [L]
+
+# contact_main
+RewriteRule ^contact_main$   index.php?page=contact_main [L]
+RewriteRule ^backoffice/contact_main$   index_backoffice.php?page=contact_main [L]
+
+# login_subscribe
+RewriteRule ^login_subscribe$   index.php?page=login_subscribe [L]
+RewriteRule ^backoffice/login_subscribe$   index_backoffice.php?page=login_subscribe [L]
+
+# myaccount_email_edit
+RewriteRule ^myaccount_email_edit$   index.php?page=myaccount_email_edit [L]
+RewriteRule ^backoffice/myaccount_email_edit$   index_backoffice.php?page=myaccount_email_edit [L]
+
+# myaccount_pwd_edit
+RewriteRule ^myaccount_pwd_edit$   index.php?page=myaccount_pwd_edit [L]
+RewriteRule ^backoffice/myaccount_pwd_edit$   index_backoffice.php?page=myaccount_pwd_edit [L]
+
+# form_contactmain
+RewriteRule ^form_contactmain$   index.php?page=form_contactmain [L]
+RewriteRule ^backoffice/form_contactmain$   index_backoffice.php?page=form_contactmain [L]
+
+# disclaimer
+RewriteRule ^disclaimer$   index.php?page=disclaimer [L]
+RewriteRule ^backoffice/disclaimer$   index_backoffice.php?page=disclaimer [L]
+
+# myaccount_address_edit
+RewriteRule ^myaccount_address_edit$   index.php?page=myaccount_address_edit [L]
+RewriteRule ^backoffice/myaccount_address_edit$   index_backoffice.php?page=myaccount_address_edit [L]
+
+# forgotten_pwd
+RewriteRule ^forgotten_pwd$   index.php?page=forgotten_pwd [L]
+RewriteRule ^backoffice/forgotten_pwd$   index_backoffice.php?page=forgotten_pwd [L]
+
+# forgotten_pwd_part2
+RewriteRule ^forgotten_pwd_part2$   index.php?page=forgotten_pwd_part2 [L]
+RewriteRule ^backoffice/forgotten_pwd_part2$   index_backoffice.php?page=forgotten_pwd_part2 [L]
+
+# search_main
+RewriteRule ^search_main$   index.php?page=search_main [L]
+RewriteRule ^backoffice/search_main$   index_backoffice.php?page=search_main [L]
+
+# clipboard
+RewriteRule ^clipboard$   index.php?page=clipboard [L]
+RewriteRule ^backoffice/clipboard$   index_backoffice.php?page=clipboard [L]
+
+# print_footer
+RewriteRule ^footer_print$   index.php?page=print_footer [L]
+RewriteRule ^backoffice/footer_print$   index_backoffice.php?page=print_footer [L]
+
+# print_header
+RewriteRule ^print_header$   index.php?page=print_header [L]
+RewriteRule ^backoffice/print_header$   index_backoffice.php?page=print_header [L]
+
+# Forbidden words management
+RewriteRule ^dirtyword_edit$   index.php?page=dirtyword_edit [L]
+RewriteRule ^backoffice/dirtyword_edit$   index_backoffice.php?page=dirtyword_edit [L]
+
+# Some Page from Vangelis
+RewriteRule ^some_page$   index.php?page=some_page [L]
+RewriteRule ^backoffice/some_page$   index_backoffice.php?page=some_page [L]
+
+# Level Editor
+RewriteRule ^produites_categories$   index.php?page=product_groups [L]
+RewriteRule ^backoffice/produites_categories$   index_backoffice.php?page=product_groups [L]
+
+# some_page_3
+RewriteRule ^some_page_3$   index.php?page=some_page_3 [L]
+RewriteRule ^backoffice/some_page_3$   index_backoffice.php?page=some_page_3 [L]
+
+# Sales
+RewriteRule ^sales$   index.php?page=quick_search [L]
+RewriteRule ^backoffice/sales$   index_backoffice.php?page=quick_search [L]
+
+# test10
+RewriteRule ^test10$   index.php?page=test10 [L]
+RewriteRule ^backoffice/test10$   index_backoffice.php?page=test10 [L]
+
+# Product Listing
+RewriteRule ^product_listing$   index.php?page=product_listing [L]
+RewriteRule ^backoffice/product_listing$   index_backoffice.php?page=product_listing [L]
+
+# Product details
+RewriteRule ^product_details$   index.php?page=product_details [L]
+RewriteRule ^backoffice/product_details$   index_backoffice.php?page=product_details [L]
+
+# Coffret Coquin Orale Passion
+RewriteRule ^coffret-coquin-orale-passion$   index.php?page=830039 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=830039 [L]
+
+# 999999
+RewriteRule ^$   index.php?page=999999 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=999999 [L]
+
+# 999998
+RewriteRule ^$   index.php?page=999998 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=999998 [L]
+
+# 999997
+RewriteRule ^$   index.php?page=999997 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=999997 [L]
+
+# 999996
+RewriteRule ^$   index.php?page=999996 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=999996 [L]
+
+# 999995
+RewriteRule ^$   index.php?page=999995 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=999995 [L]
+
+# 999994
+RewriteRule ^$   index.php?page=999994 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=999994 [L]
+
+# 999993
+RewriteRule ^$   index.php?page=999993 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=999993 [L]
+
+# 999992
+RewriteRule ^$   index.php?page=999992 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=999992 [L]
+
+# 990099
+RewriteRule ^$   index.php?page=990099 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=990099 [L]
+
+# 990098
+RewriteRule ^$   index.php?page=990098 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=990098 [L]
+
+# 990097
+RewriteRule ^$   index.php?page=990097 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=990097 [L]
+
+# 990096
+RewriteRule ^$   index.php?page=990096 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=990096 [L]
+
+# 990095
+RewriteRule ^$   index.php?page=990095 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=990095 [L]
+
+# 990094
+RewriteRule ^$   index.php?page=990094 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=990094 [L]
+
+# 990093
+RewriteRule ^$   index.php?page=990093 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=990093 [L]
+
+# prod1
+RewriteRule ^$   index.php?page=prod1 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=prod1 [L]
+
+# prod2
+RewriteRule ^$   index.php?page=prod2 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=prod2 [L]
+
+# prod3
+RewriteRule ^$   index.php?page=prod3 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=prod3 [L]
+
+# prod4
+RewriteRule ^$   index.php?page=prod4 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=prod4 [L]
+
+# prod5
+RewriteRule ^$   index.php?page=prod5 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=prod5 [L]
+
+# product6
+RewriteRule ^$   index.php?page=product6 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=product6 [L]
+
+# prod7
+RewriteRule ^$   index.php?page=prod7 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=prod7 [L]
+
+# prod9
+RewriteRule ^$   index.php?page=prod9 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=prod9 [L]
+
+# prod10
+RewriteRule ^$   index.php?page=prod10 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=prod10 [L]
+
+# prod20
+RewriteRule ^$   index.php?page=prod20 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=prod20 [L]
+
+# prod21
+RewriteRule ^$   index.php?page=prod21 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=prod21 [L]
+
+# eeee
+RewriteRule ^$   index.php?page=eeee [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=eeee [L]
+
+# ererer
+RewriteRule ^$   index.php?page=ererer [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=ererer [L]
+
+# test5
+RewriteRule ^$   index.php?page=test5 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=test5 [L]
+
+# vvvvv
+RewriteRule ^$   index.php?page=vvvvv [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=vvvvv [L]
+
+# test56
+RewriteRule ^$   index.php?page=test56 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=test56 [L]
+
+# test57
+RewriteRule ^$   index.php?page=test57 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=test57 [L]
+
+# test58
+RewriteRule ^$   index.php?page=test58 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=test58 [L]
+
+# test78
+RewriteRule ^$   index.php?page=test78 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=test78 [L]
+
+# test567
+RewriteRule ^$   index.php?page=test567 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=test567 [L]
+
+# test566
+RewriteRule ^$   index.php?page=test566 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=test566 [L]
+
+# test555
+RewriteRule ^$   index.php?page=test555 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=test555 [L]
+
+# test444
+RewriteRule ^$   index.php?page=test444 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=test444 [L]
+
+# test4444
+RewriteRule ^$   index.php?page=test4444 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=test4444 [L]
+
+# 999993545
+RewriteRule ^$   index.php?page=999993545 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=999993545 [L]
+
+# DE
+
+RewriteRule ^de/$   index.php?page=home_frontend&lang=3 [L]
+RewriteRule ^de/$   index_backoffice.php?page=home_backoffice&lang=3 [L]
+RewriteRule ^de$   index.php?page=home_frontend&lang=3 [L]
+RewriteRule ^de$   index_backoffice.php?page=home_backoffice&lang=3 [L]
+
+# CDR-Editor
+RewriteRule ^edition/cdreditor$   index.php?page=cdreditor [L]
+RewriteRule ^backoffice/edition/cdreditor$   index_backoffice.php?page=cdreditor [L]
+
+# Seiten-Editor
+RewriteRule ^gestion/page$   index.php?page=page_edit [L]
+RewriteRule ^backoffice/gestion/page$   index_backoffice.php?page=page_edit [L]
+
+# Menü-Editor
+RewriteRule ^Gestion/Sitemap$   index.php?page=sitemap [L]
+RewriteRule ^Backoffice/Gestion/Sitemap$   index_backoffice.php?page=sitemap [L]
+
+# Structur- und Stil-Editor
+RewriteRule ^Gestion/Structure$   index.php?page=edit_structure [L]
+RewriteRule ^Backoffice/Gestion/Structure$   index_backoffice.php?page=edit_structure [L]
+
+# Sprach-Editor
+RewriteRule ^Gestion/Langues$   index.php?page=edit_language [L]
+RewriteRule ^Backoffice/Gestion/Langues$   index_backoffice.php?page=edit_language [L]
+
+# Farb-Editor
+RewriteRule ^Gestion/Couleur$   index.php?page=edit_color [L]
+RewriteRule ^Backoffice/Gestion/Couleur$   index_backoffice.php?page=edit_color [L]
+
+# Übersetzungs-Editor
+RewriteRule ^Gestion/Traductions$   index.php?page=edit_translation [L]
+RewriteRule ^Backoffice/Gestion/Traductions$   index_backoffice.php?page=edit_translation [L]
+
+# Element-Editor
+RewriteRule ^Gestion/Item$   index.php?page=edit_item [L]
+RewriteRule ^Backoffice/Gestion/Item$   index_backoffice.php?page=edit_item [L]
+
+# Notizen
+RewriteRule ^edit_memo$   index.php?page=edit_memo [L]
+RewriteRule ^backoffice/edit_memo$   index_backoffice.php?page=edit_memo [L]
+
+# Produkt-Editor
+RewriteRule ^edition/product$   index.php?page=edit_product [L]
+RewriteRule ^backoffice/edition/product$   index_backoffice.php?page=edit_product [L]
+
+# Devisen-Editor
+RewriteRule ^edition/currency$   index.php?page=currency_edit [L]
+RewriteRule ^backoffice/edition/currency$   index_backoffice.php?page=currency_edit [L]
+
+# mail_edit
+RewriteRule ^mail_edit$   index.php?page=mail_edit [L]
+RewriteRule ^backoffice/mail_edit$   index_backoffice.php?page=mail_edit [L]
+
+# signature_edit
+RewriteRule ^signature_edit$   index.php?page=signature_edit [L]
+RewriteRule ^backoffice/signature_edit$   index_backoffice.php?page=signature_edit [L]
+
+# advertising_edit
+RewriteRule ^advertising_edit$   index.php?page=advertising_edit [L]
+RewriteRule ^backoffice/advertising_edit$   index_backoffice.php?page=advertising_edit [L]
+
+# stats_page
+RewriteRule ^stats_page$   index.php?page=stats_page [L]
+RewriteRule ^backoffice/stats_page$   index_backoffice.php?page=stats_page [L]
+
+# stats_visit
+RewriteRule ^stats_visit$   index.php?page=stats_visit [L]
+RewriteRule ^backoffice/stats_visit$   index_backoffice.php?page=stats_visit [L]
+
+# user_edit
+RewriteRule ^user_edit$   index.php?page=user_edit [L]
+RewriteRule ^backoffice/user_edit$   index_backoffice.php?page=user_edit [L]
+
+# user_mailing
+RewriteRule ^user_mailing$   index.php?page=user_mailing [L]
+RewriteRule ^backoffice/user_mailing$   index_backoffice.php?page=user_mailing [L]
+
+# message_edit
+RewriteRule ^message_edit$   index.php?page=message_edit [L]
+RewriteRule ^backoffice/message_edit$   index_backoffice.php?page=message_edit [L]
+
+# property_translation
+RewriteRule ^property_translation$   index.php?page=property_translation [L]
+RewriteRule ^backoffice/property_translation$   index_backoffice.php?page=property_translation [L]
+
+# adminconfig_edit
+RewriteRule ^adminconfig_edit$   index.php?page=adminconfig_edit [L]
+RewriteRule ^backoffice/adminconfig_edit$   index_backoffice.php?page=adminconfig_edit [L]
+
+# new_module
+RewriteRule ^new_module$   index.php?page=new_module [L]
+RewriteRule ^backoffice/new_module$   index_backoffice.php?page=new_module [L]
+
+# Produktgruppen
+RewriteRule ^product_type$   index.php?page=product_type [L]
+RewriteRule ^backoffice/product_type$   index_backoffice.php?page=product_type [L]
+
+# Matrix-Editor
+RewriteRule ^matrix_edit$   index.php?page=matrix_edit [L]
+RewriteRule ^backoffice/matrix_edit$   index_backoffice.php?page=matrix_edit [L]
+
+# Fehler 400
+RewriteRule ^Error/400$   index.php?page=error400 [L]
+RewriteRule ^Backoffice/Error/400$   index_backoffice.php?page=error400 [L]
+
+# Fehler 404
+RewriteRule ^Error/404$   index.php?page=error404 [L]
+RewriteRule ^Backoffice/Error/404$   index_backoffice.php?page=error404 [L]
+
+# Startseite Frontend
+RewriteRule ^Accueil$   index.php?page=home_frontend [L]
+RewriteRule ^Accueil$   index_backoffice.php?page=home_frontend [L]
+
+# Startseite Backoffice
+RewriteRule ^Backoffice/Accueil$   index.php?page=home_backoffice [L]
+RewriteRule ^Backoffice/Accueil$   index_backoffice.php?page=home_backoffice [L]
+
+# Bild-Editor
+RewriteRule ^edit_image$   index.php?page=edit_image [L]
+RewriteRule ^backoffice/edit_image$   index_backoffice.php?page=edit_image [L]
+
+# Geo-Editor
+RewriteRule ^edition/geoedit$   index.php?page=cdrgeo [L]
+RewriteRule ^backoffice/edition/geoedit$   index_backoffice.php?page=cdrgeo [L]
+
+# Fehler 401
+RewriteRule ^error401$   index.php?page=error401 [L]
+RewriteRule ^backoffice/error401$   index_backoffice.php?page=error401 [L]
+
+# Fehler 403
+RewriteRule ^error403$   index.php?page=error403 [L]
+RewriteRule ^backoffice/error403$   index_backoffice.php?page=error403 [L]
+
+# Fehler 500
+RewriteRule ^error500$   index.php?page=error500 [L]
+RewriteRule ^backoffice/error500$   index_backoffice.php?page=error500 [L]
+
+# Meldungs-Editor
+RewriteRule ^messages$   index.php?page=messages [L]
+RewriteRule ^backoffice/messages$   index_backoffice.php?page=messages [L]
+
+# footer
+RewriteRule ^footer$   index.php?page=footer [L]
+RewriteRule ^backoffice/footer$   index_backoffice.php?page=footer [L]
+
+# subscription
+RewriteRule ^subscription$   index.php?page=subscription [L]
+RewriteRule ^backoffice/subscription$   index_backoffice.php?page=subscription [L]
+
+# Unterwäsche
+RewriteRule ^information$   index.php?page=lingerie [L]
+RewriteRule ^backoffice/information$   index_backoffice.php?page=lingerie [L]
+
+# MyAccount
+RewriteRule ^myaccount$   index.php?page=myaccount [L]
+RewriteRule ^backoffice/myaccount$   index_backoffice.php?page=myaccount [L]
+
+# contact_main
+RewriteRule ^contact_main$   index.php?page=contact_main [L]
+RewriteRule ^backoffice/contact_main$   index_backoffice.php?page=contact_main [L]
+
+# login_subscribe
+RewriteRule ^login_subscribe$   index.php?page=login_subscribe [L]
+RewriteRule ^backoffice/login_subscribe$   index_backoffice.php?page=login_subscribe [L]
+
+# myaccount_email_edit
+RewriteRule ^myaccount_email_edit$   index.php?page=myaccount_email_edit [L]
+RewriteRule ^backoffice/myaccount_email_edit$   index_backoffice.php?page=myaccount_email_edit [L]
+
+# myaccount_pwd_edit
+RewriteRule ^myaccount_pwd_edit$   index.php?page=myaccount_pwd_edit [L]
+RewriteRule ^backoffice/myaccount_pwd_edit$   index_backoffice.php?page=myaccount_pwd_edit [L]
+
+# form_contactmain
+RewriteRule ^form_contactmain$   index.php?page=form_contactmain [L]
+RewriteRule ^backoffice/form_contactmain$   index_backoffice.php?page=form_contactmain [L]
+
+# disclaimer
+RewriteRule ^disclaimer$   index.php?page=disclaimer [L]
+RewriteRule ^backoffice/disclaimer$   index_backoffice.php?page=disclaimer [L]
+
+# myaccount_address_edit
+RewriteRule ^myaccount_address_edit$   index.php?page=myaccount_address_edit [L]
+RewriteRule ^backoffice/myaccount_address_edit$   index_backoffice.php?page=myaccount_address_edit [L]
+
+# forgotten_pwd
+RewriteRule ^forgotten_pwd$   index.php?page=forgotten_pwd [L]
+RewriteRule ^backoffice/forgotten_pwd$   index_backoffice.php?page=forgotten_pwd [L]
+
+# forgotten_pwd_part2
+RewriteRule ^forgotten_pwd_part2$   index.php?page=forgotten_pwd_part2 [L]
+RewriteRule ^backoffice/forgotten_pwd_part2$   index_backoffice.php?page=forgotten_pwd_part2 [L]
+
+# search_main
+RewriteRule ^search_main$   index.php?page=search_main [L]
+RewriteRule ^backoffice/search_main$   index_backoffice.php?page=search_main [L]
+
+# clipboard
+RewriteRule ^clipboard$   index.php?page=clipboard [L]
+RewriteRule ^backoffice/clipboard$   index_backoffice.php?page=clipboard [L]
+
+# print_footer
+RewriteRule ^footer_print$   index.php?page=print_footer [L]
+RewriteRule ^backoffice/footer_print$   index_backoffice.php?page=print_footer [L]
+
+# print_header
+RewriteRule ^print_header$   index.php?page=print_header [L]
+RewriteRule ^backoffice/print_header$   index_backoffice.php?page=print_header [L]
+
+# Verwaltung der verbotenen Wörter
+RewriteRule ^dirtyword_edit$   index.php?page=dirtyword_edit [L]
+RewriteRule ^backoffice/dirtyword_edit$   index_backoffice.php?page=dirtyword_edit [L]
+
+# some_page
+RewriteRule ^some_page$   index.php?page=some_page [L]
+RewriteRule ^backoffice/some_page$   index_backoffice.php?page=some_page [L]
+
+# Ebenen-Editor
+RewriteRule ^produites_categories$   index.php?page=product_groups [L]
+RewriteRule ^backoffice/produites_categories$   index_backoffice.php?page=product_groups [L]
+
+# some_page_3
+RewriteRule ^some_page_3$   index.php?page=some_page_3 [L]
+RewriteRule ^backoffice/some_page_3$   index_backoffice.php?page=some_page_3 [L]
+
+# quick_search
+RewriteRule ^quick_search$   index.php?page=quick_search [L]
+RewriteRule ^backoffice/quick_search$   index_backoffice.php?page=quick_search [L]
+
+# test10
+RewriteRule ^test10$   index.php?page=test10 [L]
+RewriteRule ^backoffice/test10$   index_backoffice.php?page=test10 [L]
+
+# product_listing
+RewriteRule ^product_listing$   index.php?page=product_listing [L]
+RewriteRule ^backoffice/product_listing$   index_backoffice.php?page=product_listing [L]
+
+# product_details
+RewriteRule ^product_details$   index.php?page=product_details [L]
+RewriteRule ^backoffice/product_details$   index_backoffice.php?page=product_details [L]
+
+# Coffret Coquin Orale Passion
+RewriteRule ^coffret-coquin-orale-passion$   index.php?page=830039 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=830039 [L]
+
+# 999999
+RewriteRule ^$   index.php?page=999999 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=999999 [L]
+
+# 999998
+RewriteRule ^$   index.php?page=999998 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=999998 [L]
+
+# 999997
+RewriteRule ^$   index.php?page=999997 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=999997 [L]
+
+# 999996
+RewriteRule ^$   index.php?page=999996 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=999996 [L]
+
+# 999995
+RewriteRule ^$   index.php?page=999995 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=999995 [L]
+
+# 999994
+RewriteRule ^$   index.php?page=999994 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=999994 [L]
+
+# 999993
+RewriteRule ^$   index.php?page=999993 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=999993 [L]
+
+# 999992
+RewriteRule ^$   index.php?page=999992 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=999992 [L]
+
+# 990099
+RewriteRule ^$   index.php?page=990099 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=990099 [L]
+
+# 990098
+RewriteRule ^$   index.php?page=990098 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=990098 [L]
+
+# 990097
+RewriteRule ^$   index.php?page=990097 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=990097 [L]
+
+# 990096
+RewriteRule ^$   index.php?page=990096 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=990096 [L]
+
+# 990095
+RewriteRule ^$   index.php?page=990095 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=990095 [L]
+
+# 990094
+RewriteRule ^$   index.php?page=990094 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=990094 [L]
+
+# 990093
+RewriteRule ^$   index.php?page=990093 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=990093 [L]
+
+# prod1
+RewriteRule ^$   index.php?page=prod1 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=prod1 [L]
+
+# prod2
+RewriteRule ^$   index.php?page=prod2 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=prod2 [L]
+
+# prod3
+RewriteRule ^$   index.php?page=prod3 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=prod3 [L]
+
+# prod4
+RewriteRule ^$   index.php?page=prod4 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=prod4 [L]
+
+# prod5
+RewriteRule ^$   index.php?page=prod5 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=prod5 [L]
+
+# product6
+RewriteRule ^$   index.php?page=product6 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=product6 [L]
+
+# prod7
+RewriteRule ^$   index.php?page=prod7 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=prod7 [L]
+
+# prod9
+RewriteRule ^$   index.php?page=prod9 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=prod9 [L]
+
+# prod10
+RewriteRule ^$   index.php?page=prod10 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=prod10 [L]
+
+# prod20
+RewriteRule ^$   index.php?page=prod20 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=prod20 [L]
+
+# prod21
+RewriteRule ^$   index.php?page=prod21 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=prod21 [L]
+
+# eeee
+RewriteRule ^$   index.php?page=eeee [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=eeee [L]
+
+# ererer
+RewriteRule ^$   index.php?page=ererer [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=ererer [L]
+
+# test5
+RewriteRule ^$   index.php?page=test5 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=test5 [L]
+
+# vvvvv
+RewriteRule ^$   index.php?page=vvvvv [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=vvvvv [L]
+
+# test56
+RewriteRule ^$   index.php?page=test56 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=test56 [L]
+
+# test57
+RewriteRule ^$   index.php?page=test57 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=test57 [L]
+
+# test58
+RewriteRule ^$   index.php?page=test58 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=test58 [L]
+
+# test78
+RewriteRule ^$   index.php?page=test78 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=test78 [L]
+
+# test567
+RewriteRule ^$   index.php?page=test567 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=test567 [L]
+
+# test566
+RewriteRule ^$   index.php?page=test566 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=test566 [L]
+
+# test555
+RewriteRule ^$   index.php?page=test555 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=test555 [L]
+
+# test444
+RewriteRule ^$   index.php?page=test444 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=test444 [L]
+
+# test4444
+RewriteRule ^$   index.php?page=test4444 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=test4444 [L]
+
+# 999993545
+RewriteRule ^$   index.php?page=999993545 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=999993545 [L]
+
+# ES
+
+RewriteRule ^es/$   index.php?page=home_frontend&lang=4 [L]
+RewriteRule ^es/$   index_backoffice.php?page=home_backoffice&lang=4 [L]
+RewriteRule ^es$   index.php?page=home_frontend&lang=4 [L]
+RewriteRule ^es$   index_backoffice.php?page=home_backoffice&lang=4 [L]
+
+# cdreditor
+RewriteRule ^gestion/cdreditor$   index.php?page=cdreditor [L]
+RewriteRule ^backoffice/edition/cdreditor$   index_backoffice.php?page=cdreditor [L]
+
+# page_edit
+RewriteRule ^gestion/page$   index.php?page=page_edit [L]
+RewriteRule ^backoffice/gestion/page$   index_backoffice.php?page=page_edit [L]
+
+# sitemap
+RewriteRule ^sitemap$   index.php?page=sitemap [L]
+RewriteRule ^backoffice/sitemap$   index_backoffice.php?page=sitemap [L]
+
+# edit_structure
+RewriteRule ^edit_structure$   index.php?page=edit_structure [L]
+RewriteRule ^backoffice/edit_structure$   index_backoffice.php?page=edit_structure [L]
+
+# edit_language
+RewriteRule ^Gestion/Langues$   index.php?page=edit_language [L]
+RewriteRule ^backoffice/Gestion/Langues$   index_backoffice.php?page=edit_language [L]
+
+# edit_color
+RewriteRule ^Gestion/Couleur$   index.php?page=edit_color [L]
+RewriteRule ^Backoffice/Gestion/Couleur$   index_backoffice.php?page=edit_color [L]
+
+# edit_translation
+RewriteRule ^edit_translation$   index.php?page=edit_translation [L]
+RewriteRule ^backoffice/edit_translation$   index_backoffice.php?page=edit_translation [L]
+
+# edit_item
+RewriteRule ^Gestion/Item$   index.php?page=edit_item [L]
+RewriteRule ^Backoffice/Gestion/Item$   index_backoffice.php?page=edit_item [L]
+
+# edit_memo
+RewriteRule ^edit_memo$   index.php?page=edit_memo [L]
+RewriteRule ^backoffice/edit_memo$   index_backoffice.php?page=edit_memo [L]
+
+# edit_product
+RewriteRule ^edit_product$   index.php?page=edit_product [L]
+RewriteRule ^backoffice/edit_product$   index_backoffice.php?page=edit_product [L]
+
+# currency_edit
+RewriteRule ^currency_edit$   index.php?page=currency_edit [L]
+RewriteRule ^backoffice/currency_edit$   index_backoffice.php?page=currency_edit [L]
+
+# mail_edit
+RewriteRule ^$   index.php?page=mail_edit [L]
+RewriteRule ^$   index_backoffice.php?page=mail_edit [L]
+
+# signature_edit
+RewriteRule ^$   index.php?page=signature_edit [L]
+RewriteRule ^$   index_backoffice.php?page=signature_edit [L]
+
+# advertising_edit
+RewriteRule ^$   index.php?page=advertising_edit [L]
+RewriteRule ^$   index_backoffice.php?page=advertising_edit [L]
+
+# stats_page
+RewriteRule ^stats_page$   index.php?page=stats_page [L]
+RewriteRule ^backoffice/stats_page$   index_backoffice.php?page=stats_page [L]
+
+# stats_visit
+RewriteRule ^$   index.php?page=stats_visit [L]
+RewriteRule ^$   index_backoffice.php?page=stats_visit [L]
+
+# user_edit
+RewriteRule ^user_edit$   index.php?page=user_edit [L]
+RewriteRule ^backoffice/user_edit$   index_backoffice.php?page=user_edit [L]
+
+# user_mailing
+RewriteRule ^$   index.php?page=user_mailing [L]
+RewriteRule ^$   index_backoffice.php?page=user_mailing [L]
+
+# message_edit
+RewriteRule ^$   index.php?page=message_edit [L]
+RewriteRule ^$   index_backoffice.php?page=message_edit [L]
+
+# property_translation
+RewriteRule ^property_translation$   index.php?page=property_translation [L]
+RewriteRule ^backoffice/property_translation$   index_backoffice.php?page=property_translation [L]
+
+# adminconfig_edit
+RewriteRule ^adminconfig_edit$   index.php?page=adminconfig_edit [L]
+RewriteRule ^backoffice/adminconfig_edit$   index_backoffice.php?page=adminconfig_edit [L]
+
+# new_module
+RewriteRule ^new_module$   index.php?page=new_module [L]
+RewriteRule ^backoffice/new_module$   index_backoffice.php?page=new_module [L]
+
+# Product types ES
+RewriteRule ^product_type$   index.php?page=product_type [L]
+RewriteRule ^backoffice/product_type$   index_backoffice.php?page=product_type [L]
+
+# Matrix editor (ES)
+RewriteRule ^matrix_edit$   index.php?page=matrix_edit [L]
+RewriteRule ^backoffice/matrix_edit$   index_backoffice.php?page=matrix_edit [L]
+
+# error400
+RewriteRule ^$   index.php?page=error400 [L]
+RewriteRule ^$   index_backoffice.php?page=error400 [L]
+
+# error404
+RewriteRule ^$   index.php?page=error404 [L]
+RewriteRule ^$   index_backoffice.php?page=error404 [L]
+
+# Frontend home
+RewriteRule ^frontend-home$   index.php?page=home_frontend [L]
+RewriteRule ^backoffice/frontend-home$   index_backoffice.php?page=home_frontend [L]
+
+# home_backoffice
+RewriteRule ^$   index.php?page=home_backoffice [L]
+RewriteRule ^$   index_backoffice.php?page=home_backoffice [L]
+
+# edit_image
+RewriteRule ^edit_image$   index.php?page=edit_image [L]
+RewriteRule ^backoffice/edit_image$   index_backoffice.php?page=edit_image [L]
+
+# cdrgeo
+RewriteRule ^$   index.php?page=cdrgeo [L]
+RewriteRule ^$   index_backoffice.php?page=cdrgeo [L]
+
+# error401
+RewriteRule ^$   index.php?page=error401 [L]
+RewriteRule ^$   index_backoffice.php?page=error401 [L]
+
+# error403
+RewriteRule ^$   index.php?page=error403 [L]
+RewriteRule ^$   index_backoffice.php?page=error403 [L]
+
+# error500
+RewriteRule ^$   index.php?page=error500 [L]
+RewriteRule ^$   index_backoffice.php?page=error500 [L]
+
+# messages
+RewriteRule ^$   index.php?page=messages [L]
+RewriteRule ^$   index_backoffice.php?page=messages [L]
+
+# footer
+RewriteRule ^footer$   index.php?page=footer [L]
+RewriteRule ^backoffice/footer$   index_backoffice.php?page=footer [L]
+
+# subscription
+RewriteRule ^$   index.php?page=subscription [L]
+RewriteRule ^$   index_backoffice.php?page=subscription [L]
+
+# lencería
+RewriteRule ^lencería$   index.php?page=lingerie [L]
+RewriteRule ^backoffice/lencería$   index_backoffice.php?page=lingerie [L]
+
+# MyAccount
+RewriteRule ^myaccount$   index.php?page=myaccount [L]
+RewriteRule ^backoffice/myaccount$   index_backoffice.php?page=myaccount [L]
+
+# contact_main
+RewriteRule ^contact_main$   index.php?page=contact_main [L]
+RewriteRule ^backoffice/contact_main$   index_backoffice.php?page=contact_main [L]
+
+# login_subscribe
+RewriteRule ^login_subscribe$   index.php?page=login_subscribe [L]
+RewriteRule ^backoffice/login_subscribe$   index_backoffice.php?page=login_subscribe [L]
+
+# myaccount_email_edit
+RewriteRule ^$   index.php?page=myaccount_email_edit [L]
+RewriteRule ^$   index_backoffice.php?page=myaccount_email_edit [L]
+
+# myaccount_pwd_edit
+RewriteRule ^$   index.php?page=myaccount_pwd_edit [L]
+RewriteRule ^$   index_backoffice.php?page=myaccount_pwd_edit [L]
+
+# form_contactmain
+RewriteRule ^$   index.php?page=form_contactmain [L]
+RewriteRule ^$   index_backoffice.php?page=form_contactmain [L]
+
+# disclaimer
+RewriteRule ^disclaimer$   index.php?page=disclaimer [L]
+RewriteRule ^backoffice/disclaimer$   index_backoffice.php?page=disclaimer [L]
+
+# myaccount_address_edit
+RewriteRule ^$   index.php?page=myaccount_address_edit [L]
+RewriteRule ^$   index_backoffice.php?page=myaccount_address_edit [L]
+
+# forgotten_pwd
+RewriteRule ^$   index.php?page=forgotten_pwd [L]
+RewriteRule ^$   index_backoffice.php?page=forgotten_pwd [L]
+
+# forgotten_pwd_part2
+RewriteRule ^$   index.php?page=forgotten_pwd_part2 [L]
+RewriteRule ^$   index_backoffice.php?page=forgotten_pwd_part2 [L]
+
+# search_main
+RewriteRule ^search_main$   index.php?page=search_main [L]
+RewriteRule ^backoffice/search_main$   index_backoffice.php?page=search_main [L]
+
+# clipboard
+RewriteRule ^$   index.php?page=clipboard [L]
+RewriteRule ^$   index_backoffice.php?page=clipboard [L]
+
+# print_footer
+RewriteRule ^$   index.php?page=print_footer [L]
+RewriteRule ^$   index_backoffice.php?page=print_footer [L]
+
+# print_header
+RewriteRule ^$   index.php?page=print_header [L]
+RewriteRule ^$   index_backoffice.php?page=print_header [L]
+
+# dirtyword_edit
+RewriteRule ^dirtyword_edit$   index.php?page=dirtyword_edit [L]
+RewriteRule ^backoffice/dirtyword_edit$   index_backoffice.php?page=dirtyword_edit [L]
+
+# some_page
+RewriteRule ^some_page$   index.php?page=some_page [L]
+RewriteRule ^backoffice/some_page$   index_backoffice.php?page=some_page [L]
+
+# product_groups
+RewriteRule ^produites_categories$   index.php?page=product_groups [L]
+RewriteRule ^backoffice/produites_categories$   index_backoffice.php?page=product_groups [L]
+
+# some_page_3
+RewriteRule ^some_page_3$   index.php?page=some_page_3 [L]
+RewriteRule ^backoffice/some_page_3$   index_backoffice.php?page=some_page_3 [L]
+
+# quick_search
+RewriteRule ^quick_search$   index.php?page=quick_search [L]
+RewriteRule ^backoffice/quick_search$   index_backoffice.php?page=quick_search [L]
+
+# test10
+RewriteRule ^test10$   index.php?page=test10 [L]
+RewriteRule ^backoffice/test10$   index_backoffice.php?page=test10 [L]
+
+# product_listing
+RewriteRule ^product_listing$   index.php?page=product_listing [L]
+RewriteRule ^backoffice/product_listing$   index_backoffice.php?page=product_listing [L]
+
+# product_details
+RewriteRule ^product_details$   index.php?page=product_details [L]
+RewriteRule ^backoffice/product_details$   index_backoffice.php?page=product_details [L]
+
+# Coffret Coquin Orale Passion
+RewriteRule ^coffret-coquin-orale-passion$   index.php?page=830039 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=830039 [L]
+
+# 999999
+RewriteRule ^$   index.php?page=999999 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=999999 [L]
+
+# 999998
+RewriteRule ^$   index.php?page=999998 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=999998 [L]
+
+# 999997
+RewriteRule ^$   index.php?page=999997 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=999997 [L]
+
+# 999996
+RewriteRule ^$   index.php?page=999996 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=999996 [L]
+
+# 999995
+RewriteRule ^$   index.php?page=999995 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=999995 [L]
+
+# 999994
+RewriteRule ^$   index.php?page=999994 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=999994 [L]
+
+# 999993
+RewriteRule ^$   index.php?page=999993 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=999993 [L]
+
+# 999992
+RewriteRule ^$   index.php?page=999992 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=999992 [L]
+
+# 990099
+RewriteRule ^$   index.php?page=990099 [L]
+RewriteRule ^$   index_backoffice.php?page=990099 [L]
+
+# 990098
+RewriteRule ^$   index.php?page=990098 [L]
+RewriteRule ^$   index_backoffice.php?page=990098 [L]
+
+# 990097
+RewriteRule ^$   index.php?page=990097 [L]
+RewriteRule ^$   index_backoffice.php?page=990097 [L]
+
+# 990096
+RewriteRule ^$   index.php?page=990096 [L]
+RewriteRule ^$   index_backoffice.php?page=990096 [L]
+
+# 990095
+RewriteRule ^$   index.php?page=990095 [L]
+RewriteRule ^$   index_backoffice.php?page=990095 [L]
+
+# 990094
+RewriteRule ^$   index.php?page=990094 [L]
+RewriteRule ^$   index_backoffice.php?page=990094 [L]
+
+# 990093
+RewriteRule ^$   index.php?page=990093 [L]
+RewriteRule ^$   index_backoffice.php?page=990093 [L]
+
+# prod1
+RewriteRule ^$   index.php?page=prod1 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=prod1 [L]
+
+# prod2
+RewriteRule ^$   index.php?page=prod2 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=prod2 [L]
+
+# prod3
+RewriteRule ^$   index.php?page=prod3 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=prod3 [L]
+
+# prod4
+RewriteRule ^$   index.php?page=prod4 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=prod4 [L]
+
+# prod5
+RewriteRule ^$   index.php?page=prod5 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=prod5 [L]
+
+# product6
+RewriteRule ^$   index.php?page=product6 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=product6 [L]
+
+# prod7
+RewriteRule ^$   index.php?page=prod7 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=prod7 [L]
+
+# prod9
+RewriteRule ^$   index.php?page=prod9 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=prod9 [L]
+
+# prod10
+RewriteRule ^$   index.php?page=prod10 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=prod10 [L]
+
+# prod20
+RewriteRule ^$   index.php?page=prod20 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=prod20 [L]
+
+# prod21
+RewriteRule ^$   index.php?page=prod21 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=prod21 [L]
+
+# eeee
+RewriteRule ^$   index.php?page=eeee [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=eeee [L]
+
+# ererer
+RewriteRule ^$   index.php?page=ererer [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=ererer [L]
+
+# test5
+RewriteRule ^$   index.php?page=test5 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=test5 [L]
+
+# vvvvv
+RewriteRule ^$   index.php?page=vvvvv [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=vvvvv [L]
+
+# test56
+RewriteRule ^$   index.php?page=test56 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=test56 [L]
+
+# test57
+RewriteRule ^$   index.php?page=test57 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=test57 [L]
+
+# test58
+RewriteRule ^$   index.php?page=test58 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=test58 [L]
+
+# test78
+RewriteRule ^$   index.php?page=test78 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=test78 [L]
+
+# test567
+RewriteRule ^$   index.php?page=test567 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=test567 [L]
+
+# test566
+RewriteRule ^$   index.php?page=test566 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=test566 [L]
+
+# test555
+RewriteRule ^$   index.php?page=test555 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=test555 [L]
+
+# test444
+RewriteRule ^$   index.php?page=test444 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=test444 [L]
+
+# test4444
+RewriteRule ^$   index.php?page=test4444 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=test4444 [L]
+
+# 999993545
+RewriteRule ^$   index.php?page=999993545 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=999993545 [L]
+
+# GR
+
+RewriteRule ^gr/$   index.php?page=home_frontend&lang=5 [L]
+RewriteRule ^gr/$   index_backoffice.php?page=home_backoffice&lang=5 [L]
+RewriteRule ^gr$   index.php?page=home_frontend&lang=5 [L]
+RewriteRule ^gr$   index_backoffice.php?page=home_backoffice&lang=5 [L]
+
+# cdreditor
+RewriteRule ^gestion/cdreditor$   index.php?page=cdreditor [L]
+RewriteRule ^backoffice/edition/cdreditor$   index_backoffice.php?page=cdreditor [L]
+
+# page_edit
+RewriteRule ^gestion/page$   index.php?page=page_edit [L]
+RewriteRule ^backoffice/gestion/page$   index_backoffice.php?page=page_edit [L]
+
+# Ιεραχία Μενού
+RewriteRule ^Ιεραχία-Μενού$   index.php?page=sitemap [L]
+RewriteRule ^backoffice/Ιεραχία-Μενού$   index_backoffice.php?page=sitemap [L]
+
+# Επεξεργαστής εμφάνισης
+RewriteRule ^Επεξεργαστής-εμφάνισης$   index.php?page=edit_structure [L]
+RewriteRule ^backoffice/Επεξεργαστής-εμφάνισης$   index_backoffice.php?page=edit_structure [L]
+
+# Επεξεργαστής Γλώσσας
+RewriteRule ^Gestion/Langues$   index.php?page=edit_language [L]
+RewriteRule ^backoffice/Gestion/Langues$   index_backoffice.php?page=edit_language [L]
+
+# edit_color
+RewriteRule ^Gestion/Χρώμα$   index.php?page=edit_color [L]
+RewriteRule ^Backoffice/Gestion/Χρώμα$   index_backoffice.php?page=edit_color [L]
+
+# Διαχείριση μεταφράσεων
+RewriteRule ^Διαχείριση-μεταφράσεων$   index.php?page=edit_translation [L]
+RewriteRule ^backoffice/Διαχείριση-μεταφράσεων$   index_backoffice.php?page=edit_translation [L]
+
+# edit_item
+RewriteRule ^Gestion/Item$   index.php?page=edit_item [L]
+RewriteRule ^Backoffice/Gestion/Item$   index_backoffice.php?page=edit_item [L]
+
+# Επεξεργαστής Υπενθύμισης
+RewriteRule ^Επεξεργαστής-Υπενθύμισης$   index.php?page=edit_memo [L]
+RewriteRule ^backoffice/Επεξεργαστής-Υπενθύμισης$   index_backoffice.php?page=edit_memo [L]
+
+# Επεξεργαστής Προϊόντων
+RewriteRule ^Επεξεργαστής-Προϊόντων$   index.php?page=edit_product [L]
+RewriteRule ^backoffice/Επεξεργαστής-Προϊόντων$   index_backoffice.php?page=edit_product [L]
+
+# Επεξεργασία νομισμάτων
+RewriteRule ^Επεξεργασία-νομισμάτων$   index.php?page=currency_edit [L]
+RewriteRule ^backoffice/Επεξεργασία-νομισμάτων$   index_backoffice.php?page=currency_edit [L]
+
+# mail_edit
+RewriteRule ^$   index.php?page=mail_edit [L]
+RewriteRule ^$   index_backoffice.php?page=mail_edit [L]
+
+# signature_edit
+RewriteRule ^$   index.php?page=signature_edit [L]
+RewriteRule ^$   index_backoffice.php?page=signature_edit [L]
+
+# advertising_edit
+RewriteRule ^$   index.php?page=advertising_edit [L]
+RewriteRule ^$   index_backoffice.php?page=advertising_edit [L]
+
+# stats_page
+RewriteRule ^stats_page$   index.php?page=stats_page [L]
+RewriteRule ^backoffice/stats_page$   index_backoffice.php?page=stats_page [L]
+
+# stats_visit
+RewriteRule ^$   index.php?page=stats_visit [L]
+RewriteRule ^$   index_backoffice.php?page=stats_visit [L]
+
+# user_edit
+RewriteRule ^$   index.php?page=user_edit [L]
+RewriteRule ^$   index_backoffice.php?page=user_edit [L]
+
+# user_mailing
+RewriteRule ^$   index.php?page=user_mailing [L]
+RewriteRule ^$   index_backoffice.php?page=user_mailing [L]
+
+# message_edit
+RewriteRule ^$   index.php?page=message_edit [L]
+RewriteRule ^$   index_backoffice.php?page=message_edit [L]
+
+# property_translation
+RewriteRule ^$   index.php?page=property_translation [L]
+RewriteRule ^$   index_backoffice.php?page=property_translation [L]
+
+# adminconfig_edit
+RewriteRule ^adminconfig_edit$   index.php?page=adminconfig_edit [L]
+RewriteRule ^backoffice/adminconfig_edit$   index_backoffice.php?page=adminconfig_edit [L]
+
+# Επεξεργασία Αρθρωμάτων
+RewriteRule ^new_module$   index.php?page=new_module [L]
+RewriteRule ^backoffice/new_module$   index_backoffice.php?page=new_module [L]
+
+# Product types GR
+RewriteRule ^product_type$   index.php?page=product_type [L]
+RewriteRule ^backoffice/product_type$   index_backoffice.php?page=product_type [L]
+
+# Επεξεργασία Πίνακα
+RewriteRule ^matrix_edit$   index.php?page=matrix_edit [L]
+RewriteRule ^backoffice/matrix_edit$   index_backoffice.php?page=matrix_edit [L]
+
+# error400
+RewriteRule ^$   index.php?page=error400 [L]
+RewriteRule ^$   index_backoffice.php?page=error400 [L]
+
+# error404
+RewriteRule ^$   index.php?page=error404 [L]
+RewriteRule ^$   index_backoffice.php?page=error404 [L]
+
+# Αρχική Σελίδα
+RewriteRule ^home_frontend$   index.php?page=home_frontend [L]
+RewriteRule ^backoffice/home_frontend$   index_backoffice.php?page=home_frontend [L]
+
+# home_backoffice
+RewriteRule ^$   index.php?page=home_backoffice [L]
+RewriteRule ^$   index_backoffice.php?page=home_backoffice [L]
+
+# edit_image
+RewriteRule ^edit_image$   index.php?page=edit_image [L]
+RewriteRule ^backoffice/edit_image$   index_backoffice.php?page=edit_image [L]
+
+# cdrgeo
+RewriteRule ^$   index.php?page=cdrgeo [L]
+RewriteRule ^$   index_backoffice.php?page=cdrgeo [L]
+
+# error401
+RewriteRule ^$   index.php?page=error401 [L]
+RewriteRule ^$   index_backoffice.php?page=error401 [L]
+
+# error403
+RewriteRule ^$   index.php?page=error403 [L]
+RewriteRule ^$   index_backoffice.php?page=error403 [L]
+
+# error500
+RewriteRule ^$   index.php?page=error500 [L]
+RewriteRule ^$   index_backoffice.php?page=error500 [L]
+
+# messages
+RewriteRule ^$   index.php?page=messages [L]
+RewriteRule ^$   index_backoffice.php?page=messages [L]
+
+# footer
+RewriteRule ^footer$   index.php?page=footer [L]
+RewriteRule ^backoffice/footer$   index_backoffice.php?page=footer [L]
+
+# subscription
+RewriteRule ^$   index.php?page=subscription [L]
+RewriteRule ^$   index_backoffice.php?page=subscription [L]
+
+# Εσώρουχα
+RewriteRule ^lingerie$   index.php?page=lingerie [L]
+RewriteRule ^backoffice/lingerie$   index_backoffice.php?page=lingerie [L]
+
+# Ο λογαριασμός μου
+RewriteRule ^Λογαριασμός$   index.php?page=myaccount [L]
+RewriteRule ^backoffice/Λογαριασμός$   index_backoffice.php?page=myaccount [L]
+
+# contact_main
+RewriteRule ^$   index.php?page=contact_main [L]
+RewriteRule ^$   index_backoffice.php?page=contact_main [L]
+
+# Είσοδος
+RewriteRule ^Είσοδος$   index.php?page=login_subscribe [L]
+RewriteRule ^backoffice/Είσοδος$   index_backoffice.php?page=login_subscribe [L]
+
+# myaccount_email_edit
+RewriteRule ^$   index.php?page=myaccount_email_edit [L]
+RewriteRule ^$   index_backoffice.php?page=myaccount_email_edit [L]
+
+# myaccount_pwd_edit
+RewriteRule ^$   index.php?page=myaccount_pwd_edit [L]
+RewriteRule ^$   index_backoffice.php?page=myaccount_pwd_edit [L]
+
+# form_contactmain
+RewriteRule ^$   index.php?page=form_contactmain [L]
+RewriteRule ^$   index_backoffice.php?page=form_contactmain [L]
+
+# disclaimer
+RewriteRule ^disclaimer$   index.php?page=disclaimer [L]
+RewriteRule ^backoffice/disclaimer$   index_backoffice.php?page=disclaimer [L]
+
+# myaccount_address_edit
+RewriteRule ^$   index.php?page=myaccount_address_edit [L]
+RewriteRule ^$   index_backoffice.php?page=myaccount_address_edit [L]
+
+# forgotten_pwd
+RewriteRule ^$   index.php?page=forgotten_pwd [L]
+RewriteRule ^$   index_backoffice.php?page=forgotten_pwd [L]
+
+# forgotten_pwd_part2
+RewriteRule ^$   index.php?page=forgotten_pwd_part2 [L]
+RewriteRule ^$   index_backoffice.php?page=forgotten_pwd_part2 [L]
+
+# Αποτελέσματα αναζήτησης
+RewriteRule ^Αποτελέσματα-αναζήτησης$   index.php?page=search_main [L]
+RewriteRule ^backoffice/Αποτελέσματα-αναζήτησης$   index_backoffice.php?page=search_main [L]
+
+# clipboard
+RewriteRule ^$   index.php?page=clipboard [L]
+RewriteRule ^$   index_backoffice.php?page=clipboard [L]
+
+# print_footer
+RewriteRule ^$   index.php?page=print_footer [L]
+RewriteRule ^$   index_backoffice.php?page=print_footer [L]
+
+# print_header
+RewriteRule ^$   index.php?page=print_header [L]
+RewriteRule ^$   index_backoffice.php?page=print_header [L]
+
+# dirtyword_edit
+RewriteRule ^$   index.php?page=dirtyword_edit [L]
+RewriteRule ^$   index_backoffice.php?page=dirtyword_edit [L]
+
+# some_page
+RewriteRule ^some_page$   index.php?page=some_page [L]
+RewriteRule ^backoffice/some_page$   index_backoffice.php?page=some_page [L]
+
+# Κατηγορίες Προϊόντων
+RewriteRule ^κατηγορίες_προιόντων$   index.php?page=product_groups [L]
+RewriteRule ^backoffice/κατηγορίες_προιόντων$   index_backoffice.php?page=product_groups [L]
+
+# some_page_3
+RewriteRule ^some_page_3$   index.php?page=some_page_3 [L]
+RewriteRule ^backoffice/some_page_3$   index_backoffice.php?page=some_page_3 [L]
+
+# Πωλήσεις
+RewriteRule ^πωλήσεις$   index.php?page=quick_search [L]
+RewriteRule ^backoffice/πωλήσεις$   index_backoffice.php?page=quick_search [L]
+
+# test10
+RewriteRule ^test10$   index.php?page=test10 [L]
+RewriteRule ^backoffice/test10$   index_backoffice.php?page=test10 [L]
+
+# Λίστα Προϊόντων
+RewriteRule ^product_listing$   index.php?page=product_listing [L]
+RewriteRule ^backoffice/product_listing$   index_backoffice.php?page=product_listing [L]
+
+# Λεπτομέρειες προϊόντος
+RewriteRule ^product_details$   index.php?page=product_details [L]
+RewriteRule ^backoffice/product_details$   index_backoffice.php?page=product_details [L]
+
+# Coffret Coquin Orale Passion
+RewriteRule ^coffret-coquin-orale-passion$   index.php?page=830039 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=830039 [L]
+
+# 999999
+RewriteRule ^$   index.php?page=999999 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=999999 [L]
+
+# 999998
+RewriteRule ^$   index.php?page=999998 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=999998 [L]
+
+# 999997
+RewriteRule ^$   index.php?page=999997 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=999997 [L]
+
+# 999996
+RewriteRule ^$   index.php?page=999996 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=999996 [L]
+
+# 999995
+RewriteRule ^$   index.php?page=999995 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=999995 [L]
+
+# 999994
+RewriteRule ^$   index.php?page=999994 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=999994 [L]
+
+# 999993
+RewriteRule ^$   index.php?page=999993 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=999993 [L]
+
+# 999992
+RewriteRule ^$   index.php?page=999992 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=999992 [L]
+
+# 990099
+RewriteRule ^$   index.php?page=990099 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=990099 [L]
+
+# 990098
+RewriteRule ^$   index.php?page=990098 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=990098 [L]
+
+# 990097
+RewriteRule ^$   index.php?page=990097 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=990097 [L]
+
+# 990096
+RewriteRule ^$   index.php?page=990096 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=990096 [L]
+
+# 990095
+RewriteRule ^$   index.php?page=990095 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=990095 [L]
+
+# 990094
+RewriteRule ^$   index.php?page=990094 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=990094 [L]
+
+# 990093
+RewriteRule ^$   index.php?page=990093 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=990093 [L]
+
+# prod1
+RewriteRule ^$   index.php?page=prod1 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=prod1 [L]
+
+# prod2
+RewriteRule ^$   index.php?page=prod2 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=prod2 [L]
+
+# prod3
+RewriteRule ^$   index.php?page=prod3 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=prod3 [L]
+
+# prod4
+RewriteRule ^$   index.php?page=prod4 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=prod4 [L]
+
+# prod5
+RewriteRule ^$   index.php?page=prod5 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=prod5 [L]
+
+# product6
+RewriteRule ^$   index.php?page=product6 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=product6 [L]
+
+# prod7
+RewriteRule ^$   index.php?page=prod7 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=prod7 [L]
+
+# prod9
+RewriteRule ^$   index.php?page=prod9 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=prod9 [L]
+
+# prod10
+RewriteRule ^$   index.php?page=prod10 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=prod10 [L]
+
+# prod20
+RewriteRule ^$   index.php?page=prod20 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=prod20 [L]
+
+# prod21
+RewriteRule ^$   index.php?page=prod21 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=prod21 [L]
+
+# eeee
+RewriteRule ^$   index.php?page=eeee [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=eeee [L]
+
+# ererer
+RewriteRule ^$   index.php?page=ererer [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=ererer [L]
+
+# test5
+RewriteRule ^$   index.php?page=test5 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=test5 [L]
+
+# vvvvv
+RewriteRule ^$   index.php?page=vvvvv [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=vvvvv [L]
+
+# test56
+RewriteRule ^$   index.php?page=test56 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=test56 [L]
+
+# test57
+RewriteRule ^$   index.php?page=test57 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=test57 [L]
+
+# test58
+RewriteRule ^$   index.php?page=test58 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=test58 [L]
+
+# test78
+RewriteRule ^$   index.php?page=test78 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=test78 [L]
+
+# test567
+RewriteRule ^$   index.php?page=test567 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=test567 [L]
+
+# test566
+RewriteRule ^$   index.php?page=test566 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=test566 [L]
+
+# test555
+RewriteRule ^$   index.php?page=test555 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=test555 [L]
+
+# test444
+RewriteRule ^$   index.php?page=test444 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=test444 [L]
+
+# test4444
+RewriteRule ^$   index.php?page=test4444 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=test4444 [L]
+
+# 999993545
+RewriteRule ^$   index.php?page=999993545 [L]
+RewriteRule ^backoffice/$   index_backoffice.php?page=999993545 [L]
+
+RewriteRule ^Gestion/Sitemap/([0-9]+)$   /index.php?page=sitemap&levelx=$1 [L]
+RewriteRule ^Backoffice/Gestion/Sitemap/([0-9]+)$   /index_backoffice.php?page=sitemap&levelx=$1 [L]
+
+RewriteRule ^Gestion/Traductions/([0-9]+)$   /index.php?page=edit_translation&trans=$1 [L]
+RewriteRule ^Backoffice/Gestion/Traductions/([0-9]+)$   /index_backoffice.php?page=edit_translation&trans=$1 [L]
+
+RewriteRule ^edition/product/([0-9]+)$   /index.php?page=edit_product&product=$1 [L]
+RewriteRule ^backoffice/edition/product/([0-9]+)$   /index_backoffice.php?page=edit_product&product=$1 [L]
+
+RewriteRule ^edition/page/([0-9]+)$   /index.php?page=page_edit&pg=$1 [L]
+RewriteRule ^backoffice/edition/page/([0-9]+)$   /index_backoffice.php?page=page_edit&pg=$1 [L]
+
+RewriteRule ^sale/page/([0-9]+)$   /index.php?page=imos_rent_main&paging=$2 [L]
+RewriteRule ^backoffice/sale/page/([0-9]+)$   /index_backoffice.php?page=imos_rent_main&paging=$2 [L]
+
+RewriteRule ^edition/user/([0-9]+)$   /index.php?page=user_edit&user=$1 [L]
+RewriteRule ^backoffice/edition/user/([0-9]+)$   /index_backoffice.php?page=user_edit&user=$1 [L]
+
+#RewriteBase /
+#RewriteCond %{HTTPS_HOST} !^ [NC]
+#RewriteRule ^(.*)$ $1 [R=301,L]

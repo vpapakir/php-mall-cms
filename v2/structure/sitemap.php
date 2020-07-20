@@ -4,7 +4,7 @@ unset($idbox_hierarchybox, $id_hierarchybox);
 $prepared_query = 'SELECT * FROM `hierarchy_box` 
                    WHERE id_frame = :frame 
                    AND status_hierarchy_box = 1';
-if(empty($config_module_immo) || $config_module_immo == 9)
+/*if(empty($config_module_immo) || $config_module_immo == 9)
 {
     $prepared_query .= ' AND family_hierarchy_box = "main"';
 }
@@ -18,9 +18,9 @@ else
     }
     
     $prepared_query .= ')';
-}
+}*/
 $prepared_query .= ' ORDER BY position_hierarchy_box';
-//if((checkrights($main_rights_log, '9', $redirection)) === true){ $_SESSION['prepared_query'] = $prepared_query; }
+if((checkrights($main_rights_log, '9', $redirection)) === true){ $_SESSION['prepared_query'] = $prepared_query; }
 $query = $connectData->prepare($prepared_query);
 $query->bindParam('frame', $sitemap_id_frame);
 $query->execute();

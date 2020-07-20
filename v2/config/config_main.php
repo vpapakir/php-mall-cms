@@ -32,16 +32,17 @@ try
                            WHERE url_page = :page';
         if((checkrights($main_rights_log, '9', $redirection)) === true){ $_SESSION['prepared_query'] = $prepared_query; }
         $query = $connectData->prepare($prepared_query);
-        $query->bindParam('page', trim(htmlspecialchars($_GET['page'], ENT_QUOTES)));
+        $ref_page=$_GET['page'];
+	$proc_ref_page=trim(htmlspecialchars($ref_page, ENT_QUOTES));
+        $query->bindParam('page', $proc_ref_page);
         $query->execute();
 
         if(($data = $query->fetch()) != false)
         {
             $config_family_page = $data[0];
             $config_scriptajax_page = $data[1];
+	    $config_scriptajax_page = split_string($config_scriptajax_page, '$');
         }
-        
-        $config_scriptajax_page = split_string($config_scriptajax_page, '$');
     }
     
     $timestamp_day = 3600 * 24;

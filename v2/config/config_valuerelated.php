@@ -71,8 +71,8 @@ try
     {
         $main_currentpage_tags = $data[0];
         $main_currentpage_tags = trim(preg_replace('#[0-9]{4,}?#', '', $main_currentpage_tags));
-        $main_currentpage_tags = str_replace_char($main_currentpage_tags, $main_id_language, true);
-        $main_currentpage_tags = replace_dirtyword($main_currentpage_tags, $main_id_language, true);
+        $main_currentpage_tags = str_replace_char($main_currentpage_tags, $main_id_language, true, "", "", "");
+        $main_currentpage_tags = replace_dirtyword($main_currentpage_tags, $main_id_language, true, "", "", "");
     }
     $query->closeCursor();
     

@@ -140,14 +140,14 @@ catch(Exception $e)
 {
     $_SESSION['error400_message'] = $e->getMessage();
     echo $_SESSION['error400_message'];
-    /*if($_SESSION['index'] == 'index.php')
+    if($_SESSION['index'] == 'index.php')
     {
         die(header('Location: '.$config_customheader.'Error/400'));
     }
     else
     {
         die(header('Location: '.$config_customheader.$_SESSION['index'].'Backoffice/Error/400'));
-    }*/
+    } 
 }
 ?>       
 <table style="width: <?php echo($width_layout); ?>; height: <?php echo($height_layout); ?>; 
@@ -155,7 +155,6 @@ catch(Exception $e)
        position: <?php echo($position_layout); ?>; margin: <?php echo($margin_layout); ?>;
        <?php if(!empty($bgcolor_layout)){ ?>background-color: <?php echo($bgcolor_layout); ?>;<?php } ?>
        border-radius: <?php echo($radius_layout[0].'px '.$radius_layout[1].'px '.$radius_layout[2].'px '.$radius_layout[3].'px'); ?>;
-/*       -moz-border-radius: <?php //echo($radius_layout[0].'px '.$radius_layout[1].'px '.$radius_layout[2].'px '.$radius_layout[3].'px'); ?>;*/
        -webkit-border-radius: <?php echo($radius_layout[0].'px '.$radius_layout[1].'px '.$radius_layout[2].'px '.$radius_layout[3].'px'); ?>;" 
        cellpadding="<?php echo($cp_layout); ?>" cellspacing="<?php echo($cs_layout); ?>" border="0">
         
@@ -211,7 +210,7 @@ catch(Exception $e)
         
         <td style="vertical-align: top;">
 <?php
-            include('structure/frame/left/left1.php');
+            #include('structure/frame/left/left1.php');
 ?>
         </td>
     
