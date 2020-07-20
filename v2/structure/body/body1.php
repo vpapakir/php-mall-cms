@@ -9,7 +9,7 @@ try
                             INNER JOIN structure_logo AS logo 
                             ON temp.id_template = logo.id_template
                             WHERE status_template = :status_template';
-    //if((checkrights($main_rights_log, '9', $redirection)) === true){ $_SESSION['prepared_query'] = $prepared_query; }
+    if((checkrights($main_rights_log, '9', $redirection)) === true){ $_SESSION['prepared_query'] = $prepared_query; }
     $query = $connectData->prepare($prepared_query);
     $query->bindParam('status_template', $status_template);
     $query->execute();
@@ -64,14 +64,15 @@ try
 catch(Exception $e)
 {
     $_SESSION['error400_message'] = $e->getMessage();
-    if($_SESSION['index'] == 'index.php')
+    echo $_SESSION['error400_message'];
+    /*if($_SESSION['index'] == 'index.php')
     {
         die(header('Location: '.$config_customheader.'Error/400'));
     }
     else
     {
         die(header('Location: '.$config_customheader.$_SESSION['index'].'Backoffice/Error/400'));
-    }
+    }*/
 }
 
 ?>
@@ -82,7 +83,7 @@ catch(Exception $e)
       text-align: <?php echo('center'); ?>;">
     
 <?php
-    include('structure/skin/skin1.php');
+    //include('structure/skin/skin1.php');
 ?>
 
 </body>
