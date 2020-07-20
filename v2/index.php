@@ -5,6 +5,7 @@ ob_start("ob_gzhandler");
 
 $COOBOX_BASE_URL = $_SERVER['REQUEST_URI'];
 $_SESSION['index'] = 'index.php';
+$main_browsertitle = "";
 if (isset($_COOKIE["language"]))
 {
 	if($_SESSION['current_language'] != $_COOKIE["language"]) {
@@ -32,6 +33,11 @@ if (isset($_SESSION['current_log_rightsuser'])) {
 } else {
 	$main_rights_log = "";
 }
+if (isset($_SESSION['current_language'])) {
+	$main_id_language = $_SESSION['current_language'];
+} else {
+	$main_id_language = 1;
+}
 $redirection = false;
 include('config/config_main.php');
 include('config/config_admin.php');
@@ -44,7 +50,6 @@ include('modules/stats/visit/statsvisit_main.php');
 include('config/config_valuerelated.php');
 
 #$_SESSION['current_page'] = trim(htmlspecialchars($_GET['page'], ENT_QUOTES));
-#$main_id_language = $_SESSION['current_language'];
 #$main_id_currency = $_SESSION['current_currency'];
 #$main_coef_currency = $_SESSION['current_coef_currency'];
 #$main_rate_currency = $_SESSION['current_rate_currency'];
@@ -63,12 +68,12 @@ include('config/config_valuerelated.php');
         <title><?php echo($main_browsertitle); ?></title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <meta name="Title" content="<?php echo($main_currentpage_title); ?>">
-        <meta name="Description" content="<?php echo($main_currentpage_intro); ?>">
-        <meta name="Keywords" content="<?php echo(cut_string($main_currentpage_tags, 0, 256, '')); ?>">
+        <meta name="Title" content="<?php //echo($main_currentpage_title); ?>">
+        <meta name="Description" content="<?php //echo($main_currentpage_intro); ?>">
+        <meta name="Keywords" content="<?php //echo(cut_string($main_currentpage_tags, 0, 256, '')); ?>">
         <meta name="Author" content="<?php echo($config_meta_author); ?>">
         <meta NAME="Publisher" content="<?php echo($config_meta_publisher); ?>">
-        <meta name="Copyright" content="<?php echo($config_meta_author.' - '.$main_currentpage_browser); ?>">
+        <meta name="Copyright" content="<?php //echo($config_meta_author.' - '.$main_currentpage_browser); ?>">
         <meta http-equiv="Reply-To" content="<?php echo($config_meta_replyto); ?>">
         <meta http-equiv="Content-Language" content="<?php echo(strtolower($main_meta_currentlangcode)); ?>">       
         <meta name="Robots" content="<?php echo($config_meta_robots); ?>">
@@ -123,6 +128,6 @@ include('config/config_valuerelated.php');
     </head>             
         <?php 
 		//get language cookie            
-		//include('structure/body/body1.php');
+		include('structure/body/body1.php');
         ?>
 </html>
