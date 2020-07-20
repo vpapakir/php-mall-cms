@@ -3,7 +3,7 @@ try
 {
     $prepared_query = 'SELECT * FROM config_main
                        WHERE id_config_main = 1';
-    //if((checkrights($main_rights_log, '9', $redirection)) === true){ $_SESSION['prepared_query'] = $prepared_query; }
+    if((checkrights($main_rights_log, '9', $redirection)) === true){ $_SESSION['prepared_query'] = $prepared_query; }
     $query = $connectData->prepare($prepared_query);
     $query->execute();
     
@@ -30,7 +30,7 @@ try
     {
         $prepared_query = 'SELECT family_page, ajaxpath_page FROM page
                            WHERE url_page = :page';
-        //if((checkrights($main_rights_log, '9', $redirection)) === true){ $_SESSION['prepared_query'] = $prepared_query; }
+        if((checkrights($main_rights_log, '9', $redirection)) === true){ $_SESSION['prepared_query'] = $prepared_query; }
         $query = $connectData->prepare($prepared_query);
         $query->bindParam('page', trim(htmlspecialchars($_GET['page'], ENT_QUOTES)));
         $query->execute();
