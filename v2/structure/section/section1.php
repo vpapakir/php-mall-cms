@@ -155,7 +155,7 @@ catch(Exception $e)
 <?php   
                         if($status_frame[6] == 1)
                         {
-                            #include('structure/frame/tabbar/tabbarL1.php');
+                            include('structure/frame/tabbar/tabbarL1.php');
                         }   
 ?>
                     </td>
@@ -164,7 +164,7 @@ catch(Exception $e)
 <?php                
                         if($status_frame[7] == 1)
                         {
-                            #include('structure/frame/tabbar/tabbarR1.php');
+                            include('structure/frame/tabbar/tabbarR1.php');
                         }
 ?>
                     </td>
@@ -178,7 +178,7 @@ catch(Exception $e)
     <tr>
         <td align="center" style="background-color: <?php echo($tablebg_section); ?>;">
             <?php
-                include('structure/layout/layout1.php');
+                #include('structure/layout/layout1.php');
             ?>
         </td>
     </tr>
@@ -189,7 +189,7 @@ catch(Exception $e)
         <tr>
         <td colspan="3" style="vertical-align: top;">
 <?php
-            include('structure/frame/footer/footer1.php');
+            #include('structure/frame/footer/footer1.php');
 ?>
         </td>
         </tr>
