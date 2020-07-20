@@ -15,7 +15,7 @@ GNU General Public License for more details.
 
 @author geoPlugin (gp_support@geoplugin.com)
 @copyright Copyright geoPlugin (gp_support@geoplugin.com)
-$version 1.01
+$version 1.2
 
 
 This PHP class uses the PHP Webservice of http://www.geoplugin.com/ to geolocate IP addresses
@@ -29,27 +29,47 @@ See http://www.geoplugin.com/webservices/php for more specific details of this f
 class geoPlugin {
 	
 	//the geoPlugin server
-	var $host = 'http://www.geoplugin.net/php.gp?ip={IP}&base_currency={CURRENCY}';
+	var $host = 'http://www.geoplugin.net/php.gp?ip={IP}&base_currency={CURRENCY}&lang={LANG}';
 		
 	//the default base currency
 	var $currency = 'USD';
 	
+	//the default language
+	var $lang = 'en';
+/*
+supported languages:
+de
+en
+es
+fr
+ja
+pt-BR
+ru
+zh-CN
+*/
+
 	//initiate the geoPlugin vars
 	var $ip = null;
 	var $city = null;
 	var $region = null;
-	var $areaCode = null;
+	var $regionCode = null;
+	var $regionName = null;
 	var $dmaCode = null;
 	var $countryCode = null;
 	var $countryName = null;
+	var $inEU = null;
+	var $euVATrate = false;
 	var $continentCode = null;
-	var $latitute = null;
+	var $continentName = null;
+	var $latitude = null;
 	var $longitude = null;
+	var $locationAccuracyRadius = null;
+	var $timezone = null;
 	var $currencyCode = null;
 	var $currencySymbol = null;
 	var $currencyConverter = null;
 	
-	function geoPlugin() {
+	function __construct() {
 
 	}
 	
@@ -63,6 +83,7 @@ class geoPlugin {
 		
 		$host = str_replace( '{IP}', $ip, $this->host );
 		$host = str_replace( '{CURRENCY}', $this->currency, $host );
+		$host = str_replace( '{LANG}', $this->lang, $host );
 		
 		$data = array();
 		
@@ -74,13 +95,19 @@ class geoPlugin {
 		$this->ip = $ip;
 		$this->city = $data['geoplugin_city'];
 		$this->region = $data['geoplugin_region'];
-		$this->areaCode = $data['geoplugin_areaCode'];
+		$this->regionCode = $data['geoplugin_regionCode'];
+		$this->regionName = $data['geoplugin_regionName'];
 		$this->dmaCode = $data['geoplugin_dmaCode'];
 		$this->countryCode = $data['geoplugin_countryCode'];
 		$this->countryName = $data['geoplugin_countryName'];
+		$this->inEU = $data['geoplugin_inEU'];
+		$this->euVATrate = $data['geoplugin_euVATrate'];
 		$this->continentCode = $data['geoplugin_continentCode'];
+		$this->continentName = $data['geoplugin_continentName'];
 		$this->latitude = $data['geoplugin_latitude'];
 		$this->longitude = $data['geoplugin_longitude'];
+		$this->locationAccuracyRadius = $data['geoplugin_locationAccuracyRadius'];
+		$this->timezone = $data['geoplugin_timezone'];
 		$this->currencyCode = $data['geoplugin_currencyCode'];
 		$this->currencySymbol = $data['geoplugin_currencySymbol'];
 		$this->currencyConverter = $data['geoplugin_currencyConverter'];
@@ -95,7 +122,7 @@ class geoPlugin {
 			$ch = curl_init();
 			curl_setopt($ch, CURLOPT_URL, $host);
 			curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-			curl_setopt($ch, CURLOPT_USERAGENT, 'geoPlugin PHP Class v1.0');
+			curl_setopt($ch, CURLOPT_USERAGENT, 'geoPlugin PHP Class v1.1');
 			$response = curl_exec($ch);
 			curl_close ($ch);
 			
@@ -149,98 +176,6 @@ class geoPlugin {
 	}
 
 	
-}
-
-
-/*
-This file is free software: you can redistribute it and/or modify
-the code under the terms of the GNU General Public License as published by
-the Free Software Foundation, either version 3 of the License, or
-(at your option) any later version. 
-
-However, the license header, copyright and author credits 
-must not be modified in any form and always be displayed.
-
-This class is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU General Public License for more details.
-
-@author geoPlugin (gp_support@geoplugin.com)
-@copyright Copyright geoPlugin (gp_support@geoplugin.com)
-
-This file is an example PHP file of the geoplugin class
-to geolocate IP addresses using the free PHP Webservices of
-http://www.geoplugin.com/
-
-*/
-
-require_once('geoplugin.class.php');
-
-$geoplugin = new geoPlugin();
-
-/* 
-Notes:
-
-The default base currency is USD (see http://www.geoplugin.com/webservices:currency ).
-You can change this before the call to geoPlugin::locate with eg:
-$geoplugin->currency = 'EUR';
-
-The default IP to lookup is $_SERVER['REMOTE_ADDR']
-You can lookup a specific IP address, by entering the IP in the call to geoPlugin::locate
-eg
-$geoplugin->locate('209.85.171.100');
-
-*/
-
-//locate the IP
-$geoplugin->locate();
-
-//echo "Geolocation results for {$geoplugin->ip}: <br />\n".
-//	"City: {$geoplugin->city} <br />\n".
-//	"Region: {$geoplugin->region} <br />\n".
-//	"Area Code: {$geoplugin->areaCode} <br />\n".
-//	"DMA Code: {$geoplugin->dmaCode} <br />\n".
-//	"Country Name: {$geoplugin->countryName} <br />\n".
-//	"Country Code: {$geoplugin->countryCode} <br />\n".
-//	"Longitude: {$geoplugin->longitude} <br />\n".
-//	"Latitude: {$geoplugin->latitude} <br />\n".
-//	"Currency Code: {$geoplugin->currencyCode} <br />\n".
-//	"Currency Symbol: {$geoplugin->currencySymbol} <br />\n".
-//	"Exchange Rate: {$geoplugin->currencyConverter} <br />\n";
-
-/*
-How to use the in-built currency converter
-geoPlugin::convert accepts 3 parameters
-$amount - amount to convert (required)
-$float - the number of decimal places to round to (default: 2)
-$symbol - whether to display the geolocated currency symbol in the output (default: true)
-*/
-if ( $geoplugin->currency != $geoplugin->currencyCode ) {
-	//our visitor is not using the same currency as the base currency
-//	echo "<p>At todays rate, US$100 will cost you " . $geoplugin->convert(100) ." </p>\n";
-}
-
-/* Finding places nearby 
-nearby($radius, $maxresults)
-$radius (optional: default 10)
-$maxresults (optional: default 5)
- */
-$nearby = $geoplugin->nearby();
-
-if ( isset($nearby[0]['geoplugin_place']) ) {
-
-//	echo "<pre><p>Some places you may wish to visit near " . $geoplugin->city . ": </p>\n";
-
-	foreach ( $nearby as $key => $array ) {
-		
-//		echo ($key + 1) .":<br />";
-//		echo "\t Place: " . $array['geoplugin_place'] . "<br />";
-//		echo "\t Region: " . $array['geoplugin_region'] . "<br />";
-//		echo "\t Latitude: " . $array['geoplugin_latitude'] . "<br />";
-//		echo "\t Longitude: " . $array['geoplugin_longitude'] . "<br />";
-	}
-//	echo "</pre>\n";
 }
 
 ?>
