@@ -12,17 +12,37 @@ if (isset($_COOKIE["language"]))
 	}
 }
 
-include('modules/dbconnect/dinxdev/dbconnect.php');
+$include_dbconnect_info = "modules/dbconnect/dinxdev/dbconnect_info.php";
+try {
+	include('modules/dbconnect/dinxdev/dbconnect.php');
+} catch (Exception $e) {
+	echo 'Caught exception: ',  $e->getMessage(), "\n";
+}
 include('modules/functions/function.php');
-include('config/config_admin.php');
-include('config/config_main.php');
 
-#include('config/config_image.php');
-#include('modules/pdf/pdf.php');
-#include('structure/config_structure.php');
-#include('modules/language/language/language_switch.php');
-#include('modules/finance/currency/currency_switch.php');
-#include('modules/stats/visit/statsvisit_main.php');
+
+if (isset($_SESSION['current_log_iduser'])) {
+	$main_iduser_log = $_SESSION['current_log_iduser'];
+} else {
+	$main_iduser_log = "";
+}
+
+if (isset($_SESSION['current_log_rightsuser'])) {
+	$main_rights_log = $_SESSION['current_log_rightsuser'];
+} else {
+	$main_rights_log = "";
+}
+$redirection = false;
+include('config/config_main.php');
+include('config/config_admin.php');
+include('config/config_image.php');
+include('modules/pdf/pdf.php');
+include('structure/config_structure.php');
+include('modules/language/language/language_switch.php');
+include('modules/finance/currency/currency_switch.php');
+include('modules/stats/visit/statsvisit_main.php');
+include('config/config_valuerelated.php');
+
 #$_SESSION['current_page'] = trim(htmlspecialchars($_GET['page'], ENT_QUOTES));
 #$main_id_language = $_SESSION['current_language'];
 #$main_id_currency = $_SESSION['current_currency'];
@@ -32,12 +52,9 @@ include('config/config_main.php');
 #$main_selectedcode_currency = $_SESSION['current_selectedcode_currency'];
 #$main_selectedsymbol_currency = $_SESSION['current_selectedsymbol_currency'];
 #$main_priority_currency = $_SESSION['current_priority_currency'];
-#$main_iduser_log = $_SESSION['current_log_iduser'];
-#$main_rights_log = $_SESSION['current_log_rightsuser'];
 #$main_onlinestatus_log = $_SESSION['current_log_onlinestatususer'];
 #$blocktitle_box_structure = 21;
 #$blockcontent_box_structure = 22;
-#include('config/config_valuerelated.php');
 
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"> 
