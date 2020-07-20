@@ -3,7 +3,7 @@ try
 {
     $prepared_query = 'SELECT * FROM config_admin
                        WHERE status_configadmin = 1';
-    //if((checkrights($main_rights_log, '9', $redirection)) === true){ $_SESSION['prepared_query'] = $prepared_query; }
+    if((checkrights($main_rights_log, '9', $redirection)) === true){ $_SESSION['prepared_query'] = $prepared_query; }
     $query = $connectData->prepare($prepared_query);
     $query->execute();    
     if(($data = $query->fetch()) != false)
@@ -17,7 +17,7 @@ try
     
     $prepared_query = 'SELECT * FROM config_module
                        WHERE status_configmodule = 1';
-    //if((checkrights($main_rights_log, '9', $redirection)) === true){ $_SESSION['prepared_query'] = $prepared_query; }
+    if((checkrights($main_rights_log, '9', $redirection)) === true){ $_SESSION['prepared_query'] = $prepared_query; }
     $query = $connectData->prepare($prepared_query);
     $query->execute();    
     if(($data = $query->fetch()) != false)
@@ -29,6 +29,7 @@ try
 catch(Exception $e)
 {
     $_SESSION['error400_message'] = $e->getMessage();
+    echo $_SESSION['error400_message'];
     if($_SESSION['index'] == 'index.php')
     {
         die(header('Location: '.$config_customheader.'Error/400'));
