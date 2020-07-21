@@ -41,7 +41,11 @@ $main_selectedcode_currency = $_SESSION['current_selectedcode_currency'];
 $main_selectedsymbol_currency = $_SESSION['current_selectedsymbol_currency'];
 $main_priority_currency = $_SESSION['current_priority_currency'];
 $main_iduser_log = $_SESSION['current_log_iduser'];
-$main_rights_log = $_SESSION['current_log_rightsuser'];
+if(isset($_SESSION['current_log_rightsuser'])) {
+	$main_rights_log = $_SESSION['current_log_rightsuser'];
+} else {
+	$main_rights_log = 0;
+}
 $main_onlinestatus_log = $_SESSION['current_log_onlinestatususer'];
 $blocktitle_box_structure = 21;
 $blockcontent_box_structure = 22;
@@ -63,7 +67,7 @@ try
 { 
     $prepared_query = 'SELECT * FROM structure_skin
                             WHERE id_body = :id_body';
-    //if((checkrights($main_rights_log, '9', $redirection)) === true){ $_SESSION['prepared_query'] = $prepared_query; }
+    if((checkrights($main_rights_log, '9', $redirection)) === true){ $_SESSION['prepared_query'] = $prepared_query; }
     $query = $connectData->prepare($prepared_query);
     $query->bindParam('id_body', $id_body);
     $query->execute();

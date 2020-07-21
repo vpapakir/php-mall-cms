@@ -19,14 +19,15 @@ try
 catch(Exception $e)
 {
     $_SESSION['error400_message'] = $e->getMessage();
-    if($_SESSION['index'] == 'index.php')
+    echo $_SESSION['error400_message'] ;
+    /*if($_SESSION['index'] == 'index.php')
     {
         die(header('Location: '.$config_customheader.'Error/400'));
     }
     else
     {
         die(header('Location: '.$config_customheader.'Backoffice/Error/400'));
-    }
+    }*/
 }
 ?>
 <td align="left" width="50%" style="vertical-align: top;"><table class="block_main2" width="100%">

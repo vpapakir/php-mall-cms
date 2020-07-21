@@ -4,7 +4,7 @@ session_start();
 ob_start("ob_gzhandler");
 
 $COOBOX_BASE_URL = $_SERVER['REQUEST_URI'];
-$_SESSION['index'] = 'index.php'; // what happens if i remove that line?
+#$_SESSION['index'] = 'index.php'; // what happens if i remove that line?
 $echo = true;
 $config_showtranslationcode = true;
 $main_browsertitle = "";
