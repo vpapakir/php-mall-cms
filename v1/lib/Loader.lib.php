@@ -119,7 +119,7 @@ function parseGetRequest($request)
 		}
 	}
 	//get requetsed variables from loader
-	if(is_array($loaderRequestedParts))
+	if(isset($loaderRequestedParts) && is_array($loaderRequestedParts))
 	{
 		$loaderRequestPartsNumber = count($loaderRequestedParts);
 		for ($i = 1; $i <= $loaderRequestPartsNumber; $i=$i+2)
@@ -162,7 +162,7 @@ function parseGetRequest($request)
 		$requestPartsNumber = count($requestParts)-1;
 		for ($i = 0; $i <= $requestPartsNumber; $i=$i+2)
 		{
-			$valueNumber=$i+1;
+			$valueNumber=$i;//+1;
 			$requestVariableValue = $requestParts[$valueNumber];
 			$subRequest = $requestParts[$i];
 			$subRequestParts = explode("/",$subRequest);
@@ -185,7 +185,6 @@ function parseGetRequest($request)
 			}
 		}
 	}
-	//print_r($HTTP_GET_VARS);
 }
 
 function setVariableIntoSystemLoader($variables,$values)
