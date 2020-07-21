@@ -6,6 +6,8 @@ $captchadinx_length = 15;
 #max code length
 $capchadinx_colorlength = 5;
 
+$captchadinx_randomstr = "aaa";
+
 #random bgcolor
 $captchadinx_bgcolor = array(0 => '#000000', 1 => '#FFFFFF', 2 => '#CFCFCF', 3 => 'black', 4 => 'white', 5 => 'lightgrey');
 $captchadinx_bgcolor_length = count($captchadinx_bgcolor) - 1;
@@ -27,7 +29,7 @@ $captchadinx_charcode = null;
 $captchadinx_bok_continue = true;
 
 $captchadinx_allowchar_length = strlen($captchadinx_allowchar);
-for($cap = 1; $cap <= $captchadinx_length; $cap++)
+for($cap = 1; $cap < $captchadinx_length; $cap++)
 {
     $captchadinx_randomstr .= $captchadinx_allowchar[rand(0, $captchadinx_allowchar_length)];
 }
@@ -35,7 +37,7 @@ $q = 0;
 
 $temp_captchadinx_randomstr = $captchadinx_randomstr;
 
-for($cap = 1; $cap <= $captchadinx_length; $cap++)
+for($cap = 1; $cap < $captchadinx_length; $cap++)
 {
     if(1 == rand(0, 1))
     {
@@ -75,7 +77,8 @@ for($u = 0, $countu = count($captchadinx_array_charcode); $u < $countu; $u++)
 $captchadinx_array_charcode = $temp_captchadinx_array_charcode;
 
 $l = 0;
-for($cap = 0; $cap <= $captchadinx_length; $cap++)
+$captchadinx_randomstr = "";
+for($cap = 0; $cap < $captchadinx_length; $cap++)
 {  
     if($l < count($captchadinx_array_charcode))
     {        
@@ -119,8 +122,7 @@ for($cap = 0; $cap <= $captchadinx_length; $cap++)
                 $capchadinx_charbasiccolor = '#000000';
                 break;
         }
-
-        $captchadinx_randomstr .= '<span style="font-size: '.$captchadinx_size[rand(0, $captchadinx_size_length)].'; color: '.$capchadinx_charbasiccolor.';">'.$temp_captchadinx_randomstr[$cap].'</span>';
+        $captchadinx_randomstr .= '<span style="font-size: './*$captchadinx_size[rand(0, $captchadinx_size_length)].*/'; color: './*$capchadinx_charbasiccolor.*/';">'.$temp_captchadinx_randomstr[$cap].'</span>';
     }
     else
     {

@@ -97,8 +97,7 @@ if(!empty($main_iduser_log))
     }
 }
 
-if(($url_page == 'home_frontend' && isset($_GET['logout']) && $_GET['logout'] == 'true') 
-        || $main_onlinestatus_log == 9)
+if(($url_page == 'home_frontend' && isset($_GET['logout']) && $_GET['logout'] == 'true'))
 {
 	/*setcookie( 'language', $_SESSION['current_language'], time() + 60*60*24*30*12,'/' );*/
 	

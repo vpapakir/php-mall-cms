@@ -1,7 +1,11 @@
 <?php
 try
 {
-    unset($stats_page_count);
+    if(isset($stats_page_count)) {
+    	#unset($stats_page_count);
+    } else {
+	$stats_page_count = 0;
+    }
     $prepared_query = 'SELECT count_statspage FROM stats_page';
     if((checkrights($main_rights_log, '9', $redirection)) === true){ $_SESSION['prepared_query'] = $prepared_query; }
     $query = $connectData->prepare($prepared_query);

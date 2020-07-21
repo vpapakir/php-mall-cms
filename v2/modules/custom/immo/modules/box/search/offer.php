@@ -8,7 +8,7 @@
                            WHERE code_cdreditor = "cdreditor_offer_object"
                            AND statusobject_cdreditor = 1
                            ORDER BY L'.$main_id_language.'S';
-        //if((checkrights($main_rights_log, '9', $redirection)) === true){ $_SESSION['prepared_query'] = $prepared_query; }
+        if((checkrights($main_rights_log, '9', $redirection)) === true){ $_SESSION['prepared_query'] = $prepared_query; }
         $query = $connectData->prepare($prepared_query);
         $query->execute();
         $p = 0;
@@ -31,7 +31,7 @@
                     <tr>                                   
                         <td align="left">
 <?php  
-                        cdreditor('checkbox', $quicksearch_nameS_offer, $quicksearch_code_offer.'Quicksearch', $quicksearch_statusobject_offer, $quicksearch_id_offer, $_SESSION['quicksearch_cdreditor_offer_objectQuicksearch'], false, '', '', '', '', '', '', 'true', 3, 1, 'true', 'offer_product_immo', '=');                                  
+                        #cdreditor('checkbox', $quicksearch_nameS_offer, $quicksearch_code_offer.'Quicksearch', $quicksearch_statusobject_offer, $quicksearch_id_offer, $_SESSION['quicksearch_cdreditor_offer_objectQuicksearch'], false, '', '', '', '', '', '', 'true', 3, 1, 'true', 'offer_product_immo', '=');                                  
 ?>
                         </td>
                     </tr>

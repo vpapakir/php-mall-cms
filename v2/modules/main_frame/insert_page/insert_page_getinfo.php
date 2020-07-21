@@ -5,9 +5,10 @@ $prepared_query = 'SELECT *
                    FROM page p
                    WHERE p.url_page = :url
                    AND p.status_page = 1';
-//if((checkrights($main_rights_log, '9', $redirection)) === true){ $_SESSION['prepared_query'] = $prepared_query; }
+if((checkrights($main_rights_log, '9', $redirection)) === true){ $_SESSION['prepared_query'] = $prepared_query; }
 $query = $connectData->prepare($prepared_query);
-$query->bindParam('url', htmlspecialchars($pageok, ENT_QUOTES));
+$url_to_select = htmlspecialchars($pageok, ENT_QUOTES);
+$query->bindParam('url', $url_to_select);
 $query->execute();
 
 if(($data = $query->fetch()) != false)
@@ -32,13 +33,13 @@ $prepared_query = 'SELECT *
                    FROM page_image
                    WHERE id_page = :id
                    ORDER BY position_image';
-//if((checkrights($main_rights_log, '9', $redirection)) === true){ $_SESSION['prepared_query'] = $prepared_query; }
+if((checkrights($main_rights_log, '9', $redirection)) === true){ $_SESSION['prepared_query'] = $prepared_query; }
 $query = $connectData->prepare($prepared_query);
-$query->bindParam('id', htmlspecialchars($id_page, ENT_QUOTES));
+$id_to_select = htmlspecialchars($id_page, ENT_QUOTES);
+$query->bindParam('id', $id_to_select);
 $query->execute();
 
-unset($id_image_page,$legend_image_page,$path_image_page,$path_thumb_page,$alt_image_page[$i]);
-
+#unset($id_image_page,$legend_image_page,$path_image_page,$path_thumb_page,$alt_image_page[$i]);
 if(($data = $query->fetch()) == false)
 {
     
@@ -64,9 +65,10 @@ $prepared_query = 'SELECT L'.$main_id_language.'
                    FROM page_translation
                    WHERE id_page = :page
                    AND family_page_translation = "title"';
-//if((checkrights($main_rights_log, '9', $redirection)) === true){ $_SESSION['prepared_query'] = $prepared_query; }
+if((checkrights($main_rights_log, '9', $redirection)) === true){ $_SESSION['prepared_query'] = $prepared_query; }
 $query = $connectData->prepare($prepared_query);
-$query->bindParam('page', htmlspecialchars($id_page, ENT_QUOTES));
+$page_to_select = htmlspecialchars($id_page, ENT_QUOTES);
+$query->bindParam('page', $page_to_select);
 $query->execute();
 
 if(($data = $query->fetch()) != false)
@@ -80,9 +82,10 @@ $prepared_query = 'SELECT L'.$main_id_language.'
                    FROM page_translation
                    WHERE id_page = :page
                    AND family_page_translation = "intro"';
-//if((checkrights($main_rights_log, '9', $redirection)) === true){ $_SESSION['prepared_query'] = $prepared_query; }
+if((checkrights($main_rights_log, '9', $redirection)) === true){ $_SESSION['prepared_query'] = $prepared_query; }
 $query = $connectData->prepare($prepared_query);
-$query->bindParam('page', htmlspecialchars($id_page, ENT_QUOTES));
+$id_page_to_select = htmlspecialchars($id_page, ENT_QUOTES);
+$query->bindParam('page', $id_page_to_select);
 $query->execute();
 
 if(($data = $query->fetch()) != false)
@@ -96,9 +99,9 @@ $prepared_query = 'SELECT L'.$main_id_language.'
                    FROM page_translation
                    WHERE id_page = :page
                    AND family_page_translation = "desc"';
-//if((checkrights($main_rights_log, '9', $redirection)) === true){ $_SESSION['prepared_query'] = $prepared_query; }
+if((checkrights($main_rights_log, '9', $redirection)) === true){ $_SESSION['prepared_query'] = $prepared_query; }
 $query = $connectData->prepare($prepared_query);
-$query->bindParam('page', htmlspecialchars($id_page, ENT_QUOTES));
+$id_page_to_select = htmlspecialchars($id_page, ENT_QUOTES);                                                                                             $query->bindParam('page', $id_page_to_select);
 $query->execute();
 
 if(($data = $query->fetch()) != false)
@@ -112,9 +115,10 @@ $prepared_query = 'SELECT L'.$main_id_language.'
                    FROM page_translation
                    WHERE id_page = :page
                    AND family_page_translation = "rewritingF"';
-//if((checkrights($main_rights_log, '9', $redirection)) === true){ $_SESSION['prepared_query'] = $prepared_query; }
+if((checkrights($main_rights_log, '9', $redirection)) === true){ $_SESSION['prepared_query'] = $prepared_query; }
 $query = $connectData->prepare($prepared_query);
-$query->bindParam('page', htmlspecialchars($id_page, ENT_QUOTES));
+$id_page_to_select = htmlspecialchars($id_page, ENT_QUOTES);
+$query->bindParam('page', $id_page_to_select);
 $query->execute();
 
 if(($data = $query->fetch()) != false)
@@ -129,9 +133,10 @@ $prepared_query = 'SELECT L'.$main_id_language.'
                    FROM page_translation
                    WHERE id_page = :page
                    AND family_page_translation = "rewritingB"';
-//if((checkrights($main_rights_log, '9', $redirection)) === true){ $_SESSION['prepared_query'] = $prepared_query; }
+if((checkrights($main_rights_log, '9', $redirection)) === true){ $_SESSION['prepared_query'] = $prepared_query; }
 $query = $connectData->prepare($prepared_query);
-$query->bindParam('page', htmlspecialchars($id_page, ENT_QUOTES));
+$id_page_to_select = htmlspecialchars($id_page, ENT_QUOTES);
+$query->bindParam('page', $id_page_to_select);
 $query->execute();
 
 if(($data = $query->fetch()) != false)

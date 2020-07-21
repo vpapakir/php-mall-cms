@@ -1804,7 +1804,7 @@ function create_pdf()
     
 }
 
-function give_translation($code, $echo, $showtranslationcode)
+function give_translation($code, $echo = true, $showtranslationcode)
 {
     $header = ["REQUEST_URI"];
     $include_dbconnect_info = 'modules/dbconnect/dinxdev/dbconnect_info.php';
@@ -1818,7 +1818,7 @@ function give_translation($code, $echo, $showtranslationcode)
     {       
         $prepared_query = 'SELECT id_translation, L'.$current_language.' FROM translation
                            WHERE code_translation = :code';
-        if((checkrights($main_rights_log, '9', $redirection)) === true){ $_SESSION['prepared_query'] = $prepared_query; }
+        //if((checkrights($main_rights_log, '9', $redirection)) === true){ $_SESSION['prepared_query'] = $prepared_query; }
         $query = $connectData->prepare($prepared_query);
 	$code_1 = $code;
 	$code_2 = htmlspecialchars($code_1, ENT_QUOTES);
@@ -1848,7 +1848,7 @@ function give_translation($code, $echo, $showtranslationcode)
         }
         else
         {
-			if($_SESSION['current_log_rightsuser'] > 7) {
+			if(isset($_SESSION['current_log_rightsuser']) && $_SESSION['current_log_rightsuser'] > 7) {
 				$href_edit = '<a class="link_error1" href="'.$header.'Gestion/Traductions/'.$translate_id.'" target="_blank" title="Edit - '.$code.'">[#]</a>&nbsp;';
 				$href_new = '<a class="link_error1" href="'.$header.'Gestion/Traductions" target="_blank" title="New - '.$code.'">[#?]</a>&nbsp;';
 			
@@ -1868,7 +1868,8 @@ function give_translation($code, $echo, $showtranslationcode)
 				try {
 					$prepared_query_2 = 'SELECT id_translation, L1 FROM translation WHERE code_translation = :code';
 					$query_2 = $connectData->prepare($prepared_query_2);
-					$query_2->bindParam('code', trim(htmlspecialchars($code, ENT_QUOTES)));
+					$code_to_select = trim(htmlspecialchars($code, ENT_QUOTES));
+					$query_2->bindParam('code', $code_to_select);
 					$query_2->execute();
 					if(($data = $query_2->fetch()) != false) {
 						$Bok_exist_translation = true;
