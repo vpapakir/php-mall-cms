@@ -150,7 +150,7 @@ catch(Exception $e)
     } 
 }
 ?>       
-<table style="width: <?php echo($width_layout); ?>; height: <?php echo($height_layout); ?>; 
+<table id="tbl_layout_01" style="width: <?php echo($width_layout); ?>; height: <?php echo($height_layout); ?>; 
        border: <?php echo($border_layout.' solid '.$bordercolor_layout); ?>;
        position: <?php echo($position_layout); ?>; margin: <?php echo($margin_layout); ?>;
        <?php if(!empty($bgcolor_layout)){ ?>background-color: <?php echo($bgcolor_layout); ?>;<?php } ?>
@@ -188,7 +188,7 @@ catch(Exception $e)
     {
 ?>
         <tr>
-        <td colspan="3" style="vertical-align: top;">
+        <td id="structure/frame/navbar/navbar1.php" colspan="3" style="vertical-align: top;">
 <?php
             include('structure/frame/navbar/navbar1.php');
 ?>        
@@ -205,7 +205,7 @@ catch(Exception $e)
     {
 ?>    
         
-        <td style="vertical-align: top;">
+        <td id="structure/frame/left/left1.php" style="vertical-align: top;">
 <?php
             include('structure/frame/left/left1.php');
 ?>
@@ -217,7 +217,7 @@ catch(Exception $e)
     if($status_frame_layout[0] == 1)
     {
 ?>     
-        <td style="vertical-align: top;">
+        <td id="structure/frame/main/main1.php" style="vertical-align: top;">
 <?php
             include('structure/frame/main/main1.php');
 ?>
@@ -229,7 +229,7 @@ catch(Exception $e)
     {
 ?>    
         
-        <td style="vertical-align: top;">
+        <td id="structure/frame/right/right1.php" style="vertical-align: top;">
 <?php
             include('structure/frame/right/right1.php');
 ?>

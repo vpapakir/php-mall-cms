@@ -4,7 +4,7 @@ session_start();
 ob_start("ob_gzhandler");
 
 $COOBOX_BASE_URL = $_SERVER['REQUEST_URI'];
-$_SESSION['index'] = 'index.php';
+#$_SESSION['index'] = 'index.php'; // what happens if i remove that line?
 $scho="true";
 $main_browsertitle = "";
 if (isset($_COOKIE["language"]))

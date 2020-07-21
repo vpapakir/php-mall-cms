@@ -76,7 +76,7 @@ catch(Exception $e)
 ?>
 
 
-<table style="width: <?php echo($width_skin); ?>; height: <?php echo($height_skin); ?>; 
+<table id="tbl_skin_01" style="width: <?php echo($width_skin); ?>; height: <?php echo($height_skin); ?>; 
        border: <?php echo($border_skin.' solid '.$bordercolor_skin); ?>;
        position: <?php echo($position_skin); ?>; margin: <?php echo($margin_skin); ?>;
        <?php if(!empty($repeat_skin)){ ?>background-repeat: <?php echo($repeat_skin) ?>;<?php } ?>
