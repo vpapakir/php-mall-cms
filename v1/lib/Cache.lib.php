@@ -47,7 +47,7 @@ class CacheController
 		//$uri = str_replace("=","-",$uri);
 		//$uri = str_replace("&","-",$uri);
 		//$uri = str_replace("?","-",$uri);
-		if($input['cacheAction']=='delete')
+		if(isset(input['cacheAction']) && $input['cacheAction']=='delete')
 		{
 			$this->deleteCache();
 		}
