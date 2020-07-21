@@ -1012,8 +1012,8 @@ RewriteRule ^forgotten_pwd$   index.php?page=forgotten_pwd [L]
 RewriteRule ^backoffice/forgotten_pwd$   index_backoffice.php?page=forgotten_pwd [L]
 
 # forgotten_pwd_part2
-RewriteRule ^forgotten_pwd_part2$   index.php?page=forgotten_pwd_part2 [L]
-RewriteRule ^backoffice/forgotten_pwd_part2$   index_backoffice.php?page=forgotten_pwd_part2 [L]
+#RewriteRule ^forgotten_pwd_part2$   index.php?page=forgotten_pwd_part2 [L]
+#RewriteRule ^backoffice/forgotten_pwd_part2$   index_backoffice.php?page=forgotten_pwd_part2 [L]
 
 # search_main
 RewriteRule ^search_main$   index.php?page=search_main [L]
@@ -2059,6 +2059,6 @@ RewriteRule ^backoffice/sale/page/([0-9]+)$   /index_backoffice.php?page=imos_re
 RewriteRule ^edition/user/([0-9]+)$   /index.php?page=user_edit&user=$1 [L]
 RewriteRule ^backoffice/edition/user/([0-9]+)$   /index_backoffice.php?page=user_edit&user=$1 [L]
 
-RewriteBase /
+RewriteBase /mymall/v2/
 RewriteCond %{HTTPS_HOST} !^ [NC]
 RewriteRule ^(.*)$ $1 [R=301,L]

@@ -8,7 +8,7 @@
         
         <tr></tr>
         
-        <td id="center_text" align="center"><strong><?php echo($_SESSION['prepared_query']); ?></strong></td>
+        <td id="center_text" align="center"><strong><?php if(isset($_SESSION['prepared_query'])) { echo($_SESSION['prepared_query']); } ?></strong></td>
         
         <tr></tr>
         

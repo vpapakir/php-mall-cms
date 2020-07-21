@@ -94,7 +94,7 @@ function give_prioritylangcontent($content, $idpage, $family)
 
 function checkrights($actualrights = 0, $arrayauthrights, $redirection, $excludeSA = true)
 {
-    $header =  "//";
+    $header =  "/";
     
     if(empty($actualrights))
     {
