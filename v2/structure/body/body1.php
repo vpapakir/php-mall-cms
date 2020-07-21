@@ -1,8 +1,14 @@
 <?php
 try
-{   
-    $status_template = 1;
-    
+{
+    if (isset($status_template)) {
+	// do nothing
+    } 
+    else 
+    {   
+    	$status_template = 1;
+    }
+
     $prepared_query = 'SELECT * FROM structure_template AS temp
                             INNER JOIN structure_body AS body
                             ON temp.id_body = body.id_body

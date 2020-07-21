@@ -3,7 +3,7 @@
     $id_box_structure = 11;
 
     include('structure/box/block_getinfo.php');
-    #include('structure/box/box_getinfo.php');
+    include('structure/box/box_getinfo.php');
 ?>
 
     <table style="width: <?php echo($width_box); ?>; 

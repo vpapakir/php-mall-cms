@@ -99,7 +99,7 @@ catch(Exception $e)
     }
 }
 ?>
-<table style="width: <?php echo($width_section); ?>; height: <?php echo($height_section); ?>; 
+<table id="tbl_section_01" style="width: <?php echo($width_section); ?>; height: <?php echo($height_section); ?>; 
        border: <?php echo($border_section.' solid '.$bordercolor_section); ?>;
        position: <?php echo($position_section); ?>; margin: <?php echo($margin_section); ?>;
        border-radius: <?php echo($radius_section[0].'px '.$radius_section[1].'px '.$radius_section[2].'px '.$radius_section[3].'px'); ?>;
