@@ -78,7 +78,6 @@ catch(Exception $e)
 ?>
 <body style="background-color: <?php echo($bgcolor_body); ?>;
       background-image: url('<?php echo($config_customheader.$path_body) ?>'); 
-      <?php if(!empty($repeat_body)){ ?>background-repeat: <?php echo($repeat_body) ?>;<?php } ?>
       <?php if(!empty($attachment_body)){ ?>background-attachment: <?php echo($attachment_body) ?>; <?php } ?> margin: 0px;
       text-align: <?php echo('center'); ?>;">
     

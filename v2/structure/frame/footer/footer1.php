@@ -5,7 +5,7 @@ try
     $prepared_query = 'SELECT * FROM structure_frame
                                WHERE id_frame = :id_frame
                                AND id_layout = :id_layout';
-    //if((checkrights($main_rights_log, '9', $redirection)) === true){ $_SESSION['prepared_query'] = $prepared_query; }
+    if((checkrights($main_rights_log, '9', $redirection)) === true){ $_SESSION['prepared_query'] = $prepared_query; }
     $query = $connectData->prepare($prepared_query);
     $query->execute(array(
                           'id_frame' => $array_id_frame[5],
@@ -66,6 +66,7 @@ try
 catch(Exception $e)
 {
     $_SESSION['error400_message'] = $e->getMessage();
+    echo $_SESSION['error400_message'];
     if($_SESSION['index'] == 'index.php')
     {
         die(header('Location: '.$config_customheader.'Error/400'));
@@ -95,7 +96,7 @@ catch(Exception $e)
                                    ON page.id_page = page_translation.id_page
                                    WHERE url_page = "footer"
                                    AND family_page_translation = "title"';
-                //if((checkrights($main_rights_log, '9', $redirection)) === true){ $_SESSION['prepared_query'] = $prepared_query; }
+                if((checkrights($main_rights_log, '9', $redirection)) === true){ $_SESSION['prepared_query'] = $prepared_query; }
                 $query = $connectData->prepare($prepared_query);
                 $query->execute();
 
@@ -110,7 +111,7 @@ catch(Exception $e)
                                    ON page.id_page = page_translation.id_page
                                    WHERE url_page = "footer"
                                    AND family_page_translation = "intro"';
-                //if((checkrights($main_rights_log, '9', $redirection)) === true){ $_SESSION['prepared_query'] = $prepared_query; }
+                if((checkrights($main_rights_log, '9', $redirection)) === true){ $_SESSION['prepared_query'] = $prepared_query; }
                 $query = $connectData->prepare($prepared_query);
                 $query->execute();
 
@@ -125,7 +126,7 @@ catch(Exception $e)
                                    ON page.id_page = page_translation.id_page
                                    WHERE url_page = "footer"
                                    AND family_page_translation = "desc"';
-                //if((checkrights($main_rights_log, '9', $redirection)) === true){ $_SESSION['prepared_query'] = $prepared_query; }
+                if((checkrights($main_rights_log, '9', $redirection)) === true){ $_SESSION['prepared_query'] = $prepared_query; }
                 $query = $connectData->prepare($prepared_query);
 
                 if(($data = $query->fetch()) != false)

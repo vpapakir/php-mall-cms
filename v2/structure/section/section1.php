@@ -103,7 +103,6 @@ catch(Exception $e)
        border: <?php echo($border_section.' solid '.$bordercolor_section); ?>;
        position: <?php echo($position_section); ?>; margin: <?php echo($margin_section); ?>;
        border-radius: <?php echo($radius_section[0].'px '.$radius_section[1].'px '.$radius_section[2].'px '.$radius_section[3].'px'); ?>;
-/*       -moz-border-radius: <?php //echo($radius_section[0].'px '.$radius_section[1].'px '.$radius_section[2].'px '.$radius_section[3].'px'); ?>;*/
        -webkit-border-radius: <?php echo($radius_section[0].'px '.$radius_section[1].'px '.$radius_section[2].'px '.$radius_section[3].'px'); ?>;
        <?php if(!empty($bgcolor_section)){ ?>background-color: <?php echo($bgcolor_section); ?>;"<?php } ?> 
        cellpadding="<?php echo($cp_section); ?>" cellspacing="<?php echo($cs_section); ?>" border="0">
@@ -130,7 +129,7 @@ catch(Exception $e)
                 </td>
                 <td>
                     <?php
-                        include('structure/box/11.php');
+                        #include('structure/box/11.php');
                     ?>
                 </td>
                 <td><div style="width: 10px;"></div></td>

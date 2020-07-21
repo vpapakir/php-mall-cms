@@ -160,15 +160,12 @@ catch(Exception $e)
         
         <tr>
         <td colspan="3" style="height: <?php echo($height_layout_top); ?>px;
-                               background-image: url('<?php echo($config_customheader.$path_layout_top); ?>'); 
                                <?php if(!empty($repeat_layout_top)){ ?>background-repeat: <?php echo($repeat_layout_top); ?>;<?php } ?>
                                <?php if(!empty($attachment_layout_top)){ ?>background-attachment: <?php echo($attachment_layout_top); ?>;<?php } ?>"></td>
         </tr>
         
         <tr>       
         <td><table width="100%" style="height: <?php echo($height_layout_middle); ?>px;
-                                       background-image: url('<?php echo($config_customheader.$path_layout_middle); ?>'); 
-                                       <?php if(!empty($repeat_layout_middle)){ ?>background-repeat: <?php echo($repeat_layout_middle); ?>;<?php } ?>
                                        <?php if(!empty($attachment_layout_middle)){ ?>background-attachment: <?php echo($attachment_layout_middle); ?>;<?php } ?>" cellpadding="0" cellspacing="0">
 
 <?php
@@ -210,7 +207,7 @@ catch(Exception $e)
         
         <td style="vertical-align: top;">
 <?php
-            #include('structure/frame/left/left1.php');
+            include('structure/frame/left/left1.php');
 ?>
         </td>
     
@@ -246,8 +243,6 @@ catch(Exception $e)
     
     <tr>
     <td colspan="3" style="height: <?php echo($height_layout_bottom); ?>px;
-                           background-image: url('<?php echo($config_customheader.$path_layout_bottom); ?>'); 
-                           <?php if(!empty($repeat_layout_bottom)){ ?>background-repeat: <?php echo($repeat_layout_bottom); ?>;<?php } ?>
                            <?php if(!empty($attachment_layout_bottom)){ ?>background-attachment: <?php echo($attachment_layout_bottom); ?>;<?php } ?>"></td>   
     </tr>
 </table>       

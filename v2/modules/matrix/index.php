@@ -1,13 +1,13 @@
 <?php session_start();
 ob_start("ob_gzhandler");
 
-$include_dbconnect_info = 'modules/dbconnect/dinxdev/dbconnect_info.php';
-include('modules/dbconnect/dinxdev/dbconnect.php');
-include('modules/functions/function.php');
-include('config/config_admin.php');
-include('config/config_main.php');
-include('config/config_image.php');
-include('modules/pdf/pdf.php');
+$include_dbconnect_info = '../../modules/dbconnect/dinxdev/dbconnect_info.php';
+include('../../modules/dbconnect/dinxdev/dbconnect.php');
+include('../../modules/functions/function.php');
+include('../../config/config_admin.php');
+include('../../config/config_main.php');
+include('../../config/config_image.php');
+include('../../modules/pdf/pdf.php');
 $_SESSION['index'] = 'index.php';
 $_SESSION['cooshopname'] = 'coobox.eu';
 $_SESSION['cooshopid'] = 1;
@@ -26,10 +26,10 @@ if (isset($_COOKIE["language"]))
 				//$main_id_language = $_SESSION['current_language'];
 				//echo "FUCK!!!";
 }
-include('structure/config_structure.php');
-include('modules/language/language/language_switch.php');
-include('modules/finance/currency/currency_switch.php');
-include('modules/stats/visit/statsvisit_main.php');
+include('../../structure/config_structure.php');
+include('../../modules/language/language/language_switch.php');
+include('../../modules/finance/currency/currency_switch.php');
+include('../../modules/stats/visit/statsvisit_main.php');
 
 $_SESSION['current_page'] = trim(htmlspecialchars($_GET['page'], ENT_QUOTES));
 $main_id_language = $_SESSION['current_language'];
@@ -46,7 +46,7 @@ $main_onlinestatus_log = $_SESSION['current_log_onlinestatususer'];
 $blocktitle_box_structure = 21;
 $blockcontent_box_structure = 22;
 
-include('config/config_valuerelated.php');
+include('../../config/config_valuerelated.php');
 
 if(isset($_GET['block']))
 {

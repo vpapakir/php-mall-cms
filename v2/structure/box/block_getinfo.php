@@ -62,7 +62,7 @@ try
     
     $prepared_query = 'SELECT * FROM style_block
                        WHERE id_block = :id';
-    //if((checkrights($main_rights_log, '9', $redirection)) === true){ $_SESSION['prepared_query'] = $prepared_query; }
+    if((checkrights($main_rights_log, '9', $redirection)) === true){ $_SESSION['prepared_query'] = $prepared_query; }
     $query = $connectData->prepare($prepared_query);
     $query->bindParam('id', $blocktitle_box_structure);
     $query->execute();
@@ -90,7 +90,7 @@ try
     
     $prepared_query = 'SELECT * FROM style_block
                        WHERE id_block = :id';
-    //if((checkrights($main_rights_log, '9', $redirection)) === true){ $_SESSION['prepared_query'] = $prepared_query; }
+    if((checkrights($main_rights_log, '9', $redirection)) === true){ $_SESSION['prepared_query'] = $prepared_query; }
     $query = $connectData->prepare($prepared_query);
     $query->bindParam('id', $blockcontent_box_structure);
     $query->execute();

@@ -1818,7 +1818,7 @@ function give_translation($code, $echo, $showtranslationcode)
     {       
         $prepared_query = 'SELECT id_translation, L'.$current_language.' FROM translation
                            WHERE code_translation = :code';
-        //if((checkrights($main_rights_log, '9', $redirection)) === true){ $_SESSION['prepared_query'] = $prepared_query; }
+        if((checkrights($main_rights_log, '9', $redirection)) === true){ $_SESSION['prepared_query'] = $prepared_query; }
         $query = $connectData->prepare($prepared_query);
 	$code_1 = $code;
 	$code_2 = htmlspecialchars($code_1, ENT_QUOTES);
@@ -4203,7 +4203,7 @@ function check_code_bonus($code_bonus)
     }
 }
 
-function change_link($frontend_link, $backoffice_link, $echo)
+function change_link($frontend_link, $backoffice_link, $echo = "link")
 {
     if(!empty($_SESSION['index']) && $_SESSION['index'] == 'index.php')
     {
@@ -4656,12 +4656,16 @@ function replace_dirtyword($string, $current_language, $search, $keyword, $comme
            unset($keepyindex, $create_dirty);
            $length_string = strlen($string);
            
-           for($y = 0, $county = $length_string; $y <= $county; $y++)
+           for($y = 0, $county = $length_string; $y < $county; $y++)
            {
                if($string[$y] == $array_unmodified_char[$i][$k])
                {
                    $keepyindex[$flag] = $y;
-                   $create_dirty .= $array_unmodified_char[$i][$k];
+		   if(isset($create_dirty)) {
+                   	$create_dirty .= $array_unmodified_char[$i][$k];
+		   } else {
+			$create_dirty = $array_unmodified_char[$i][$k];
+		   }
                    $flag++;
                    $k++;
                    

@@ -5,6 +5,7 @@ ob_start("ob_gzhandler");
 
 $COOBOX_BASE_URL = $_SERVER['REQUEST_URI'];
 $_SESSION['index'] = 'index.php';
+$scho="true";
 $main_browsertitle = "";
 if (isset($_COOKIE["language"]))
 {

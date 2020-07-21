@@ -1,12 +1,10 @@
 <?php
-//if((checkrights($main_rights_log, $userrights_hierarchybox[$i])) === true)
-//{
     #Search Main
     $id_box_structure = 11;
 
     include('structure/box/block_getinfo.php');
-    include('structure/box/box_getinfo.php');
-    ?>
+    #include('structure/box/box_getinfo.php');
+?>
 
     <table style="width: <?php echo($width_box); ?>; 
                   border: <?php echo($border_box.' solid '.$bordercolor_box); ?>;
@@ -20,6 +18,5 @@
 
     </table> 
 <?php
-//}
 ?>
 

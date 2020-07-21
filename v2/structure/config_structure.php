@@ -3,7 +3,7 @@ try
 {
     $prepared_query = 'SELECT * FROM config_structure
                        WHERE id_config_structure = 1';
-    //if((checkrights($main_rights_log, '9', $redirection)) === true){ $_SESSION['prepared_query'] = $prepared_query; }
+    if((checkrights($main_rights_log, '9', $redirection)) === true){ $_SESSION['prepared_query'] = $prepared_query; }
     $query = $connectData->prepare($prepared_query);
     $query->execute();
     if(($data = $query->fetch()) != false)
