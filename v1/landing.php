@@ -5,7 +5,10 @@ if(empty($loaderName))
 	die ('<div align="center">Sorry, this website is under construction	</div>');
 }
 */
-//die('123');
+global $HTTP_SERVER_VARS;
+$HTTP_SERVER_VARS = $_SERVER;
+$loaderRootPath = "/var/www/vhosts/vpapakir.eu/mymall.vpapakir.eu/mymall/v1/";
+$HTTP_HOST=$_SERVER['HTTP_HOST'];
 define('LB',"\n");
 ini_set('display_errors','1');
 ini_set('allow_call_time_pass_reference','1');
@@ -32,7 +35,6 @@ if(!empty($loaderConfig))
 }
 
 include_once($rootPath.'lib/Loader.lib.php');
-//timeTracking('Start');
 //get variables with /
 
 
