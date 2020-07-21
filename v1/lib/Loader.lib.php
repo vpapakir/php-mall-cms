@@ -21,7 +21,7 @@ if($sessionHandler=='phpsession')
 	if (!session_is_registered($sessionCookieName)) {session_register($sessionCookieName);}
 }
 //recursive function to get all php files in a directory (including all subderictories)
-function getLibFiles($dirPath,$files='')
+function getLibFiles($dirPath,$files=[])
 {
 	$dir = $dirPath;
 	if ($dp=@opendir($dir)) {
