@@ -91,7 +91,7 @@ if($array_box[0] != null && $array_box[0] != 0)
         if($i == 0)
         {
 ?>
-           <table style="width: <?php echo($width_frame); ?>; height: <?php echo($height_frame); ?>; 
+           <table id="tbl_main_01" style="width: <?php echo($width_frame); ?>; height: <?php echo($height_frame); ?>; 
                   border: <?php echo($border_frame.' solid '.$bordercolor_frame); ?>;
                   position: <?php echo($position_frame); ?>; margin: <?php echo($margin_frame); ?>;" 
                   cellpadding="<?php echo($cp_frame); ?>" cellspacing="<?php echo($cs_frame); ?>">                 
@@ -188,8 +188,7 @@ if($array_box[0] != null && $array_box[0] != 0)
                    cellpadding="<?php echo($cp_box); ?>" cellspacing="<?php echo($cs_box); ?>">
 
 <?php
-		   ## POLEMOS!!!
-                   ## include('structure/box/'.$id_box.'.php');
+                   include('structure/box/'.$id_box.'.php');
 ?>
             
             </table>

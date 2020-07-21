@@ -11,7 +11,7 @@ if(!empty($title_page))
                         <span><?php echo($title_page); ?></span>
                     </td>
 <?php
-                    if((checkrights($main_rights_log, '8')) === true)
+                    if((checkrights($main_rights_log, '8', true)) === true)
                     {
 ?>  
                         <td align="center">
@@ -74,10 +74,10 @@ if(!empty($title_page))
     #[custom]
     if(!empty($config_module_immo) && $config_module_immo == 1)
     {
-        include('modules/custom/immo/modules/main_frame/home/featured_random.php');
+        #include('modules/custom/immo/modules/main_frame/home/featured_random.php');
     }
     #[/custom]
-    include('modules/main_frame/listing/listing_relatedpage.php');
+    #include('modules/main_frame/listing/listing_relatedpage.php');
 ?>
     </table></td>
     </tr>

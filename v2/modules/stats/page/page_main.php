@@ -1,6 +1,6 @@
 <?php
-if((stats_page_checksession($_SESSION['stats_page_count'], $url_page)) === true)
-{
+#if((stats_page_checksession($_SESSION['stats_page_count'], $url_page)) === true)
+#{
     try
     {
         unset($stats_page_count, $stats_page_id);
@@ -54,14 +54,15 @@ if((stats_page_checksession($_SESSION['stats_page_count'], $url_page)) === true)
     catch(Exception $e)
     {
         $_SESSION['error400_message'] = $e->getMessage();
-        if($_SESSION['index'] == 'index.php')
+        echo $_SESSION['error400_message'];
+        /*if($_SESSION['index'] == 'index.php')
         {
             die(header('Location: '.$config_customheader.'Error/400'));
         }
         else
         {
             die(header('Location: '.$config_customheader.'Backoffice/Error/400'));
-        }
+        }*/
     }
-}
+#}
 ?>

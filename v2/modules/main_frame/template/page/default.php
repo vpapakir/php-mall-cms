@@ -11,7 +11,7 @@ if(!empty($title_page))
                         <span><?php echo($title_page); ?></span>
                     </td> 
 <?php
-                    if((checkrights($main_rights_log, '8')) === true)
+                    if((checkrights($main_rights_log, '8', false)) === true)
                     {
 ?>  
                         <td align="center">
