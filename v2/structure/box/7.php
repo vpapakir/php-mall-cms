@@ -1,6 +1,6 @@
 <?php
-if((checkrights($main_rights_log, $userrights_hierarchybox[$i])) === true)
-{
+#if((checkrights($main_rights_log, $userrights_hierarchybox[$i])) === true)
+#{
     #INFORMATIONS
     $id_box_structure = 7;
 
@@ -145,5 +145,5 @@ if((checkrights($main_rights_log, $userrights_hierarchybox[$i])) === true)
 
 <?php
     }
-}
+#}
 ?>

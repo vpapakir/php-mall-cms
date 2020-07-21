@@ -55,7 +55,7 @@
                 $prepared_query = 'SELECT * FROM cdreditor
                                    WHERE code_cdreditor = "cdreditor_type_object"
                                    ORDER BY L'.$main_id_language.'S';
-                //if((checkrights($main_rights_log, '9', $redirection)) === true){ $_SESSION['prepared_query'] = $prepared_query; }
+                if((checkrights($main_rights_log, '9', $redirection)) === true){ $_SESSION['prepared_query'] = $prepared_query; }
                 $query = $connectData->prepare($prepared_query);
                 //$query->bindParam('code', 'cdreditor.type_object');
                 $query->execute();
@@ -82,7 +82,7 @@
                                 <tr>
                                     <td>
 <?php                       
-                                    cdreditor('checkbox', $quicksearch_nameS_typeobject, $quicksearch_code_typeobject.'Quicksearch', $quicksearch_statusobject_typeobject, $quicksearch_id_typeobject, $_SESSION['quicksearch_cdreditor_type_objectQuicksearch'], false, '', '', '', '', '', '', 'true', '', '', 'true', 'type_product_immo', '=', 'true', 10, '...', '', 'font_main', 'font-size: 10px;');                                      
+                                    #cdreditor('checkbox', $quicksearch_nameS_typeobject, $quicksearch_code_typeobject.'Quicksearch', $quicksearch_statusobject_typeobject, $quicksearch_id_typeobject, $_SESSION['quicksearch_cdreditor_type_objectQuicksearch'], false, '', '', '', '', '', '', 'true', '', '', 'true', 'type_product_immo', '=', 'true', 10, '...', '', 'font_main', 'font-size: 10px;');                                      
 ?>
                                     </td>
                                 </tr>

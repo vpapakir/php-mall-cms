@@ -1,6 +1,6 @@
 <?php
-if((checkrights($main_rights_log, $userrights_hierarchybox[$i])) === true)
-{
+#if((checkrights($main_rights_log, $userrights_hierarchybox[$i])) === true)
+#{
     #quicksearch
     $id_box_structure = 12;
 
@@ -142,5 +142,5 @@ if((checkrights($main_rights_log, $userrights_hierarchybox[$i])) === true)
     </td> 
     </tr>
 <?php
-}
+#}
 ?>

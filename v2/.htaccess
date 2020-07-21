@@ -2059,6 +2059,6 @@ RewriteRule ^backoffice/sale/page/([0-9]+)$   /index_backoffice.php?page=imos_re
 RewriteRule ^edition/user/([0-9]+)$   /index.php?page=user_edit&user=$1 [L]
 RewriteRule ^backoffice/edition/user/([0-9]+)$   /index_backoffice.php?page=user_edit&user=$1 [L]
 
-#RewriteBase /
-#RewriteCond %{HTTPS_HOST} !^ [NC]
-#RewriteRule ^(.*)$ $1 [R=301,L]
+RewriteBase /
+RewriteCond %{HTTPS_HOST} !^ [NC]
+RewriteRule ^(.*)$ $1 [R=301,L]

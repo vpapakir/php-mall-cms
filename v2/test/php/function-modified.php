@@ -1817,7 +1817,7 @@ function give_translation($code, $echo, $showtranslationcode)
     {       
         $prepared_query = 'SELECT id_translation, L'.$current_language.' FROM translation
                            WHERE code_translation = :code';
-        //if((checkrights($main_rights_log, '9', $redirection)) === true){ $_SESSION['prepared_query'] = $prepared_query; }
+        if((checkrights($main_rights_log, '9', $redirection)) === true){ $_SESSION['prepared_query'] = $prepared_query; }
         $query = $connectData->prepare($prepared_query);
         $query->bindParam('code', trim(htmlspecialchars($code, ENT_QUOTES)));
         $query->execute();

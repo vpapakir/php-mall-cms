@@ -93,9 +93,7 @@ if($idbox_hierarchybox[0] != null && $idbox_hierarchybox[0] != 0)
                   cellpadding="<?php echo($cp_frame); ?>" cellspacing="<?php echo($cs_frame); ?>" border="0">                 
 <?php 
         }
-       	    ## OLETHROS!!!! 
-            echo $idbox_hierarchybox[$i]." - ";
-            ##include('structure/box/'.$idbox_hierarchybox[$i].'.php');
+            include('structure/box/'.$idbox_hierarchybox[$i].'.php');
 
         if($i >= (count($idbox_hierarchybox) - 1))
         {

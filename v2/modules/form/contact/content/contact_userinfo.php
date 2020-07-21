@@ -69,7 +69,7 @@
         </td>
         <td align="left" width="<?php echo($right_column_width); ?>">
 <?php
-            cdreditor($fcontactmain_type_subject, $fcontactmain_nameS_subject, $fcontactmain_code_subject, $fcontactmain_statusobject_subject, $fcontactmain_id_subject, $_SESSION['form_contactmain_cdreditor_formcontact_subject'], false);
+            #cdreditor($fcontactmain_type_subject, $fcontactmain_nameS_subject, $fcontactmain_code_subject, $fcontactmain_statusobject_subject, $fcontactmain_id_subject, $_SESSION['form_contactmain_cdreditor_formcontact_subject'], false);
             if(!empty($_SESSION['msg_form_contactmain_cdreditor_formcontact_subject']))
             {
 ?>

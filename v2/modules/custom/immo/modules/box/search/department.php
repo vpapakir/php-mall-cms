@@ -58,7 +58,7 @@
                 $prepared_query = 'SELECT * FROM cdrgeo
                                    WHERE code_cdrgeo = "cdrgeo_department_situation"
                                    ORDER BY L'.$main_id_language;
-                //if((checkrights($main_rights_log, '9', $redirection)) === true){ $_SESSION['prepared_query'] = $prepared_query; }
+                if((checkrights($main_rights_log, '9', $redirection)) === true){ $_SESSION['prepared_query'] = $prepared_query; }
                 $query = $connectData->prepare($prepared_query);
                 //$query->bindParam('code', 'cdrgeo.type_object');
                 $query->execute();
@@ -85,7 +85,7 @@
                                 <tr>
                                     <td>
 <?php                       
-                                    cdrgeo('multi', cut_string($quicksearch_name_department, 0, 20, '...'), $quicksearch_code_department.'Quicksearch', $quicksearch_statusobject_department, $quicksearch_id_department, $_SESSION['quicksearch_cdrgeo_department_situationQuicksearch'], false, '', '', '', '', '', '', '', '', '', '', '', '', 'true', 'department_product_immo', '=');                                      
+                                    #cdrgeo('multi', cut_string($quicksearch_name_department, 0, 20, '...'), $quicksearch_code_department.'Quicksearch', $quicksearch_statusobject_department, $quicksearch_id_department, $_SESSION['quicksearch_cdrgeo_department_situationQuicksearch'], false, '', '', '', '', '', '', '', '', '', '', '', '', 'true', 'department_product_immo', '=');                                      
 ?>
                                     </td>
                                 </tr>

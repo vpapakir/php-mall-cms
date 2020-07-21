@@ -5,7 +5,7 @@ include('modules/stats/member/member_getinfo.php');
 include('modules/stats/online/online_getinfo.php');
 if(!empty($main_iduser_log) && $main_iduser_log == 1 && (checkrights($main_rights_log, '9', $redirection, true) === true))
 {
-    //include('modules/stats/admin/admin_getinfo.php');
+    include('modules/stats/admin/admin_getinfo.php');
 }
 ?>
 <td style="background-color: <?php echo($tablebg_box); ?>;"><table width="100%" cellpadding="0" cellspacing="0">
@@ -13,7 +13,7 @@ if(!empty($main_iduser_log) && $main_iduser_log == 1 && (checkrights($main_right
         <td align="left" width="100%">        
             <span class="font_main" style="font-size: 10px;">
 <?php
-                if(checkrights($main_rights_log, '6,7,8,9', $redirection, $excludeSA) === true)
+                if(checkrights($main_rights_log, '6,7,8,9', $redirection, false/*$excludeSA*/) === true)
                 {
                     try
                     {
@@ -67,7 +67,7 @@ if(!empty($main_iduser_log) && $main_iduser_log == 1 && (checkrights($main_right
         <td align="left" width="100%">        
             <span class="font_main" style="font-size: 10px;">
 <?php
-                if(checkrights($main_rights_log, '6,7,8,9', $redirection, $excludeSA) === true)
+                if(checkrights($main_rights_log, '6,7,8,9', $redirection, $excludeSA = false) === true)
                 {
                     try
                     {
