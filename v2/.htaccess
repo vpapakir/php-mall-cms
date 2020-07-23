@@ -2033,10 +2033,6 @@ RewriteRule ^backoffice/$   index_backoffice.php?page=test555 [L]
 RewriteRule ^$   index.php?page=test444 [L]
 RewriteRule ^backoffice/$   index_backoffice.php?page=test444 [L]
 
-# test4444
-RewriteRule ^$   index.php?page=test4444 [L]
-RewriteRule ^backoffice/$   index_backoffice.php?page=test4444 [L]
-
 # 999993545
 RewriteRule ^$   index.php?page=999993545 [L]
 RewriteRule ^backoffice/$   index_backoffice.php?page=999993545 [L]
