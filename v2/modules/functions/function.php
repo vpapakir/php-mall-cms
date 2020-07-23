@@ -1832,16 +1832,9 @@ function give_translation($code, $echo = true, $showtranslationcode)
             $translate_id = $data[0];
             $translate_sentence = $data[1];
         } else {
-        	if($_SESSION['current_log_rightsuser'] < 7) {
-			
-        	}
+        	$href_edit = '<a class="link_main" href="'.$header[0].'Gestion/Traductions#translation_main" style="text-decoration: none;" onclick="return hs.htmlExpand(this, { contentId: \'translation_main\',objectType: \'ajax\', width: 200, height: 200 } )">#</a>';
+        	$href_new = '<a class="link_main" href="'.$header[0].'Gestion/Traductions#translation_main" style="text-decoration: none;" onclick="return hs.htmlExpand(this, { contentId: \'translation_main\',objectType: \'ajax\', width: 200, height: 200 } )">#?</a>';
         }
-        
-        //$href_edit = '<a class="link_main" href="'.$header.'Gestion/Traductions/'.$translate_id.'#translation_main" style="text-decoration: none;" onclick="return hs.htmlExpand(this, { contentId: \'translation_main\',
-        //                    objectType: \'ajax\', width: 200, height: 200 } )">#</a>';
-        
-        //$href_new = '<a class="link_main" href="'.$header.'Gestion/Traductions#translation_main" style="text-decoration: none;" onclick="return hs.htmlExpand(this, { contentId: \'translation_main\',
-        //                    objectType: \'ajax\', width: 200, height: 200 } )">#?</a>';
         if(!empty($echo) && $echo == 'false')
         {
             return $translate_sentence;

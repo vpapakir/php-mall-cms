@@ -1,8 +1,9 @@
 <?php
 try 
 {   
-    $echo="true";
-    exit(0); 
+    if(!isset($type_box_content)) {
+	$type_box_content = [];
+    }
     $prepared_query = 'SELECT * FROM hierarchy_box
                        WHERE id_hierarchy_box = 6';
     $query = $connectData->prepare($prepared_query);
@@ -47,46 +48,46 @@ try
             <tr>
                 <td align="left">             
                     <span class="font_main" style="font-size: 10px;">
-                        COOBOX
+                        <?php give_translation('main.software_name', $echo, $config_showtranslationcode); ?>
                     </span>
                 </td>
                 <td align="right" >       
                     <span class="font_main" style="font-size: 10px;">
-                        v3.0.0
+                        <?php give_translation('main.software_version', $echo, $config_showtranslationcode); ?>
                     </span>
                 </td>
             </tr>
             <tr>
                 <td align="left">             
                     <span class="font_main" style="font-size: 10px;">
-                        <?php //give_translation('main.copyright_license', $echo, $config_showtranslationcode); ?>
+                        <?php give_translation('main.copyright_license', $echo, $config_showtranslationcode); ?>
                     </span>
                 </td>
                 <td align="right">       
                     <span class="font_main" style="font-size: 10px;">
-                        10153
+                        <?php give_translation('main.build_number', $echo, $config_showtranslationcode); ?>
                     </span>
                 </td>
             </tr>
             <tr>
                 <td align="left">             
                     <span class="font_main" style="font-size: 10px;">
-                        <?php //give_translation('main.copyright_by', $echo, $config_showtranslationcode); ?>
+                        <?php give_translation('main.copyright_by', $echo, $config_showtranslationcode); ?>
                     </span>
                 </td>
                 <td align="right">       
-                    <a class="link_main" href="http://coorda.com" target="_blank" style="font-size: 10px;">Coorda</a>
+                    <a class="link_main" href="<?php give_translation('main.software_website', $echo, $config_showtranslationcode); ?>" target="_blank" style="font-size: 10px;"><?php give_translation('main.software_publisher', $echo, $config_showtranslationcode); ?></a>
                 </td>
             </tr>
             <tr>
                 <td align="left">             
                     <span class="font_main" style="font-size: 10px;">
-                        <?php //give_translation('main.copyright_authorized', $echo, $config_showtranslationcode); ?>
+                        <?php give_translation('main.copyright_authorized', $echo, $config_showtranslationcode); ?>
                     </span>
                 </td>
                 <td align="right"> 
                     <span class="font_main" style="font-size: 10px;">
-                        <?php //give_translation('main.copyright_authorized_check', $echo, $config_showtranslationcode); ?>
+                        <?php give_translation('main.copyright_authorized_check', $echo, $config_showtranslationcode); ?>
                     </span>
                 </td>
             </tr>
@@ -131,9 +132,6 @@ try
 
             if(!empty($temphref_box_content))
             {
-                //$temphref_box_content = split_string($temphref_box_content, '$');
-
-
                     $href_box_content = $config_customheader.$temphref_box_content;
             }
         }
@@ -174,6 +172,7 @@ try
 catch(Exception $e)
 {
     $_SESSION['error400_message'] = $e->getMessage();
+    echo $_SESSION['error400_message'];
     if($_SESSION['index'] == 'index.php')
     {
         die(header('Location: '.$config_customheader.'Error/400'));
