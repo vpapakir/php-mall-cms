@@ -2056,5 +2056,6 @@ RewriteRule ^edition/user/([0-9]+)$   /index.php?page=user_edit&user=$1 [L]
 RewriteRule ^backoffice/edition/user/([0-9]+)$   /index_backoffice.php?page=user_edit&user=$1 [L]
 
 RewriteBase /mymall/v2/
-RewriteCond %{HTTPS_HOST} !^ [NC]
-RewriteRule ^(.*)$ $1 [R=301,L]
+RewriteCond %{HTTP_HOST} !^ [NC]
+#RewriteCond %{HTTP_HOST} !/mymall/v2/
+RewriteRule ^(.*)$ /mymall/v2/$1 [R=301,L]

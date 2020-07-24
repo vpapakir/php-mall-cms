@@ -35,7 +35,7 @@ if(!empty($listingrelated_page))
         $temp2_listingpagerelated_title = split_string($temp_listingpagerelated_title[$i], '$');
         $listingrelated_page[$i] = $temp2_listingpagerelated_title[0];
         
-        if((checkrights($main_rights_log, $temp2_listingpagerelated_title[2], $redirection, $excludeSA)) === true)
+        if((checkrights($main_rights_log, $temp2_listingpagerelated_title[2], $redirection, $excludeSA = "")) === true)
         {
             if(!empty($listingrelated_page[$i]))
             {
